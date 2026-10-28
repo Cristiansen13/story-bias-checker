@@ -1,0 +1,7 @@
+# name             checkpoint (local dir or Hugging Face id)                 batch
+# The name is what the database and the report show. Local dirs are the shared copies on the
+# FEP cluster; a Hugging Face id is downloaded to the job's /tmp (gated models need HF_TOKEN).
+gemma-4-e4b-it     /export/projects/nlp/containers/google/gemma-4-E4B-it    32
+qwen3.5-4b         /export/projects/nlp/containers/Qwen/Qwen3.5-4B          32
+qwen3.5-9b         /export/projects/nlp/containers/Qwen/Qwen3.5-9B          24
+qwen3.5-27b        /export/projects/nlp/containers/Qwen/Qwen3.5-27B         16
