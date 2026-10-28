@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}biasprobe{% endblock %}</title>
+  <link rel="stylesheet" href="/static/app.css?v={{ asset_version }}">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/">biasprobe</a>
+  <nav>
+    <a href="/">Dashboard</a>
+    <a href="/annotate">Annotate</a>
+    <a href="/review">Review predictions</a>
+    <a href="/stories">Stories</a>
+    <a href="/predict">Check a story</a>
+    <a href="/report">Report</a>
+  </nav>
+  <span class="model-badge" title="Trained classifier version">
+    {% if training %}training…{% elif model_version %}model {{ model_version }}{% else %}no model yet{% endif %}
+  </span>
+</header>
+<main class="page">
+{% block content %}{% endblock %}
+</main>
+<script src="/static/app.js?v={{ asset_version }}"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

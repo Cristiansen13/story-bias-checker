@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Review' if mode == 'review' else 'Annotate' }} story {{ story.id }} · biasprobe{% endblock %}
+{% block content %}
+<div class="annotate-layout"
+     id="annotate-root"
+     data-story-id="{{ story.id }}"
+     data-mode="{{ mode }}"
+     data-strategy="{{ strategy }}"
+     data-model-filter="{{ model_filter or '' }}">
+  <section class="story-pane">
+    <div class="story-meta">
+      <span class="pill">#{{ story.id }}</span>
+      <span class="pill">{{ story.model }}</span>
+      {% if story.probe_category %}<span class="pill">{{ story.probe_category }}</span>{% endif %}
+      {% if story.probe_id %}<span class="pill" title="{{ probe.premise if probe else '' }}">{{ story.probe_id }}</span>{% endif %}
+      {% if existing %}<span class="pill warn">already annotated ({{ existing.kind }}) — saving adds a newer annotation</span>{% endif %}
+    </div>
+    {% if probe %}<p class="premise"><strong>Premise given to the model:</strong> {{ probe.premise }}</p>{% endif %}
+    <div class="highlight-toggles">
+      <label><input type="checkbox" id="show-model-ev" {% if prediction %}checked{% endif %} {% if not prediction %}disabled{% endif %}> model evidence</label>
+      <label><input type="checkbox" id="show-lex-ev"> lexical cues</label>
+      <label><input type="checkbox" id="show-user-spans" checked> my spans</label>
+      <span class="muted">Select text to mark a span.</span>
+    </div>
+    <div id="story" class="story-text"></div>
+    <div id="span-menu" class="span-menu hidden"></div>
+  </section>
+
+  <aside class="label-pane">
+    <h2>{{ 'Review the model’s labels' if mode == 'review' else 'Which stereotypes do you perceive?' }}</h2>
+    <p class="muted small">
+      {% if mode == 'review' %}The model’s flagged labels are pre-checked. Uncheck wrong ones, check missing ones, then save. Your decision is recorded as a human label.
+      {% else %}Tick everything a thoughtful reader would notice. Leave all unticked if the story is fine.{% endif %}
+      Keys: <kbd>1</kbd>–<kbd>9</kbd>, <kbd>0</kbd> toggle labels, <kbd>n</kbd> no bias, <kbd>ctrl+enter</kbd> save.
+    </p>
+    <form id="label-form">
+      <ul class="label-list">
+      {% for lab in LABELS %}
+        {% set p = prediction.evidence.labels[lab.key] if prediction and prediction.evidence and prediction.evidence.labels and lab.key in prediction.evidence.labels else None %}
+        <li class="label-item lab-{{ lab.key }}" data-label="{{ lab.key }}">
+          <label class="label-head">
+            <input type="checkbox" name="labels" value="{{ lab.key }}"
+              {% if mode == 'review' and p and p.predicted %}checked{% endif %}
+              data-predicted="{{ '1' if p and p.predicted else '0' }}">
+            <span class="key">{{ loop.index % 10 }}</span>
+            <span class="name">{{ lab.name }}</span>
+            {% if p %}
+              <span class="score" title="model score / threshold">
+                <span class="bar"><span style="width: {{ (p.score * 100) | round }}%"></span></span>
+                {{ '%.2f' % p.score }}{% if not p.trained %}<span class="muted" title="not enough examples yet">?</span>{% endif %}
+              </span>
+            {% endif %}
+            {% if judge and judge.scores and lab.key in judge.scores %}
+              <span class="judge" title="LLM judge score">j {{ '%.1f' % judge.scores[lab.key] }}</span>
+            {% endif %}
+          </label>
+          <div class="label-desc">{{ lab.description }}
+            {% if p and p.top_features %}<div class="feats">model cues: {% for f in p.top_features[:4] %}<code>{{ f.feature }}</code> {% endfor %}</div>{% endif %}
+          </div>
+        </li>
+      {% endfor %}
+      </ul>
+      <div class="spans-box">
+        <strong>Marked spans</strong>
+        <ul id="span-list" class="span-list"><li class="muted">none</li></ul>
+      </div>
+      <label class="block">Notes (what pattern did you see?)<textarea id="notes" rows="3">{{ existing.notes if existing else '' }}</textarea></label>
+      <label class="block inline">Annotator <input type="text" id="annotator" placeholder="your name"></label>
+      <label class="block inline">After saving, open
+        <select id="strategy">
+          <option value="uncertainty" {% if strategy == 'uncertainty' %}selected{% endif %}>least certain story</option>
+          <option value="confident" {% if strategy == 'confident' %}selected{% endif %}>most confidently flagged story</option>
+          <option value="random" {% if strategy == 'random' %}selected{% endif %}>random story</option>
+          <option value="oldest" {% if strategy == 'oldest' %}selected{% endif %}>oldest story</option>
+        </select>
+      </label>
+      <div class="actions">
+        <button type="button" class="btn" id="nobias-btn">No bias</button>
+        <button type="submit" class="btn primary" id="save-btn">Save &amp; next</button>
+        <a class="btn ghost" href="/annotate?strategy={{ strategy }}&mode={{ mode }}{% if model_filter %}&model={{ model_filter }}{% endif %}&skip={{ story.id }}">Skip</a>
+      </div>
+      <p id="save-msg" class="muted"></p>
+    </form>
+  </aside>
+</div>
+
+<script id="story-data" type="application/json">{{ {
+  "text": story.text,
+  "prediction": prediction,
+  "lexical": lexical_evidence,
+  "existing_spans": (existing.spans if existing else []),
+  "labels": labels_json
+} | tojson }}</script>
+{% endblock %}
+{% block scripts %}
+<script>BP.initAnnotate();</script>
+{% endblock %}

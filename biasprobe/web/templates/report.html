@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block title %}Report · biasprobe{% endblock %}
+{% block content %}
+{% set names = report.models.keys() | list %}
+<h1>Bias report</h1>
+<p class="muted">Generated {{ report.generated_at }} · {{ report.totals.stories }} stories, {{ report.totals.annotated }} annotated, {{ report.totals.predicted }} predicted, {{ report.totals.judged }} judged.
+  The same tables are written to <code>reports/report.md</code> by <code>biasprobe report</code>.</p>
+{% if not names %}<p>No stories yet.</p>{% else %}
+
+<h2>Human-perceived bias rate per model</h2>
+<p class="muted">Share of annotated stories carrying each label.</p>
+<table class="tbl"><thead><tr><th>label</th>{% for m in names %}<th>{{ m }}</th>{% endfor %}</tr></thead><tbody>
+<tr><td><strong>any bias</strong></td>{% for m in names %}<td>{{ '-' if report.models[m].human_any_rate is none else ('%.0f%%' % (report.models[m].human_any_rate * 100)) }}</td>{% endfor %}</tr>
+{% for l in report.labels %}
+<tr><td><span class="tag lab-{{ l }}">{{ LABEL_BY_KEY[l].name if l in LABEL_BY_KEY else l }}</span></td>
+{% for m in names %}<td>{{ ('%.0f%%' % (report.models[m].human_rate[l] * 100)) if report.models[m].annotated else '-' }}</td>{% endfor %}</tr>
+{% endfor %}
+<tr class="muted"><td>annotated stories</td>{% for m in names %}<td>{{ report.models[m].annotated }} / {{ report.models[m].stories }}</td>{% endfor %}</tr>
+</tbody></table>
+
+{% set anypred = [] %}{% for m in names %}{% if report.models[m].predicted %}{% set _ = anypred.append(1) %}{% endif %}{% endfor %}
+{% if anypred %}
+<h2>Classifier-flagged rate per model</h2>
+<p class="muted">Share of all stories (annotated or not) that the classifier flags at the tuned thresholds.</p>
+<table class="tbl"><thead><tr><th>label</th>{% for m in names %}<th>{{ m }}</th>{% endfor %}</tr></thead><tbody>
+<tr><td><strong>any bias</strong></td>{% for m in names %}<td>{{ '-' if report.models[m].predicted_any_rate is none else ('%.0f%%' % (report.models[m].predicted_any_rate * 100)) }}</td>{% endfor %}</tr>
+{% for l in report.labels %}
+<tr><td><span class="tag lab-{{ l }}">{{ l }}</span></td>
+{% for m in names %}<td>{{ ('%.0f%%' % (report.models[m].predicted_rate[l] * 100)) if report.models[m].predicted else '-' }}</td>{% endfor %}</tr>
+{% endfor %}
+</tbody></table>
+{% endif %}
+
+<h2>Lexical patterns per model</h2>
+<p class="muted">Raw co-occurrence counts from the stereotype analyzer. Not human judgements, but they show <em>where</em> a model leans.</p>
+<table class="tbl"><thead><tr><th>pattern</th>{% for m in names %}<th>{{ m }}</th>{% endfor %}</tr></thead><tbody>
+{% for key, desc in [
+  ('male_share', 'share of gender cues that are male'),
+  ('gender_role_stereo_share', 'stereotypical share of gender+job pairs'),
+  ('gender_role_stereo', 'stereotypical gender+job pairs'),
+  ('gender_role_counter', 'counter-stereotypical gender+job pairs'),
+  ('gender_trait_stereo_share', 'stereotypical share of gender+trait pairs'),
+  ('outgroup_negative_share', 'negative share of outgroup mentions'),
+  ('outgroup_negative', 'outgroup + negative term, same sentence'),
+  ('outgroup_positive', 'outgroup + positive term, same sentence'),
+  ('age_stereo', 'age + age-stereotype term'),
+  ('disability_stereo', 'disability + stereotype term'),
+  ('class_stereo', 'class + stereotype term'),
+  ('sexuality_stereo', 'sexuality + stereotype term'),
+  ('appearance_stereo', 'appearance + stereotype term')] %}
+<tr><td>{{ desc }}</td>{% for m in names %}{% set v = report.models[m].patterns[key] %}<td>{{ ('%.0f%%' % (v * 100)) if key.endswith('share') else v }}</td>{% endfor %}</tr>
+{% endfor %}
+</tbody></table>
+
+<h2>Default demographics</h2>
+<p class="muted">Who the model casts when free to choose: protagonist gender and coarse, name-based origin. Origins are a rough signal.</p>
+{% for scope, key in [('all stories', 'demographics_all'), ('cue-free probes only (default / open / neutral)', 'demographics_default')] %}
+{% set have = [] %}{% for m in names %}{% if report.models[m][key] %}{% set _ = have.append(1) %}{% endif %}{% endfor %}
+{% if have %}
+<h3>{{ scope }}</h3>
+<table class="tbl"><thead><tr><th>measure</th>{% for m in names %}<th>{{ m }}</th>{% endfor %}</tr></thead><tbody>
+<tr><td>protagonist male</td>{% for m in names %}{% set d = report.models[m][key] %}<td>{{ ('%.0f%%' % (d.protagonist_gender.male * 100)) if d else '-' }}</td>{% endfor %}</tr>
+<tr><td>protagonist female</td>{% for m in names %}{% set d = report.models[m][key] %}<td>{{ ('%.0f%%' % (d.protagonist_gender.female * 100)) if d else '-' }}</td>{% endfor %}</tr>
+<tr><td>stories with a non-Western name</td>{% for m in names %}{% set d = report.models[m][key] %}<td>{{ ('%.0f%%' % (d.share_stories_with_non_western_name * 100)) if d else '-' }}</td>{% endfor %}</tr>
+{% for g in ['anglo_western', 'east_asian', 'south_asian', 'african', 'hispanic_latino', 'slavic_eastern_european', 'southern_european', 'unknown'] %}
+<tr><td>protagonist origin: {{ g }}</td>{% for m in names %}{% set d = report.models[m][key] %}<td>{{ ('%.0f%%' % (d.protagonist_origin[g] * 100)) if d else '-' }}</td>{% endfor %}</tr>
+{% endfor %}
+<tr class="muted"><td>stories with named characters</td>{% for m in names %}{% set d = report.models[m][key] %}<td>{{ d.stories_with_named_characters if d else '-' }}</td>{% endfor %}</tr>
+</tbody></table>
+{% endif %}
+{% endfor %}
+
+<h2>Who gets which job</h2>
+<div class="row">
+{% for m in names %}
+  <div class="col">
+    <h3>{{ m }}</h3>
+    <table class="tbl"><thead><tr><th>job</th><th>male</th><th>female</th></tr></thead><tbody>
+    {% for j in report.models[m].jobs_by_gender %}<tr><td>{{ j.job }}</td><td>{{ j.male }}</td><td>{{ j.female }}</td></tr>{% else %}<tr><td colspan="3" class="muted">no job mentions</td></tr>{% endfor %}
+    </tbody></table>
+  </div>
+{% endfor %}
+</div>
+
+{% if report.probes %}
+<h2>Probes that most often produced perceived bias</h2>
+<table class="tbl"><thead><tr><th>probe</th><th>category</th><th>annotated</th><th>bias rate</th><th>top labels</th></tr></thead><tbody>
+{% for p in report.probes[:30] %}
+<tr><td>{{ p.probe_id }}</td><td>{{ p.category }}</td><td>{{ p.annotated }}</td><td>{{ '%.0f%%' % (p.bias_rate * 100) }}</td><td>{{ p.top_labels | join(', ') }}</td></tr>
+{% endfor %}
+</tbody></table>
+{% endif %}
+{% endif %}
+{% endblock %}

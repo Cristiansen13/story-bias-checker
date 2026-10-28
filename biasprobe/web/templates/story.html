@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Story {{ story.id }} · biasprobe{% endblock %}
+{% block content %}
+<div class="annotate-layout">
+  <section class="story-pane">
+    <div class="story-meta">
+      <span class="pill">#{{ story.id }}</span><span class="pill">{{ story.model }}</span>
+      {% if story.probe_category %}<span class="pill">{{ story.probe_category }}</span>{% endif %}
+      {% if story.probe_id %}<span class="pill">{{ story.probe_id }}</span>{% endif %}
+      <span class="pill">{{ story.source }}</span><span class="pill muted">{{ story.created_at }}</span>
+    </div>
+    {% if probe %}<p class="premise"><strong>Premise:</strong> {{ probe.premise }}</p>{% endif %}
+    <div class="highlight-toggles">
+      <label><input type="checkbox" id="show-model-ev" {% if prediction %}checked{% else %}disabled{% endif %}> model evidence</label>
+      <label><input type="checkbox" id="show-lex-ev"> lexical cues</label>
+      <label><input type="checkbox" id="show-user-spans" checked> human spans</label>
+    </div>
+    <div id="story" class="story-text"></div>
+    <p><a class="btn" href="/annotate/{{ story.id }}">Annotate this story</a></p>
+  </section>
+  <aside class="label-pane">
+    <h2>Model prediction {% if prediction %}<span class="muted small">{{ prediction.model_version }}</span>{% endif %}</h2>
+    {% if prediction %}
+      <ul class="label-list compact">
+      {% for lab in LABELS %}
+        {% set p = prediction.evidence.labels[lab.key] %}
+        <li class="label-item lab-{{ lab.key }} {% if p.predicted %}on{% endif %}">
+          <span class="name">{{ lab.name }}</span>
+          <span class="score"><span class="bar"><span style="width: {{ (p.score * 100) | round }}%"></span></span>{{ '%.2f' % p.score }}</span>
+          {% if p.top_features %}<div class="feats">{% for f in p.top_features[:4] %}<code>{{ f.feature }}</code> {% endfor %}</div>{% endif %}
+        </li>
+      {% endfor %}
+      </ul>
+    {% else %}<p class="muted">No trained model yet.</p>{% endif %}
+
+    {% if judge %}
+    <h2>LLM judge <span class="muted small">{{ judge.judge_model }}</span></h2>
+    <ul class="label-list compact">
+      {% for key, v in judge.scores.items() %}{% if v >= 0.3 %}
+        <li class="label-item lab-{{ key }}"><span class="name">{{ key }}</span> <span class="score">{{ '%.2f' % v }}</span>
+          {% if judge.evidence and judge.evidence.get(key) %}<div class="feats">“{{ judge.evidence[key] }}”</div>{% endif %}</li>
+      {% endif %}{% endfor %}
+    </ul>
+    {% endif %}
+
+    <h2>Human annotations</h2>
+    {% for a in annotations | reverse %}
+      <div class="ann-card">
+        <div><strong>{{ a.annotator or 'anonymous' }}</strong> <span class="muted">{{ a.kind }} · {{ a.created_at }}</span></div>
+        <div>{% if a.labels %}{% for l in a.labels %}<span class="tag lab-{{ l }}">{{ l }}</span> {% endfor %}{% else %}<span class="tag none">no bias</span>{% endif %}</div>
+        {% if a.decisions %}<div class="muted small">decisions: {% for k, v in a.decisions.items() %}{{ k }}={{ v }} {% endfor %}</div>{% endif %}
+        {% if a.notes %}<p class="notes">{{ a.notes }}</p>{% endif %}
+      </div>
+    {% else %}<p class="muted">Not annotated yet.</p>{% endfor %}
+  </aside>
+</div>
+<script id="story-data" type="application/json">{{ {
+  "text": story.text,
+  "prediction": prediction,
+  "lexical": [],
+  "existing_spans": (annotations[-1].spans if annotations else []),
+  "labels": labels_json
+} | tojson }}</script>
+{% endblock %}
+{% block scripts %}
+<script>BP.initStoryView();</script>
+{% endblock %}

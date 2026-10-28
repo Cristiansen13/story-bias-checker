@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Stories · biasprobe{% endblock %}
+{% block content %}
+<h1>Stories <span class="muted">({{ total }})</span></h1>
+{% if done %}<p class="notice">Nothing left to {{ 'review' if filters.annotated == '0' else 'annotate' }} with that filter. 🎉</p>{% endif %}
+<form class="filters" method="get" action="/stories">
+  <select name="model"><option value="">all models</option>
+    {% for m in models %}<option value="{{ m }}" {% if filters.model == m %}selected{% endif %}>{{ m }}</option>{% endfor %}</select>
+  <select name="category"><option value="">all categories</option>
+    {% for c in CATEGORIES %}<option value="{{ c }}" {% if filters.category == c %}selected{% endif %}>{{ c }}</option>{% endfor %}</select>
+  <select name="label"><option value="">any label</option>
+    {% for lab in LABELS %}<option value="{{ lab.key }}" {% if filters.label == lab.key %}selected{% endif %}>{{ lab.name }}</option>{% endfor %}</select>
+  <select name="annotated"><option value="">annotated or not</option>
+    <option value="1" {% if filters.annotated == '1' %}selected{% endif %}>annotated</option>
+    <option value="0" {% if filters.annotated == '0' %}selected{% endif %}>not annotated</option></select>
+  <input type="search" name="q" placeholder="search text" value="{{ filters.q }}">
+  <button class="btn">Filter</button>
+</form>
+<table class="tbl stories">
+  <thead><tr><th>#</th><th>model</th><th>probe</th><th>story</th><th>human labels</th><th>model flags</th></tr></thead>
+  <tbody>
+  {% for r in rows %}
+    <tr>
+      <td><a href="/story/{{ r.story.id }}">{{ r.story.id }}</a></td>
+      <td class="nowrap">{{ r.story.model }}</td>
+      <td class="nowrap muted">{{ r.story.probe_id }}</td>
+      <td class="snippet">{{ r.snippet }}</td>
+      <td>
+        {% if r.annotation %}
+          {% if r.annotation.labels %}{% for l in r.annotation.labels %}<span class="tag lab-{{ l }}">{{ l }}</span> {% endfor %}{% else %}<span class="tag none">none</span>{% endif %}
+        {% else %}<a href="/annotate/{{ r.story.id }}">annotate</a>{% endif %}
+      </td>
+      <td>{% for l in r.flagged %}<span class="tag outline lab-{{ l }}">{{ l }}</span> {% endfor %}</td>
+    </tr>
+  {% else %}
+    <tr><td colspan="6" class="muted">No stories match.</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% set pages = ((total - 1) // per_page) + 1 if total else 1 %}
+{% if pages > 1 %}
+<p class="pager">
+  {% for p in range(1, pages + 1) %}
+    {% if p == page %}<strong>{{ p }}</strong>{% else %}<a href="/stories?model={{ filters.model }}&category={{ filters.category }}&label={{ filters.label }}&annotated={{ filters.annotated }}&q={{ filters.q }}&page={{ p }}">{{ p }}</a>{% endif %}
+  {% endfor %}
+</p>
+{% endif %}
+{% endblock %}

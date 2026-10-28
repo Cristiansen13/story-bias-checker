@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Check a story · biasprobe{% endblock %}
+{% block content %}
+<h1>Check a new story</h1>
+<p class="muted">Paste any story. The classifier lists the stereotypes it perceives with its confidence and the sentences that drove the decision. Confirm or correct the labels and save: your decision becomes new training data.</p>
+{% if not has_model %}<p class="notice">No trained classifier yet. You will only see lexical cues until you train one from the dashboard.</p>{% endif %}
+<div class="annotate-layout" id="predict-root">
+  <section class="story-pane">
+    <textarea id="story-input" rows="14" placeholder="Paste a story here…"></textarea>
+    <div class="actions">
+      <button class="btn primary" id="predict-btn">Detect biases</button>
+      <label class="inline">Model that wrote it
+        <input type="text" id="story-model" list="model-names" placeholder="e.g. gpt-x" value="manual">
+        <datalist id="model-names">{% for m in models %}<option value="{{ m }}">{% endfor %}</datalist>
+      </label>
+    </div>
+    <div class="highlight-toggles hidden" id="toggles">
+      <label><input type="checkbox" id="show-model-ev" checked> model evidence</label>
+      <label><input type="checkbox" id="show-lex-ev"> lexical cues</label>
+    </div>
+    <div id="story" class="story-text hidden"></div>
+  </section>
+  <aside class="label-pane">
+    <h2>Detected stereotypes</h2>
+    <p id="predict-msg" class="muted">Nothing checked yet.</p>
+    <form id="label-form" class="hidden">
+      <ul class="label-list" id="result-list"></ul>
+      <label class="block">Notes<textarea id="notes" rows="2"></textarea></label>
+      <label class="block inline">Annotator <input type="text" id="annotator" placeholder="your name"></label>
+      <div class="actions">
+        <button type="submit" class="btn primary">Confirm &amp; save as training example</button>
+      </div>
+      <p id="save-msg" class="muted"></p>
+    </form>
+  </aside>
+</div>
+<script id="labels-data" type="application/json">{{ labels_json | tojson }}</script>
+{% endblock %}
+{% block scripts %}
+<script>BP.initPredict();</script>
+{% endblock %}

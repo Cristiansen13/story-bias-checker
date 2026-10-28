@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block title %}Dashboard · biasprobe{% endblock %}
+{% block content %}
+<h1>Dashboard</h1>
+
+<section class="cards">
+  <div class="card"><div class="num">{{ stats.stories }}</div><div class="lbl">stories</div></div>
+  <div class="card"><div class="num">{{ stats.annotated }}</div><div class="lbl">annotated</div></div>
+  <div class="card"><div class="num">{{ stats.unannotated }}</div><div class="lbl">waiting for a label</div></div>
+  <div class="card"><div class="num">{{ stats.predicted }}</div><div class="lbl">with predictions</div></div>
+  <div class="card"><div class="num">{{ stats.judged }}</div><div class="lbl">with judge scores</div></div>
+</section>
+
+<section class="row">
+  <div class="col">
+    <h2>Next steps</h2>
+    <ol class="steps">
+      <li><a href="/annotate?strategy=random">Annotate</a> stories from scratch (random order){% if stats.predicted %} or <a href="/annotate?strategy=uncertainty">the ones the model is least sure about</a>{% endif %}.</li>
+      <li>{% if stats.annotated >= 4 %}<button class="btn primary" id="train-btn">Train / retrain classifier</button>{% else %}Train the classifier once at least 4 stories are annotated.{% endif %}
+        <span id="train-msg" class="muted"></span></li>
+      <li>{% if has_model %}<a href="/review">Review</a> what the model flags: accept or reject each label, which becomes new training data.{% else %}Review the model's predictions once it is trained.{% endif %}</li>
+      <li><a href="/predict">Check a new story</a> and confirm or correct the detected biases.</li>
+      <li><a href="/report">Compare models</a> in the bias report.</li>
+    </ol>
+    <pre id="train-log" class="log {% if not train_status.log %}hidden{% endif %}">{{ train_status.log | join('\n') }}</pre>
+    {% if train_status.error %}<p class="error">Last training failed: {{ train_status.error }}</p>{% endif %}
+  </div>
+  <div class="col">
+    <h2>Per model</h2>
+    <table class="tbl">
+      <thead><tr><th>model</th><th>stories</th><th>annotated</th><th></th></tr></thead>
+      <tbody>
+      {% for m in stats.per_model %}
+        <tr><td>{{ m.model }}</td><td>{{ m.stories }}</td><td>{{ m.annotated }}</td>
+            <td><a href="/stories?model={{ m.model }}">browse</a> · <a href="/annotate?model={{ m.model }}&strategy=random">annotate</a></td></tr>
+      {% else %}
+        <tr><td colspan="4" class="muted">No stories yet. Run <code>biasprobe generate</code> (needs config.toml) or <code>biasprobe demo</code>.</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+
+    <h2>Human labels so far</h2>
+    <table class="tbl">
+      <tbody>
+      <tr><td>no bias perceived</td><td>{{ stats.no_bias }}</td></tr>
+      {% for key, n in stats.label_counts.items() %}
+        <tr><td><span class="tag lab-{{ key }}">{{ LABEL_BY_KEY[key].name if key in LABEL_BY_KEY else key }}</span></td><td>{{ n }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+{% if metrics %}
+<section>
+  <h2>Classifier quality (cross-validated on {{ metrics.n_labeled }} labelled stories, {{ metrics.n_splits }} folds)</h2>
+  <p class="muted">Every number comes from predictions on stories the model had not seen in that fold. Thresholds are tuned per label on those out-of-fold scores.</p>
+  <div class="cards small">
+    <div class="card"><div class="num">{{ '%.0f' % (metrics.label_accuracy * 100) }}%</div><div class="lbl">per-label accuracy</div></div>
+    <div class="card"><div class="num">{{ '%.0f' % (metrics.any_bias_accuracy * 100) }}%</div><div class="lbl">bias vs. no-bias accuracy</div></div>
+    <div class="card"><div class="num">{{ '%.0f' % (metrics.exact_match * 100) }}%</div><div class="lbl">exact label-set match</div></div>
+    <div class="card"><div class="num">{{ '%.2f' % metrics.macro_f1 }}</div><div class="lbl">macro F1</div></div>
+    <div class="card"><div class="num">{{ '%.2f' % metrics.micro_f1 }}</div><div class="lbl">micro F1</div></div>
+  </div>
+  <table class="tbl">
+    <thead><tr><th>label</th><th>pos</th><th>neg</th><th>precision</th><th>recall</th><th>F1</th><th>accuracy</th><th>threshold</th></tr></thead>
+    <tbody>
+    {% for m in metrics.per_label %}
+      <tr class="{% if not m.trained %}muted{% endif %}">
+        <td><span class="tag lab-{{ m.label }}">{{ m.label }}</span></td>
+        <td>{{ m.positives }}</td><td>{{ m.negatives }}</td>
+        <td>{{ '%.2f' % m.precision }}</td><td>{{ '%.2f' % m.recall }}</td><td>{{ '%.2f' % m.f1 }}</td>
+        <td>{{ '%.2f' % m.accuracy }}</td><td>{{ '%.2f' % m.threshold }}{% if not m.trained %} (too few examples){% endif %}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endif %}
+{% endblock %}
+{% block scripts %}
+<script>
+BP.wireTrainButton(document.getElementById('train-btn'), document.getElementById('train-msg'), document.getElementById('train-log'));
+</script>
+{% endblock %}
