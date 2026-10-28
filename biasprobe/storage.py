@@ -141,15 +141,15 @@ class Storage:
     # ---------------------------------------------------------------- stories
     def add_story(self, text: str, model: str, *, probe_id: str = "", probe_category: str = "",
                   prompt: str = "", source: str = "llm", meta: dict[str, Any] | None = None,
-                  created_at: str | None = None) -> int | None:
-        """Insert a story; returns its id, or None if an identical story exists."""
+                  created_at: str | None = None, story_id: int | None = None) -> int | None:
+        """Insert a story; returns its id, or None if an identical story (or `story_id`) exists."""
         uid = self.story_uid(model, probe_id, text)
         with self._lock:
             try:
                 cur = self._conn.execute(
-                    "INSERT INTO stories (uid, model, probe_id, probe_category, prompt, text, "
-                    "source, meta, created_at) VALUES (?,?,?,?,?,?,?,?,?)",
-                    (uid, model, probe_id, probe_category, prompt, text, source,
+                    "INSERT INTO stories (id, uid, model, probe_id, probe_category, prompt, text, "
+                    "source, meta, created_at) VALUES (?,?,?,?,?,?,?,?,?,?)",
+                    (story_id, uid, model, probe_id, probe_category, prompt, text, source,
                      json.dumps(meta or {}), created_at or _now()))
                 self._conn.commit()
                 return int(cur.lastrowid)
@@ -220,7 +220,7 @@ class Storage:
     def add_annotation(self, story_id: int, labels: list[str], *, spans: list[dict] | None = None,
                        notes: str = "", annotator: str = "", kind: str = "manual",
                        decisions: dict[str, str] | None = None,
-                       taxonomy: list[str] | None = None) -> int:
+                       taxonomy: list[str] | None = None, created_at: str | None = None) -> int:
         """`taxonomy` records which labels the annotator could choose from; labels
         outside it count as unknown (not negative) when training."""
         if self.get_story(story_id) is None:
@@ -233,7 +233,7 @@ class Storage:
                 "INSERT INTO annotations (story_id, annotator, labels, spans, notes, kind, "
                 "decisions, taxonomy, created_at) VALUES (?,?,?,?,?,?,?,?,?)",
                 (story_id, annotator, json.dumps(sorted(set(labels))), json.dumps(spans or []),
-                 notes, kind, json.dumps(decisions or {}), json.dumps(list(taxonomy)), _now()))
+                 notes, kind, json.dumps(decisions or {}), json.dumps(list(taxonomy)), created_at or _now()))
             self._conn.commit()
             return int(cur.lastrowid)
 
@@ -404,20 +404,28 @@ class Storage:
 
     # ------------------------------------------------------------- import/export
     def export_jsonl(self, path: str | Path) -> int:
-        latest = self.latest_annotations()
+        """One line per story with every annotation round (`annotations`, oldest first),
+        the latest one again as `annotation`, and judge scores."""
+        rounds: dict[int, list[dict[str, Any]]] = {}
+        for ann in self._fetchall("SELECT * FROM annotations ORDER BY id"):
+            rounds.setdefault(ann["story_id"], []).append(ann)
         n = 0
         with open(path, "w", encoding="utf-8") as fh:
             for story in self.list_stories():
                 record = dict(story)
-                record["annotation"] = latest.get(story["id"])
+                record["annotations"] = rounds.get(story["id"], [])
+                record["annotation"] = record["annotations"][-1] if record["annotations"] else None
                 record["judge"] = self.judge_for(story["id"])
                 fh.write(json.dumps(record, ensure_ascii=False) + "\n")
                 n += 1
         return n
 
-    def import_jsonl(self, path: str | Path, *, keep_annotations: bool = True) -> tuple[int, int]:
+    def import_jsonl(self, path: str | Path, *, keep_annotations: bool = True,
+                     keep_ids: bool = False) -> tuple[int, int]:
         """Import stories (and their annotations) exported by export_jsonl, or any
-        JSONL with at least a `text` field. Returns (stories_added, annotations_added)."""
+        JSONL with at least a `text` field. Returns (stories_added, annotations_added).
+        `keep_ids` reuses the exported story ids (for rebuilding a database, so that
+        files referring to story ids stay valid); a story whose id is taken is skipped."""
         added = anns = 0
         with open(path, "r", encoding="utf-8") as fh:
             for line in fh:
@@ -434,17 +442,20 @@ class Storage:
                                      prompt=rec.get("prompt", ""),
                                      source=rec.get("source", "import"),
                                      meta=rec.get("meta") or {},
-                                     created_at=rec.get("created_at"))
+                                     created_at=rec.get("created_at"),
+                                     story_id=rec.get("id") if keep_ids else None)
                 if sid is None:
                     continue
                 added += 1
-                ann = rec.get("annotation")
+                rounds = rec.get("annotations") or ([rec["annotation"]] if rec.get("annotation") else [])
                 labels = rec.get("labels")
-                if keep_annotations and ann:
-                    self.add_annotation(sid, ann.get("labels", []), spans=ann.get("spans"),
-                                        notes=ann.get("notes", ""), annotator=ann.get("annotator", ""),
-                                        kind=ann.get("kind", "import"), taxonomy=ann.get("taxonomy"))
-                    anns += 1
+                if keep_annotations and rounds:
+                    for ann in rounds:
+                        self.add_annotation(sid, ann.get("labels", []), spans=ann.get("spans"),
+                                            notes=ann.get("notes", ""), annotator=ann.get("annotator", ""),
+                                            kind=ann.get("kind", "import"), decisions=ann.get("decisions"),
+                                            taxonomy=ann.get("taxonomy"), created_at=ann.get("created_at"))
+                        anns += 1
                 elif keep_annotations and isinstance(labels, list):
                     self.add_annotation(sid, labels, notes=rec.get("notes", ""), kind="import")
                     anns += 1

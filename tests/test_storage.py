@@ -63,3 +63,20 @@ def test_export_import_roundtrip(storage, tmp_path):
     assert st["probe_id"] == "p" and other.latest_annotation(st["id"])["labels"] == ["class"]
     # importing again is a no-op thanks to the uid
     assert other.import_jsonl(path) == (0, 0)
+
+
+def test_export_keeps_every_round_and_ids(storage, tmp_path):
+    storage.add_story("first story", "m")
+    sid = storage.add_story("second story", "m")
+    storage.add_annotation(sid, ["age"], annotator="round1", spans=[{"start": 0, "end": 6, "label": "age"}])
+    storage.add_annotation(sid, ["class"], annotator="round2", kind="review", decisions={"class": "added"})
+    storage.delete_story(1)  # leaves a gap: the story keeps id 2 only with keep_ids
+    path = tmp_path / "dump.jsonl"
+    storage.export_jsonl(path)
+    from biasprobe.storage import Storage
+    other = Storage(":memory:")
+    assert other.import_jsonl(path, keep_ids=True) == (1, 2)
+    rounds = other.annotations_for(sid)
+    assert [a["annotator"] for a in rounds] == ["round1", "round2"]
+    assert rounds[0]["spans"][0]["label"] == "age" and rounds[1]["decisions"] == {"class": "added"}
+    assert other.latest_annotation(sid)["labels"] == ["class"]

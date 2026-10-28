@@ -222,7 +222,8 @@ def cmd_export(args) -> int:
 
 def cmd_import(args) -> int:
     _, storage = _open(args)
-    added, anns = storage.import_jsonl(args.path, keep_annotations=not args.no_annotations)
+    added, anns = storage.import_jsonl(args.path, keep_annotations=not args.no_annotations,
+                                       keep_ids=args.keep_ids)
     print(f"imported {added} stories and {anns} annotations from {args.path}")
     return 0
 
@@ -298,7 +299,10 @@ def build_parser() -> argparse.ArgumentParser:
     s = sub.add_parser("export", help="export stories + annotations to JSONL"); s.add_argument("path")
     s.set_defaults(func=cmd_export)
     s = sub.add_parser("import", help="import stories (+annotations) from JSONL"); s.add_argument("path")
-    s.add_argument("--no-annotations", action="store_true"); s.set_defaults(func=cmd_import)
+    s.add_argument("--no-annotations", action="store_true")
+    s.add_argument("--keep-ids", action="store_true",
+                   help="reuse the exported story ids (rebuild an empty database from an export)")
+    s.set_defaults(func=cmd_import)
     return p
 
 
