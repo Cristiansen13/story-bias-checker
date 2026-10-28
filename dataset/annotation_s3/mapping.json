@@ -1,0 +1,1537 @@
+{
+ "R001": {
+  "story_id": 107,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R002": {
+  "story_id": 230,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R003": {
+  "story_id": 169,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R004": {
+  "story_id": 260,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R005": {
+  "story_id": 243,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R006": {
+  "story_id": 312,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R007": {
+  "story_id": 152,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R008": {
+  "story_id": 347,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R009": {
+  "story_id": 140,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R010": {
+  "story_id": 166,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R011": {
+  "story_id": 198,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R012": {
+  "story_id": 333,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R013": {
+  "story_id": 133,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R014": {
+  "story_id": 94,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R015": {
+  "story_id": 83,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R016": {
+  "story_id": 311,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R017": {
+  "story_id": 305,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R018": {
+  "story_id": 77,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R019": {
+  "story_id": 339,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R020": {
+  "story_id": 210,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R021": {
+  "story_id": 292,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R022": {
+  "story_id": 693,
+  "role": "anchor",
+  "model": "qwen3.5-4b"
+ },
+ "R023": {
+  "story_id": 156,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R024": {
+  "story_id": 233,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R025": {
+  "story_id": 87,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R026": {
+  "story_id": 173,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R027": {
+  "story_id": 174,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R028": {
+  "story_id": 103,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R029": {
+  "story_id": 239,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R030": {
+  "story_id": 175,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R031": {
+  "story_id": 237,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R032": {
+  "story_id": 100,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R033": {
+  "story_id": 258,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R034": {
+  "story_id": 1186,
+  "role": "anchor",
+  "model": "qwen3.5-27b"
+ },
+ "R035": {
+  "story_id": 113,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R036": {
+  "story_id": 263,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R037": {
+  "story_id": 242,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R038": {
+  "story_id": 155,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R039": {
+  "story_id": 200,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R040": {
+  "story_id": 330,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R041": {
+  "story_id": 182,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R042": {
+  "story_id": 1185,
+  "role": "anchor",
+  "model": "qwen3.5-27b"
+ },
+ "R043": {
+  "story_id": 222,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R044": {
+  "story_id": 939,
+  "role": "anchor",
+  "model": "qwen3.5-9b"
+ },
+ "R045": {
+  "story_id": 268,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R046": {
+  "story_id": 344,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R047": {
+  "story_id": 130,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R048": {
+  "story_id": 287,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R049": {
+  "story_id": 106,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R050": {
+  "story_id": 154,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R051": {
+  "story_id": 304,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R052": {
+  "story_id": 110,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R053": {
+  "story_id": 217,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R054": {
+  "story_id": 405,
+  "role": "anchor",
+  "model": "gemma-4-e4b-it"
+ },
+ "R055": {
+  "story_id": 78,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R056": {
+  "story_id": 251,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R057": {
+  "story_id": 170,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R058": {
+  "story_id": 99,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R059": {
+  "story_id": 346,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R060": {
+  "story_id": 129,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R061": {
+  "story_id": 659,
+  "role": "anchor",
+  "model": "qwen3.5-4b"
+ },
+ "R062": {
+  "story_id": 259,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R063": {
+  "story_id": 946,
+  "role": "anchor",
+  "model": "qwen3.5-9b"
+ },
+ "R064": {
+  "story_id": 711,
+  "role": "anchor",
+  "model": "qwen3.5-4b"
+ },
+ "R065": {
+  "story_id": 72,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R066": {
+  "story_id": 178,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R067": {
+  "story_id": 349,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R068": {
+  "story_id": 202,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R069": {
+  "story_id": 111,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R070": {
+  "story_id": 332,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R071": {
+  "story_id": 341,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R072": {
+  "story_id": 262,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R073": {
+  "story_id": 90,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R074": {
+  "story_id": 73,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R075": {
+  "story_id": 164,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R076": {
+  "story_id": 89,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R077": {
+  "story_id": 185,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R078": {
+  "story_id": 180,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R079": {
+  "story_id": 159,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R080": {
+  "story_id": 337,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R081": {
+  "story_id": 211,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R082": {
+  "story_id": 194,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R083": {
+  "story_id": 69,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R084": {
+  "story_id": 245,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R085": {
+  "story_id": 177,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R086": {
+  "story_id": 1211,
+  "role": "anchor",
+  "model": "qwen3.5-27b"
+ },
+ "R087": {
+  "story_id": 331,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R088": {
+  "story_id": 294,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R089": {
+  "story_id": 308,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R090": {
+  "story_id": 179,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R091": {
+  "story_id": 190,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R092": {
+  "story_id": 97,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R093": {
+  "story_id": 76,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R094": {
+  "story_id": 203,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R095": {
+  "story_id": 371,
+  "role": "anchor",
+  "model": "gemma-4-e4b-it"
+ },
+ "R096": {
+  "story_id": 679,
+  "role": "anchor",
+  "model": "qwen3.5-4b"
+ },
+ "R097": {
+  "story_id": 289,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R098": {
+  "story_id": 231,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R099": {
+  "story_id": 343,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R100": {
+  "story_id": 62,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R101": {
+  "story_id": 68,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R102": {
+  "story_id": 914,
+  "role": "anchor",
+  "model": "qwen3.5-9b"
+ },
+ "R103": {
+  "story_id": 144,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R104": {
+  "story_id": 309,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R105": {
+  "story_id": 1195,
+  "role": "anchor",
+  "model": "qwen3.5-27b"
+ },
+ "R106": {
+  "story_id": 165,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R107": {
+  "story_id": 71,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R108": {
+  "story_id": 235,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R109": {
+  "story_id": 66,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R110": {
+  "story_id": 135,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R111": {
+  "story_id": 162,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R112": {
+  "story_id": 145,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R113": {
+  "story_id": 92,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R114": {
+  "story_id": 307,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R115": {
+  "story_id": 168,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R116": {
+  "story_id": 264,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R117": {
+  "story_id": 218,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R118": {
+  "story_id": 121,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R119": {
+  "story_id": 252,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R120": {
+  "story_id": 205,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R121": {
+  "story_id": 244,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R122": {
+  "story_id": 147,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R123": {
+  "story_id": 101,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R124": {
+  "story_id": 104,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R125": {
+  "story_id": 267,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R126": {
+  "story_id": 160,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R127": {
+  "story_id": 215,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R128": {
+  "story_id": 663,
+  "role": "anchor",
+  "model": "qwen3.5-4b"
+ },
+ "R129": {
+  "story_id": 351,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R130": {
+  "story_id": 340,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R131": {
+  "story_id": 115,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R132": {
+  "story_id": 139,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R133": {
+  "story_id": 328,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R134": {
+  "story_id": 345,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R135": {
+  "story_id": 223,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R136": {
+  "story_id": 142,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R137": {
+  "story_id": 59,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R138": {
+  "story_id": 440,
+  "role": "anchor",
+  "model": "gemma-4-e4b-it"
+ },
+ "R139": {
+  "story_id": 109,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R140": {
+  "story_id": 250,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R141": {
+  "story_id": 949,
+  "role": "anchor",
+  "model": "qwen3.5-9b"
+ },
+ "R142": {
+  "story_id": 293,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R143": {
+  "story_id": 290,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R144": {
+  "story_id": 934,
+  "role": "anchor",
+  "model": "qwen3.5-9b"
+ },
+ "R145": {
+  "story_id": 88,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R146": {
+  "story_id": 1208,
+  "role": "anchor",
+  "model": "qwen3.5-27b"
+ },
+ "R147": {
+  "story_id": 695,
+  "role": "anchor",
+  "model": "qwen3.5-4b"
+ },
+ "R148": {
+  "story_id": 79,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R149": {
+  "story_id": 118,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R150": {
+  "story_id": 1173,
+  "role": "anchor",
+  "model": "qwen3.5-27b"
+ },
+ "R151": {
+  "story_id": 226,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R152": {
+  "story_id": 298,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R153": {
+  "story_id": 256,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R154": {
+  "story_id": 288,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R155": {
+  "story_id": 60,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R156": {
+  "story_id": 296,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R157": {
+  "story_id": 302,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R158": {
+  "story_id": 95,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R159": {
+  "story_id": 334,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R160": {
+  "story_id": 212,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R161": {
+  "story_id": 157,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R162": {
+  "story_id": 138,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R163": {
+  "story_id": 240,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R164": {
+  "story_id": 449,
+  "role": "anchor",
+  "model": "gemma-4-e4b-it"
+ },
+ "R165": {
+  "story_id": 266,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R166": {
+  "story_id": 246,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R167": {
+  "story_id": 136,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R168": {
+  "story_id": 646,
+  "role": "anchor",
+  "model": "qwen3.5-4b"
+ },
+ "R169": {
+  "story_id": 291,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R170": {
+  "story_id": 353,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R171": {
+  "story_id": 228,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R172": {
+  "story_id": 429,
+  "role": "anchor",
+  "model": "gemma-4-e4b-it"
+ },
+ "R173": {
+  "story_id": 303,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R174": {
+  "story_id": 306,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R175": {
+  "story_id": 187,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R176": {
+  "story_id": 125,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R177": {
+  "story_id": 141,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R178": {
+  "story_id": 348,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R179": {
+  "story_id": 197,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R180": {
+  "story_id": 221,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R181": {
+  "story_id": 201,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R182": {
+  "story_id": 67,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R183": {
+  "story_id": 70,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R184": {
+  "story_id": 234,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R185": {
+  "story_id": 65,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R186": {
+  "story_id": 93,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R187": {
+  "story_id": 132,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R188": {
+  "story_id": 206,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R189": {
+  "story_id": 114,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R190": {
+  "story_id": 938,
+  "role": "anchor",
+  "model": "qwen3.5-9b"
+ },
+ "R191": {
+  "story_id": 167,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R192": {
+  "story_id": 124,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R193": {
+  "story_id": 61,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R194": {
+  "story_id": 249,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R195": {
+  "story_id": 184,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R196": {
+  "story_id": 310,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R197": {
+  "story_id": 199,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R198": {
+  "story_id": 261,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R199": {
+  "story_id": 149,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R200": {
+  "story_id": 207,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R201": {
+  "story_id": 295,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R202": {
+  "story_id": 80,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R203": {
+  "story_id": 208,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R204": {
+  "story_id": 224,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R205": {
+  "story_id": 1183,
+  "role": "anchor",
+  "model": "qwen3.5-27b"
+ },
+ "R206": {
+  "story_id": 120,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R207": {
+  "story_id": 57,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R208": {
+  "story_id": 146,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R209": {
+  "story_id": 195,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R210": {
+  "story_id": 220,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R211": {
+  "story_id": 105,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R212": {
+  "story_id": 1200,
+  "role": "anchor",
+  "model": "qwen3.5-27b"
+ },
+ "R213": {
+  "story_id": 131,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R214": {
+  "story_id": 64,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R215": {
+  "story_id": 123,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R216": {
+  "story_id": 350,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R217": {
+  "story_id": 236,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R218": {
+  "story_id": 127,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R219": {
+  "story_id": 917,
+  "role": "anchor",
+  "model": "qwen3.5-9b"
+ },
+ "R220": {
+  "story_id": 161,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R221": {
+  "story_id": 134,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R222": {
+  "story_id": 119,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R223": {
+  "story_id": 143,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R224": {
+  "story_id": 128,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R225": {
+  "story_id": 108,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R226": {
+  "story_id": 82,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R227": {
+  "story_id": 255,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R228": {
+  "story_id": 342,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R229": {
+  "story_id": 269,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R230": {
+  "story_id": 232,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R231": {
+  "story_id": 254,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R232": {
+  "story_id": 336,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R233": {
+  "story_id": 690,
+  "role": "anchor",
+  "model": "qwen3.5-4b"
+ },
+ "R234": {
+  "story_id": 171,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R235": {
+  "story_id": 158,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R236": {
+  "story_id": 380,
+  "role": "anchor",
+  "model": "gemma-4-e4b-it"
+ },
+ "R237": {
+  "story_id": 186,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R238": {
+  "story_id": 192,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R239": {
+  "story_id": 248,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R240": {
+  "story_id": 968,
+  "role": "anchor",
+  "model": "qwen3.5-9b"
+ },
+ "R241": {
+  "story_id": 352,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R242": {
+  "story_id": 91,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R243": {
+  "story_id": 191,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R244": {
+  "story_id": 209,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R245": {
+  "story_id": 300,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R246": {
+  "story_id": 163,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R247": {
+  "story_id": 389,
+  "role": "anchor",
+  "model": "gemma-4-e4b-it"
+ },
+ "R248": {
+  "story_id": 265,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R249": {
+  "story_id": 196,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R250": {
+  "story_id": 117,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R251": {
+  "story_id": 214,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R252": {
+  "story_id": 225,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R253": {
+  "story_id": 102,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R254": {
+  "story_id": 1217,
+  "role": "anchor",
+  "model": "qwen3.5-27b"
+ },
+ "R255": {
+  "story_id": 126,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R256": {
+  "story_id": 137,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R257": {
+  "story_id": 253,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R258": {
+  "story_id": 204,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R259": {
+  "story_id": 247,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R260": {
+  "story_id": 238,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R261": {
+  "story_id": 227,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R262": {
+  "story_id": 153,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R263": {
+  "story_id": 172,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R264": {
+  "story_id": 257,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R265": {
+  "story_id": 84,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R266": {
+  "story_id": 216,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R267": {
+  "story_id": 188,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R268": {
+  "story_id": 329,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R269": {
+  "story_id": 213,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R270": {
+  "story_id": 112,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R271": {
+  "story_id": 150,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R272": {
+  "story_id": 229,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R273": {
+  "story_id": 271,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R274": {
+  "story_id": 676,
+  "role": "anchor",
+  "model": "qwen3.5-4b"
+ },
+ "R275": {
+  "story_id": 181,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R276": {
+  "story_id": 1244,
+  "role": "anchor",
+  "model": "qwen3.5-27b"
+ },
+ "R277": {
+  "story_id": 270,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R278": {
+  "story_id": 183,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R279": {
+  "story_id": 386,
+  "role": "anchor",
+  "model": "gemma-4-e4b-it"
+ },
+ "R280": {
+  "story_id": 241,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R281": {
+  "story_id": 96,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R282": {
+  "story_id": 151,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R283": {
+  "story_id": 58,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R284": {
+  "story_id": 375,
+  "role": "anchor",
+  "model": "gemma-4-e4b-it"
+ },
+ "R285": {
+  "story_id": 86,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R286": {
+  "story_id": 63,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R287": {
+  "story_id": 219,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R288": {
+  "story_id": 122,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R289": {
+  "story_id": 189,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R290": {
+  "story_id": 299,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R291": {
+  "story_id": 81,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R292": {
+  "story_id": 454,
+  "role": "anchor",
+  "model": "gemma-4-e4b-it"
+ },
+ "R293": {
+  "story_id": 116,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R294": {
+  "story_id": 963,
+  "role": "anchor",
+  "model": "qwen3.5-9b"
+ },
+ "R295": {
+  "story_id": 297,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R296": {
+  "story_id": 301,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R297": {
+  "story_id": 98,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R298": {
+  "story_id": 193,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R299": {
+  "story_id": 148,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R300": {
+  "story_id": 75,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R301": {
+  "story_id": 85,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R302": {
+  "story_id": 176,
+  "role": "target",
+  "model": "claude-opus"
+ },
+ "R303": {
+  "story_id": 338,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R304": {
+  "story_id": 335,
+  "role": "target",
+  "model": "claude-sonnet"
+ },
+ "R305": {
+  "story_id": 719,
+  "role": "anchor",
+  "model": "qwen3.5-4b"
+ },
+ "R306": {
+  "story_id": 74,
+  "role": "target",
+  "model": "claude-haiku"
+ },
+ "R307": {
+  "story_id": 954,
+  "role": "anchor",
+  "model": "qwen3.5-9b"
+ }
+}
