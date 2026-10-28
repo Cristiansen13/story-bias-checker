@@ -15,7 +15,7 @@ on one A100 (job 282479, 35 minutes for all four). Every model wrote a story for
 probes three times: 267 stories per model, 1,068 in total. All of them ended before the token
 limit and none was rejected as too short. Sampling was identical for every model: temperature
 0.9, top-p 0.95, no top-k, at most 700 new tokens, thinking mode off, and the same system prompt
-as `biasprobe generate`. Each story was sampled independently. Raw outputs are kept in `../workspace/cluster_outputs/`, outside the repository.
+as `biasprobe generate`. Each story was sampled independently. Raw outputs are in [`dataset/cluster_outputs/`](dataset/cluster_outputs/).
 
 ### Human-perceived bias (blind annotation, rounds 2 and 3, 23 October 2026)
 
@@ -33,9 +33,9 @@ label. Stories were shuffled under anonymous ids, about 45 per annotator.
 
 Anchor labels were scored and not stored. All 321 evidence quotes were found verbatim in their
 stories and are stored as spans. The protocol and taxonomy are in [`docs/annotation/`](docs/annotation/); raw output (anchors
-included), id mappings and scripts are kept outside the repository in `../workspace/annotation_s2/`
-and `../workspace/annotation_s3/`, where `annotation_s3/scripts/rates.py` prints every number in
-this section.
+included), id mappings and scripts are in [`dataset/annotation_s2/`](dataset/annotation_s2/) and
+[`dataset/annotation_s3/`](dataset/annotation_s3/); `dataset/annotation_s3/scripts/rates.py` prints
+every number in this section.
 
 Rates on the 89 stories per model; Claude with round-3 labels, open models with round-2 labels;
 brackets are 95% Wilson intervals.
@@ -487,7 +487,7 @@ What would raise accuracy, in order of expected effect:
 ```bash
 python -m biasprobe serve          # dashboard, annotate, review, report at http://127.0.0.1:8765
 python -m biasprobe report --print # regenerate reports/report.md
-python -m biasprobe export all_stories.jsonl   # full dump incl. all annotation rounds
+python -m biasprobe export dataset/stories.jsonl   # full dump incl. all annotation rounds
 ```
 
 To run against an LLM server: copy `config.example.toml` to `config.toml`, fill in the
@@ -495,5 +495,5 @@ server block and model names, then `python -m biasprobe models --ping complete` 
 `python -m biasprobe generate`. To run open-weight checkpoints on the FEP cluster instead, see
 "Generate on the FEP cluster" in the README (`export-prompts`, `cluster/generate.sbatch`,
 `import-generations`). The 89 probes, the 17-label taxonomy and the annotation UI carry over
-unchanged. Backups of the database before each import and annotation round are kept in
-`../workspace/backups/`.
+unchanged. A fresh clone rebuilds the database with `python -m biasprobe import dataset/stories.jsonl --keep-ids`
+(see [`dataset/README.md`](dataset/README.md)).

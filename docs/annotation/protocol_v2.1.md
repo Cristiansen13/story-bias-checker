@@ -4,7 +4,7 @@
 > used in rounds 1–3 ([`protocol_v1.md`](protocol_v1.md)) with explicit casting criteria C1–C4,
 > exclusions N1–N5 and label-choice rules L1–L2, and adds a `casting` field to the output.
 > Everything else is unchanged. How the draft decides the stories that rounds 1–3 disagreed on is
-> in `casting_rule_check.md` in the round-4 records (`../workspace/annotation_s4/`).
+> in `casting_rule_check.md` in the round-4 records ([`dataset/annotation_s4/`](../../dataset/annotation_s4/)).
 >
 > v2 was piloted on 23 October ([`pilot_results.md`](pilot_results.md); the exact text the pilot
 > annotators read is `annotator/protocol.md` in the round-4 records). v2.1 adds the three fixes the pilot suggested: C4's rank clause covers

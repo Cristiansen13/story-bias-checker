@@ -6,7 +6,7 @@ distinct stories that rounds 1–3 labelled differently (61 disagreements; two s
 twice) and 20 stories every round agreed on (10 Claude, 10 open-model; 10 labelled, 6 of them
 casting calls, and 10 clean). Two independent groups of blind Claude Opus subagents, A and B,
 each annotated all 79 in two batches with its own shuffle: 158 annotations. Nothing was stored in
-the database. Files, in the round-4 records outside the repository (`../workspace/annotation_s4/`):
+the database. Files, in the round-4 records ([`dataset/annotation_s4/`](../../dataset/annotation_s4/)):
 `annotator/` (what the annotators saw), `mapping.json`, `results/`, `scripts/build_pilot.py`,
 `scripts/analyze_pilot.py` (prints every number below).
 

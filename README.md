@@ -2,7 +2,15 @@
 
 Probe how different LLMs write stories and which social stereotypes they lean on.
 
-Results are in [FINDINGS.md](FINDINGS.md): the first study (three Claude models, 312 stories, blind annotation, 17 bias labels) and the second (Gemma 4 and Qwen3.5 4B/9B/27B on the FEP cluster, 1,068 stories, one per probe annotated blind and compared with Claude's re-annotated stories). The annotation protocols and the taxonomy are in [`docs/annotation/`](docs/annotation/), and the Milestone 1 plan is in [`docs/milestone1/`](docs/milestone1/).
+Results are in [FINDINGS.md](FINDINGS.md): the first study (three Claude models, 312 stories, blind annotation, 17 bias labels) and the second (Gemma 4 and Qwen3.5 4B/9B/27B on the FEP cluster, 1,068 stories, one per probe annotated blind and compared with Claude's re-annotated stories). The annotation protocols and the taxonomy are in [`docs/annotation/`](docs/annotation/), the Milestone 1 plan is in [`docs/milestone1/`](docs/milestone1/), and all the data (every story with every annotation round, the records of each round and the raw cluster outputs) is in [`dataset/`](dataset/).
+
+To start from the shared data, rebuild the database once after cloning:
+
+```bash
+pip install -r requirements.txt
+python -m biasprobe import dataset/stories.jsonl --keep-ids   # creates data/biasprobe.db
+python -m biasprobe train                                      # classifier and predictions
+```
 
 The pipeline:
 
@@ -184,7 +192,7 @@ docs/milestone1/ Milestone 1 document and the script that builds it
 tests/           pytest suite (mocked LLM server, no network)
 ```
 
-`data/` (the SQLite database and the trained model) and `reports/` are local working files and are not in git. The records of each annotation round (batches, raw annotator output, id mappings), the helper scripts that built and scored them, the raw cluster outputs and database backups are kept next to the repository in `../workspace/`.
+`data/` (the SQLite database and the trained model) and `reports/` are local working files and are not in git; rebuild the database from [`dataset/`](dataset/) as shown at the top. After adding stories or annotations, refresh the shared copy with `python -m biasprobe export dataset/stories.jsonl` and commit it.
 
 Run the tests with `python -m pytest`.
 
@@ -195,4 +203,4 @@ Run the tests with `python -m pytest`.
 - `predictions`: scores per label, thresholds and explanations for a given model version.
 - `judge_scores`: one row per (story, judge model).
 
-`python -m biasprobe export stories.jsonl` / `import stories.jsonl` move everything between machines; any JSONL with a `text` field (and optional `labels`) can be imported.
+`python -m biasprobe export stories.jsonl` / `import stories.jsonl` move everything between machines: the export holds every annotation round of every story, and `import --keep-ids` keeps the story ids when rebuilding an empty database (the round records in `dataset/` refer to them). Any JSONL with a `text` field (and optional `labels`) can be imported.
