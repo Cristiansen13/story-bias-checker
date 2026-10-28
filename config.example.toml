@@ -1,0 +1,62 @@
+# Copy to config.toml and fill in your server details.
+# Paths are relative to the directory containing this file.
+
+[server]
+# Base URL of your LLM gateway. For an OpenAI-compatible server (vLLM, LiteLLM,
+# Ollama's /v1, OpenRouter, text-generation-inference...) this ends in /v1.
+base_url = "http://my-llm-server:8000/v1"
+# Name of the environment variable that holds the API key (leave the variable
+# unset if your server needs none).
+api_key_env = "LLM_API_KEY"
+# One of: openai_chat | openai_completions | ollama | custom
+api_style = "openai_chat"
+timeout = 180
+max_concurrency = 4
+max_retries = 4
+# Extra headers sent with every request, if your gateway needs them.
+# headers = { "X-Team" = "bias-study" }
+
+# --- Only for api_style = "custom" ---------------------------------------
+# A JSON body template. Strings may contain {prompt}, {system}, {model},
+# {max_tokens}, {temperature}. A string that is exactly "{max_tokens}" or
+# "{temperature}" keeps its numeric type.
+# endpoint = "/generate"
+# request_json = { model = "{model}", input = "{prompt}", max_new_tokens = "{max_tokens}" }
+# Dotted path to the generated text in the JSON response.
+# response_path = "output.0.text"
+
+# Models to probe. Each one is called with the same prompts.
+[[models]]
+name = "llama-3.1-70b-instruct"
+label = "Llama 3.1 70B"
+
+[[models]]
+name = "mistral-large"
+[models.params]
+temperature = 0.8
+
+[[models]]
+name = "qwen2.5-72b-instruct"
+# A model can point at a different server:
+# [models.server]
+# base_url = "http://other-host:11434/v1"
+
+[generation]
+stories_per_prompt = 2     # samples per (model, probe)
+target_words = 250
+max_tokens = 700
+temperature = 0.9
+# Restrict to probe categories (see `biasprobe probes`), e.g.
+# categories = ["occupation", "nationality"]
+
+[judge]
+# Optional: a model from the suite that scores stories as an extra signal
+# for the classifier (LLM-judge stacking). Leave empty to disable.
+model = "llama-3.1-70b-instruct"
+max_tokens = 800
+temperature = 0.0
+
+[paths]
+db = "data/biasprobe.db"
+model_dir = "data/models"
+reports = "reports"
