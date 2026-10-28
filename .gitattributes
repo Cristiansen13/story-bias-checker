@@ -1,0 +1,5 @@
+* text=auto
+cluster/** text eol=lf
+*.sh text eol=lf
+*.pdf binary
+*.jsonl text eol=lf
