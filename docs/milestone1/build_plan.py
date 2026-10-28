@@ -387,7 +387,7 @@ components = [
      "cleans and loads the output.",
      "Used for study 2: four models, 1,068 stories in one 35-minute job."),
     ("Store", "storage.py: SQLite tables for stories, annotations (every round, with its taxonomy version and "
-     "spans), predictions and judge scores; JSONL export and import.",
+     "spans), predictions and judge scores; JSONL export and import of every round, keeping story ids.",
      "1,436 stories (1,380 generated, 56 demo), 715 of them annotated."),
     ("Annotation", "Web interface (annotate, review flags, check a new story, browse, report) and a batch "
      "workflow for LLM annotators with anonymous ids, mixed batches, hidden anchors and quote-to-span "
@@ -415,9 +415,11 @@ story += [
       "the taxonomy and one batch of story texts, and returns labels, a note and one exact quote per label as "
       "JSON. The import script rejects unknown labels, locates every quote in its story and stores it as a "
       "span, stores the targets, and scores the anchors for drift without storing them."),
-    p("<b>Repository.</b> Code, tests, cluster scripts, the annotation protocols and this document are kept in a "
-      "git repository. The working data (database, records of each annotation round, raw cluster outputs and "
-      "database backups) are kept outside it."),
+    p("<b>Repository.</b> Code, tests, cluster scripts, the annotation protocols, this document and the data are "
+      "kept in one git repository for all collaborators. The data folder holds every story with every annotation "
+      "round, the records of each round (what the annotators read, their raw output, the id mappings and the "
+      "scripts that scored them) and the raw cluster outputs; one import command rebuilds the database, and the "
+      "scripts reproduce every number in Section 8 from it."),
 
     p("7&nbsp;&nbsp;Methodology so far", H1),
     p("Two studies have been run with the same 89 premises and the same taxonomy, and their stories have been "
