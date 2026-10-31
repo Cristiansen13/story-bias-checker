@@ -178,12 +178,12 @@ def import_generations(storage: Storage, path, *, progress: Callable[[str], None
                 continue
             probe = PROBE_BY_ID.get(rec.get("probe_id", ""))
             meta = {k: rec[k] for k in ("sample_index", "latency_s", "params", "finished", "engine",
-                                        "model_path") if k in rec}
+                                        "model_path", "generation") if k in rec}
             meta["usage"] = {"completion_tokens": rec.get("new_tokens")}
             meta["targets"] = list(probe.targets) if probe else rec.get("targets", [])
             sid = storage.add_story(text, rec["model"], probe_id=rec.get("probe_id", ""),
                                     probe_category=rec.get("probe_category") or (probe.category if probe else ""),
-                                    prompt=rec.get("prompt", ""), source="llm", meta=meta,
+                                    prompt=rec.get("prompt", ""), source=rec.get("source", "llm"), meta=meta,
                                     created_at=rec.get("created_at"))
             if sid is None:
                 summary.duplicates += 1

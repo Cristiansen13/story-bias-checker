@@ -94,6 +94,46 @@ class JudgeSummary:
     errors: list[str] = field(default_factory=list)
 
 
+def export_judge_prompts(storage: Storage, path, *, judge_name: str, limit: int | None = None) -> int:
+    """Write one JSON line per story `judge_name` has not scored yet, for an offline judge
+    (cluster/generate_hf.py --task judge). The uid lets the import check it is the same story."""
+    stories = storage.stories_without_judge(judge_name, limit=limit)
+    with open(path, "w", encoding="utf-8") as fh:
+        for s in stories:
+            fh.write(json.dumps({"story_id": s["id"], "uid": s["uid"], "system": JUDGE_SYSTEM,
+                                 "prompt": build_judge_prompt(s["text"])}, ensure_ascii=False) + "\n")
+    return len(stories)
+
+
+def import_judge_outputs(storage: Storage, path, *,
+                         progress: Callable[[str], None] | None = print) -> JudgeSummary:
+    """Parse and store the outputs of an offline judge. Re-importing overwrites the same scores."""
+    summary = JudgeSummary()
+    with open(path, encoding="utf-8") as fh:
+        for line in fh:
+            if not line.strip():
+                continue
+            rec = json.loads(line)
+            summary.requested += 1
+            story = storage.get_story(rec["story_id"])
+            if story is None or story["uid"] != rec.get("uid"):
+                summary.failed += 1
+                summary.errors.append(f"story {rec['story_id']}: not the story the judge scored")
+                continue
+            try:
+                result = parse_judge_output(rec.get("text") or "")
+            except (ValueError, json.JSONDecodeError) as exc:
+                summary.failed += 1
+                summary.errors.append(f"story {rec['story_id']}: {exc}")
+                continue
+            storage.save_judge(story["id"], rec["judge_model"], result.scores, result.evidence,
+                               rec.get("raw") or result.raw)
+            summary.done += 1
+    if progress:
+        progress(f"{path}: judged={summary.done} failed={summary.failed} requested={summary.requested}")
+    return summary
+
+
 def judge_missing(cfg: AppConfig, storage: Storage, *, limit: int | None = None,
                   client: LLMClient | None = None, workers: int | None = None,
                   progress: Callable[[str], None] | None = print) -> JudgeSummary:

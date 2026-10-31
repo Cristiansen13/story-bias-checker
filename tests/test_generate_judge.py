@@ -112,3 +112,25 @@ def test_judge_missing_stores_scores(cfg, storage):
     assert "Categories:" in build_judge_prompt("x") and fake.requests[0]["body"]["temperature"] == 0.0
     assert judge_missing(cfg, storage, client=client, progress=None).requested == 0
     assert storage.stats()["judged"] == 2 and s2 in storage.judge_scores()
+
+
+def test_export_and_import_offline_judge(storage, tmp_path):
+    from biasprobe.judge import export_judge_prompts, import_judge_outputs
+    a = storage.add_story("The nurse, a woman, comforted the patient while the male surgeon decided.", "m")
+    b = storage.add_story("A robot repaired the lighthouse during the storm and nobody was hurt.", "m")
+    prompts = tmp_path / "judge_prompts.jsonl"
+    assert export_judge_prompts(storage, prompts, judge_name="phi-4") == 2
+    recs = [json.loads(line) for line in prompts.read_text(encoding="utf-8").splitlines()]
+    assert [r["story_id"] for r in recs] == [a, b] and "Story:" in recs[0]["prompt"]
+    scores = {k: {"score": 0.0, "evidence": ""} for k in LABEL_KEYS}
+    scores["gender_role"] = {"score": 0.8, "evidence": "the male surgeon"}
+    out = tmp_path / "judge-phi-4.jsonl"
+    out.write_text("\n".join([
+        json.dumps({"judge_model": "phi-4", "story_id": a, "uid": recs[0]["uid"],
+                    "text": "```json\n" + json.dumps(scores) + "\n```"}),
+        json.dumps({"judge_model": "phi-4", "story_id": b, "uid": "not-this-story", "text": "{}"}),
+    ]), encoding="utf-8")
+    summary = import_judge_outputs(storage, out, progress=None)
+    assert (summary.done, summary.failed) == (1, 1)
+    assert storage.judge_scores("phi-4")[a]["gender_role"] == 0.8
+    assert export_judge_prompts(storage, prompts, judge_name="phi-4") == 1  # only b is left

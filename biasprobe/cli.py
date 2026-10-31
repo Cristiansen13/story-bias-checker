@@ -138,6 +138,26 @@ def cmd_judge(args) -> int:
     return 0 if summary.failed == 0 else 2
 
 
+def cmd_export_judge_prompts(args) -> int:
+    from .judge import export_judge_prompts
+    _, storage = _open(args)
+    n = export_judge_prompts(storage, args.path, judge_name=args.judge, limit=args.limit)
+    print(f"wrote {n} judge prompts to {args.path} (stories {args.judge} has not scored)")
+    return 0
+
+
+def cmd_import_judge(args) -> int:
+    from .judge import import_judge_outputs
+    _, storage = _open(args)
+    failed = 0
+    for path in args.paths:
+        summary = import_judge_outputs(storage, path)
+        failed += summary.failed
+        for err in summary.errors[:5]:
+            print(f"    {err}")
+    return 0 if failed == 0 else 2
+
+
 def cmd_train(args) -> int:
     from .model import predict_all, save_model, train_from_storage
     cfg, storage = _open(args)
@@ -268,6 +288,13 @@ def build_parser() -> argparse.ArgumentParser:
 
     s = sub.add_parser("import-generations", help="import stories written by an offline generator")
     s.add_argument("paths", nargs="+"); s.set_defaults(func=cmd_import_generations)
+
+    s = sub.add_parser("export-judge-prompts", help="write judge prompts for an offline judge (cluster)")
+    s.add_argument("path"); s.add_argument("--judge", required=True, help="judge name, e.g. phi-4")
+    s.add_argument("--limit", type=int); s.set_defaults(func=cmd_export_judge_prompts)
+
+    s = sub.add_parser("import-judge", help="import scores written by an offline judge")
+    s.add_argument("paths", nargs="+"); s.set_defaults(func=cmd_import_judge)
 
     s = sub.add_parser("demo", help="load the built-in synthetic demo stories"); s.set_defaults(func=cmd_demo)
 

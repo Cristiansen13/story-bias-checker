@@ -44,7 +44,7 @@ fi
 [ -n "${SIF:-}" ] || { echo "no container supports all models"; exit 1; }
 echo "container: $SIF"
 
-run() {  # name checkpoint batch [extra args]
+run() {  # name checkpoint batch [extra generate_hf.py args]
   local name=$1 path=$2 bs=$3; shift 3
   apptainer exec --nv $BIND --env HF_HOME="$HF_HOME" "$SIF" python3 generate_hf.py \
     --model-name "$name" --model-path "$path" --prompts prompts.jsonl \
@@ -54,8 +54,8 @@ run() {  # name checkpoint batch [extra args]
 
 if [ "$SMOKE" -gt 0 ]; then
   echo "=== smoke pass: $SMOKE stories per model"
-  for m in "${MODELS[@]}"; do set -- $m; run "$1" "$2" "$SMOKE" --limit "$SMOKE"; done
+  for m in "${MODELS[@]}"; do set -- $m; run "$1" "$2" "$SMOKE" --limit "$SMOKE" "${@:4}"; done
 fi
 echo "=== full pass"
-for m in "${MODELS[@]}"; do set -- $m; run "$1" "$2" "$3"; done
+for m in "${MODELS[@]}"; do set -- $m; run "$1" "$2" "$3" "${@:4}"; done
 echo "=== done"

@@ -1,7 +1,12 @@
-# name             checkpoint (local dir or Hugging Face id)                 batch
+# name             checkpoint (local dir or Hugging Face id)                 batch  [extra generate_hf.py args]
 # The name is what the database and the report show. Local dirs are the shared copies on the
 # FEP cluster; a Hugging Face id is downloaded to the job's /tmp (gated models need HF_TOKEN).
 gemma-4-e4b-it     /export/projects/nlp/containers/google/gemma-4-E4B-it    32
 qwen3.5-4b         /export/projects/nlp/containers/Qwen/Qwen3.5-4B          32
 qwen3.5-9b         /export/projects/nlp/containers/Qwen/Qwen3.5-9B          24
 qwen3.5-27b        /export/projects/nlp/containers/Qwen/Qwen3.5-27B         16
+mistral-7b-instruct-v0.3  mistralai/Mistral-7B-Instruct-v0.3          32
+olmo-3-7b-instruct        allenai/Olmo-3-7B-Instruct                  32
+olmo-3.1-32b-instruct     allenai/Olmo-3.1-32B-Instruct               12
+# gpt-oss always reasons before answering: low effort, and room for the reasoning before the story
+gpt-oss-20b               openai/gpt-oss-20b                          16  --max-new-tokens 1500 --chat-kwargs {"reasoning_effort":"low"}

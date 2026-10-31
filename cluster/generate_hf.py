@@ -1,14 +1,18 @@
-"""Generate biasprobe stories with a local Hugging Face model (runs inside the cluster container).
+"""Generate biasprobe stories, or LLM-judge scores, with a local Hugging Face model (runs inside the cluster container).
 
-Reads the prompt file written by `python -m biasprobe export-prompts`, writes one JSON line per
-story and resumes from whatever the output file already holds, so a preempted job loses at most
-one batch. Import the result locally with `python -m biasprobe import-generations`.
+Stories: reads the prompt file written by `python -m biasprobe export-prompts` and writes one JSON
+line per story; import the result locally with `python -m biasprobe import-generations`.
+Judge (`--task judge`): reads the file written by `python -m biasprobe export-judge-prompts`,
+decodes greedily and writes one JSON line per story; import with `python -m biasprobe import-judge`.
+Both resume from whatever the output file already holds, so a preempted job loses at most one batch.
 
 Only torch and transformers are needed; biasprobe itself is not imported here.
 
     python3 generate_hf.py --check MODEL_DIR [MODEL_DIR ...]
     python3 generate_hf.py --model-name qwen3.5-9b --model-path /path/Qwen3.5-9B \
         --prompts prompts.jsonl --out out/stories-qwen3.5-9b.jsonl --samples 3
+    python3 generate_hf.py --task judge --model-name phi-4 --model-path microsoft/phi-4 \
+        --prompts judge_prompts.jsonl --out out/judge-phi-4.jsonl
 """
 
 from __future__ import annotations
@@ -28,6 +32,9 @@ from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer, Genera
 # End-of-turn markers of the common chat templates; generation stops at any of them.
 END_OF_TURN = ["<|im_end|>", "<turn|>", "<end_of_turn>", "<|eot_id|>", "<|end|>", "<|endoftext|>", "</s>"]
 REASONING = re.compile(r"<think>.*?(?:</think>|$)|<\|channel>.*?(?:<channel\|>|$)", re.DOTALL)
+# gpt-oss (harmony format) writes an analysis message, then the answer in the final channel;
+# <|end|> closes the analysis message there, so only <|return|> ends its turn.
+HARMONY_FINAL = "<|channel|>final<|message|>"
 
 
 def log(msg: str) -> None:
@@ -81,15 +88,14 @@ def load_model(path: str, dtype: torch.dtype, device: str):
     raise RuntimeError(f"no auto class could load {path}: {last_exc}")
 
 
-def render(tokenizer, system: str, prompt: str) -> str:
+def render(tokenizer, system: str, prompt: str, chat_kwargs: dict | None = None) -> str:
+    kw = {"enable_thinking": False, **(chat_kwargs or {})}
     messages = [{"role": "system", "content": system}, {"role": "user", "content": prompt}]
     try:
-        return tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True,
-                                             enable_thinking=False)
+        return tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True, **kw)
     except Exception:  # noqa: BLE001 - templates without a system role
         merged = [{"role": "user", "content": f"{system}\n\n{prompt}"}]
-        return tokenizer.apply_chat_template(merged, tokenize=False, add_generation_prompt=True,
-                                             enable_thinking=False)
+        return tokenizer.apply_chat_template(merged, tokenize=False, add_generation_prompt=True, **kw)
 
 
 def stop_ids(tokenizer, model) -> list[int]:
@@ -100,22 +106,26 @@ def stop_ids(tokenizer, model) -> list[int]:
         elif src:
             ids.update(src)
     vocab = tokenizer.get_vocab()
-    ids.update(vocab[t] for t in END_OF_TURN if t in vocab)
+    harmony = "<|return|>" in vocab
+    ids.update(vocab[t] for t in END_OF_TURN if t in vocab and not (harmony and t == "<|end|>"))
     return sorted(ids)
 
 
 def decode(tokenizer, ids: list[int], stops: set[int]) -> tuple[str, str, bool]:
     """Return (raw, text, finished): raw keeps special tokens for auditing, text has reasoning
-    blocks and special tokens removed. `finished` is False if the story hit max_new_tokens."""
+    blocks and special tokens removed. `finished` is False if the output hit max_new_tokens."""
     cut = next((i for i, t in enumerate(ids) if t in stops), None)
     raw = tokenizer.decode(ids[:cut], skip_special_tokens=False)
-    text = REASONING.sub("", raw).split("</think>")[-1]
+    if "<|channel|>" in raw:  # harmony: keep the final channel only; none means it ran out of tokens
+        text = raw.split(HARMONY_FINAL, 1)[1] if HARMONY_FINAL in raw else ""
+    else:
+        text = REASONING.sub("", raw).split("</think>")[-1]
     for tok in tokenizer.all_special_tokens:
         text = text.replace(tok, "")
-    return raw, text.strip(), cut is not None
+    return raw, text.strip(), cut is not None and (HARMONY_FINAL in raw or "<|channel|>" not in raw)
 
 
-def done_keys(path: str) -> set[tuple[str, int]]:
+def done_keys(path: str, fields: tuple[str, ...]) -> set[tuple]:
     keys = set()
     if os.path.exists(path):
         with open(path, encoding="utf-8") as fh:
@@ -124,23 +134,41 @@ def done_keys(path: str) -> set[tuple[str, int]]:
                     rec = json.loads(line)
                 except json.JSONDecodeError:
                     continue  # a line cut off by preemption; it is regenerated
-                keys.add((rec["probe_id"], rec["sample_index"]))
+                keys.add(tuple(rec[f] for f in fields))
     return keys
+
+
+def work_items(task: str, records: list[dict], samples: int, model_name: str) -> tuple[list[dict], tuple[str, ...]]:
+    """What to generate, as dicts with `system`, `prompt` and the `fields` stored with the output."""
+    if task == "judge":
+        items = [{"system": r["system"], "prompt": r["prompt"],
+                  "fields": {"judge_model": model_name, "story_id": r["story_id"], "uid": r["uid"]}}
+                 for r in records]
+        return items, ("story_id",)
+    # sample 0 of every probe first, then sample 1, ...: a run cut short stays balanced
+    items = [{"system": pr["system"], "prompt": pr["prompt"],
+              "fields": {"model": model_name, "probe_id": pr["probe_id"], "probe_category": pr["probe_category"],
+                         "targets": pr.get("targets", []), "prompt": pr["prompt"], "sample_index": k}}
+             for k in range(samples) for pr in records]
+    return items, ("probe_id", "sample_index")
 
 
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     p.add_argument("--check", nargs="+", metavar="MODEL_DIR", help="only check that the models' configs load")
-    p.add_argument("--model-name", help="name stored with every story, e.g. qwen3.5-9b")
+    p.add_argument("--task", choices=["stories", "judge"], default="stories")
+    p.add_argument("--model-name", help="name stored with every output, e.g. qwen3.5-9b")
     p.add_argument("--model-path", help="local checkpoint directory or Hugging Face id")
     p.add_argument("--prompts", default="prompts.jsonl")
     p.add_argument("--out")
     p.add_argument("--samples", type=int, default=3, help="stories per probe")
     p.add_argument("--limit", type=int, help="generate at most this many stories in this run (smoke test)")
     p.add_argument("--batch-size", type=int, default=16)
-    p.add_argument("--max-new-tokens", type=int, default=700)
-    p.add_argument("--temperature", type=float, default=0.9)
+    p.add_argument("--max-new-tokens", type=int, help="default 700 for stories, 1500 for the judge")
+    p.add_argument("--temperature", type=float, default=0.9, help="stories only; the judge decodes greedily")
     p.add_argument("--top-p", type=float, default=0.95)
+    p.add_argument("--chat-kwargs", type=json.loads, default={},
+                   help='extra chat-template arguments as JSON, e.g. \'{"reasoning_effort": "low"}\'')
     p.add_argument("--seed", type=int, default=1234)
     p.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
     args = p.parse_args(argv)
@@ -148,15 +176,17 @@ def main(argv: list[str] | None = None) -> int:
         return check(args.check)
     if not (args.model_name and args.model_path and args.out):
         p.error("--model-name, --model-path and --out are required")
+    judge = args.task == "judge"
+    max_new = args.max_new_tokens or (1500 if judge else 700)
 
     with open(args.prompts, encoding="utf-8") as fh:
-        probes = [json.loads(line) for line in fh if line.strip()]
-    have = done_keys(args.out)
-    # sample 0 of every probe first, then sample 1, ...: a run cut short stays balanced
-    todo = [(k, pr) for k in range(args.samples) for pr in probes if (pr["probe_id"], k) not in have]
+        records = [json.loads(line) for line in fh if line.strip()]
+    items, key_fields = work_items(args.task, records, args.samples, args.model_name)
+    have = done_keys(args.out, key_fields)
+    todo = [it for it in items if tuple(it["fields"][f] for f in key_fields) not in have]
     if args.limit is not None:
         todo = todo[:args.limit]
-    log(f"{args.model_name}: {len(have)} stories present, {len(todo)} to generate")
+    log(f"{args.model_name} ({args.task}): {len(have)} present, {len(todo)} to generate")
     if not todo:
         return 0
 
@@ -167,11 +197,17 @@ def main(argv: list[str] | None = None) -> int:
         tokenizer.pad_token = tokenizer.eos_token
     model = load_model(args.model_path, dtype, args.device)
     stops = stop_ids(tokenizer, model)
-    gen_cfg = GenerationConfig(do_sample=True, temperature=args.temperature, top_p=args.top_p, top_k=0,
-                               max_new_tokens=args.max_new_tokens, eos_token_id=stops,
-                               pad_token_id=tokenizer.pad_token_id)
-    params = {"temperature": args.temperature, "top_p": args.top_p, "top_k": 0,
-              "max_new_tokens": args.max_new_tokens}
+    if judge:
+        gen_cfg = GenerationConfig(do_sample=False, max_new_tokens=max_new, eos_token_id=stops,
+                                   pad_token_id=tokenizer.pad_token_id)
+        params = {"greedy": True, "max_new_tokens": max_new}
+    else:
+        gen_cfg = GenerationConfig(do_sample=True, temperature=args.temperature, top_p=args.top_p, top_k=0,
+                                   max_new_tokens=max_new, eos_token_id=stops,
+                                   pad_token_id=tokenizer.pad_token_id)
+        params = {"temperature": args.temperature, "top_p": args.top_p, "top_k": 0, "max_new_tokens": max_new}
+    if args.chat_kwargs:
+        params["chat_kwargs"] = args.chat_kwargs
     engine = f"transformers-{transformers.__version__}"
     log(f"stop tokens {stops}; sampling {params}")
 
@@ -180,7 +216,7 @@ def main(argv: list[str] | None = None) -> int:
     batch_size, i, started = args.batch_size, 0, time.time()
     while i < len(todo):
         batch = todo[i:i + batch_size]
-        texts = [render(tokenizer, pr["system"], pr["prompt"]) for _, pr in batch]
+        texts = [render(tokenizer, it["system"], it["prompt"], args.chat_kwargs) for it in batch]
         enc = tokenizer(texts, return_tensors="pt", padding=True, add_special_tokens=False).to(args.device)
         torch.manual_seed(args.seed + i)
         t0 = time.time()
@@ -198,13 +234,12 @@ def main(argv: list[str] | None = None) -> int:
         dt = time.time() - t0
         new = gen[:, enc["input_ids"].shape[1]:].tolist()
         n_tokens = 0
-        for (k, pr), ids in zip(batch, new):
+        for it, ids in zip(batch, new):
             raw, text, finished = decode(tokenizer, ids, set(stops))
             n_new = next((j for j, t in enumerate(ids) if t in stops), len(ids))
             n_tokens += n_new
             out.write(json.dumps({
-                "model": args.model_name, "probe_id": pr["probe_id"], "probe_category": pr["probe_category"],
-                "targets": pr.get("targets", []), "prompt": pr["prompt"], "sample_index": k,
+                **it["fields"],
                 "text": text, "raw": raw, "finished": finished, "new_tokens": n_new,
                 "latency_s": round(dt / len(batch), 2), "params": params, "engine": engine,
                 "model_path": args.model_path,
