@@ -9,7 +9,7 @@ from pathlib import Path
 
 from reportlab.graphics.shapes import Circle, Drawing, Line, Polygon, Rect, String
 from reportlab.lib import colors
-from reportlab.lib.enums import TA_CENTER, TA_JUSTIFY, TA_LEFT
+from reportlab.lib.enums import TA_JUSTIFY, TA_LEFT
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import cm
@@ -49,13 +49,10 @@ TITLE = ParagraphStyle("title", fontName="Sans-Bold", fontSize=18, leading=22, t
 SUBTITLE = ParagraphStyle("subtitle", fontName="Sans", fontSize=10.2, leading=13, textColor=MUTED, spaceAfter=1)
 CELL = ParagraphStyle("cell", fontName="Body", fontSize=8.4, leading=10.9, textColor=INK, alignment=TA_LEFT)
 CELL_HEAD = ParagraphStyle("cellhead", fontName="Sans-Bold", fontSize=8.2, leading=10.4, textColor=INK)
-CELL_NUM = ParagraphStyle("cellnum", parent=CELL, alignment=TA_CENTER)
-CELL_NUM_HEAD = ParagraphStyle("cellnumhead", parent=CELL_HEAD, alignment=TA_CENTER)
-CELL_GROUP = ParagraphStyle("cellgroup", fontName="Sans-Bold", fontSize=7.8, leading=10, textColor=MUTED)
 CAPTION = ParagraphStyle("caption", fontName="Body-Italic", fontSize=8.2, leading=10.4, textColor=MUTED,
                          spaceBefore=2, spaceAfter=5)
-REF = ParagraphStyle("ref", fontName="Body", fontSize=7.9, leading=9.9, textColor=INK, leftIndent=12,
-                     firstLineIndent=-12, spaceAfter=1.6, alignment=TA_LEFT)
+REF = ParagraphStyle("ref", fontName="Body", fontSize=7.7, leading=9.4, textColor=INK, leftIndent=12,
+                     firstLineIndent=-12, spaceAfter=1.2, alignment=TA_LEFT)
 
 W = A4[0] - 4.0 * cm  # text width
 
@@ -117,12 +114,12 @@ def pipeline_figure():
 
     box(xs[0], top_y, "1  Probe bank", ["89 story premises, 19 categories", "gender, origin, age, roles left open",
                                          "bias is never mentioned"])
-    box(xs[1], top_y, "2  Generation", ["API client: OpenAI-compatible, Ollama", "HF batch jobs on the Slurm GPU cluster",
-                                         "one prompt + sampling for all models"])
+    box(xs[1], top_y, "2  Generation", ["same premises for every model", "one prompt + sampling configuration",
+                                         "resumable, several samples per premise"])
     box(xs[2], top_y, "3  Clean & store", ["strip reasoning blocks and titles", "drop short outputs, deduplicate",
                                             "SQLite: stories, all annotation rounds"])
     box(xs[2], bot_y, "4  Blind annotation", ["17 labels, casting criteria C1–C4", "exact evidence quotes \u2192 spans",
-                                               "hidden anchors, double annotation (\u03ba)"])
+                                               "mixed batches, repeated stories (\u03ba)"])
     box(xs[1], bot_y, "5  Classifier & analyzers", ["semi-supervised, per-label thresholds",
                                                      "evidence sentences, optional LLM judge",
                                                      "lexical + default-demographics analysis"])
@@ -146,19 +143,18 @@ def pipeline_figure():
     return d
 
 
-# one story per premise and model, labelled blind (Claude: round 3, open-weight: round 2):
+# one story per premise and model, labelled blind in one balanced round:
 # (model, stories with any label, stories with a stereotype beyond casting, stories)
 RATES = [
-    ("Claude (round-3 labels)", [("Haiku", 35, 15, 89), ("Sonnet", 32, 17, 89), ("Opus", 27, 12, 89),
-                                 ("All Claude", 94, 44, 267)]),
-    ("Open-weight (round-2 labels)", [("Gemma 4 E4B", 36, 15, 89), ("Qwen3.5 4B", 35, 25, 89),
-                                      ("Qwen3.5 9B", 36, 23, 89), ("Qwen3.5 27B", 39, 23, 89),
-                                      ("All open-weight", 146, 86, 356)]),
+    ("Claude", [("Haiku", 33, 8, 89), ("Sonnet", 26, 8, 89), ("Opus", 21, 3, 89), ("All Claude", 80, 19, 267)]),
+    ("Open-weight", [("Gemma 4 E4B", 42, 21, 89), ("Qwen3.5 4B", 45, 30, 89), ("Qwen3.5 9B", 38, 21, 89),
+                     ("Qwen3.5 27B", 43, 24, 89), ("Mistral 7B", 55, 44, 89), ("OLMo 3 7B", 23, 9, 89),
+                     ("OLMo 3.1 32B", 34, 16, 89), ("gpt-oss 20B", 34, 19, 89), ("All open-weight", 314, 184, 712)]),
 ]
 
 
 def results_figure():
-    pitch, label_w, xmax = 14.5, 112, 60
+    pitch, label_w, xmax = 11.6, 112, 80
     n_rows = sum(len(rows) + 1 for _, rows in RATES)
     h = n_rows * pitch + 34
     d = Drawing(W, h)
@@ -218,8 +214,8 @@ def results_figure():
 
 story = [
     p("Probing Social Stereotypes in LLM-Generated Stories", TITLE),
-    p("Milestone 1 · Project plan, current implementation and preliminary results", SUBTITLE),
-    p("Mihai Strejaru · 27 October 2026", SUBTITLE),
+    p("Milestone 1 · Project plan and first experiments", SUBTITLE),
+    p("Muntean Vlad-Andrei · Strejaru Mihai · Pacuraru Macedoniu Nicolae · 1 November 2026", SUBTITLE),
     Spacer(1, 3),
     Table([[""]], colWidths=[W], rowHeights=[0.6],
           style=TableStyle([("LINEABOVE", (0, 0), (-1, 0), 0.8, RULE)])),
@@ -297,8 +293,8 @@ gaps = [
     ("G4 Unstated annotation rules",
      "Whether stereotypical casting alone counts is usually left to each annotator, so labels drift between "
      "annotators and rounds; the reliability of LLM annotators is rarely reported.",
-     "Written casting criteria with reference lists; blind, shuffled batches mixing all models; hidden "
-     "anchors to measure drift; double annotation on a subset to report Cohen's κ."),
+     "Written casting criteria with reference lists; blind, shuffled batches mixing all models; a subset "
+     "read twice under new ids to report Cohen's κ."),
     ("G5 Opaque detectors",
      "Classifiers return a score without the sentence that triggered it, which makes review slow and "
      "error-prone.",
@@ -321,10 +317,8 @@ story += [
         "<b>Probe bank.</b> 89 premises in 19 categories: occupation, family, traits, nationality, race, "
         "religion, age, disability, class, sexuality, appearance, regional, profession, mental health, "
         "political, saviour narratives, open character lists, cue-free one-line defaults and neutral controls.",
-        "<b>Generation.</b> Two interchangeable back-ends behind one prompt and one sampling configuration: an "
-        "HTTP client for OpenAI-compatible, Ollama or custom gateways, and a batched Hugging Face generator "
-        "for open-weight checkpoints on the university's Slurm cluster (NVIDIA A100 80 GB, Apptainer "
-        "containers). Runs are resumable, and checkpoints are rejected if any weights fail to load.",
+        "<b>Generation.</b> Every model receives the same premises with one prompt and one sampling "
+        "configuration. Runs are resumable, and several samples are drawn per premise.",
         "<b>Store.</b> SQLite with stories, every annotation round (with the taxonomy version it used), "
         "classifier predictions and judge scores; everything can be exported and re-imported as JSONL.",
         "<b>Annotation.</b> A web interface for human annotators (multi-label, span highlighting, keyboard "
@@ -343,217 +337,63 @@ story += [
 
     p("5&nbsp;&nbsp;Data and processing", H1),
     p("<b>Data.</b> All text is generated for the study: there is no scraped or personal data. The model set "
-      "spans two groups: proprietary Claude models (Haiku, Sonnet, Opus) and open-weight models run on the "
-      "cluster (Gemma 4 E4B, Qwen3.5 4B, 9B and 27B), to be extended with further open families (Llama, "
-      "Mistral, OLMo, gpt-oss). Each model writes three stories per premise (267 per model); 1,380 stories "
-      "have been generated so far. Labels come from blind annotators following the written protocol; LLM "
-      "annotators stand in for human readers until people spot-check their labels."),
+      "spans two groups: proprietary Claude models (Haiku, Sonnet, Opus) and open-weight models (Gemma 4 E4B, "
+      "Qwen3.5 4B, 9B and 27B, Mistral 7B, OLMo 3 7B, OLMo 3.1 32B, gpt-oss 20B). Each open-weight model writes "
+      "three stories per premise (267 per model) and each Claude model at least one (89); 2,714 stories have been "
+      "generated so far. Labels come from blind annotators following the written protocol; LLM annotators "
+      "stand in for human readers until people spot-check their labels."),
     p("<b>Processing.</b> Each step is scripted and can be rerun:", LEAD),
     *bullets([
         "<b>Prompting.</b> Premise plus a fixed instruction (about 250 words, every character named, no title "
         "or commentary) and a fixed system prompt that asks only for good fiction.",
-        "<b>Generation.</b> Batched sampling with temperature 0.9, top-p 0.95, no top-k and at most 700 new "
-        "tokens, thinking mode off; samples of each premise are generated in rounds so a cut-short run stays "
-        "balanced.",
+        "<b>Generation.</b> Sampling with temperature 0.9, top-p 0.95, no top-k and at most 700 new tokens "
+        "(1,500 for gpt-oss, whose reasoning counts against the limit), with thinking mode off where a model "
+        "allows it.",
         "<b>Cleaning.</b> Strip reasoning blocks, titles and code fences; drop outputs under 20 words; "
         "deduplicate on a hash of model, premise and text; keep the raw output for auditing.",
         "<b>Sampling for annotation.</b> One story per premise per model; batches are shuffled under anonymous "
         "ids and every batch mixes all models, so annotator leniency cannot favour one family.",
         "<b>Validation.</b> Labels must belong to the taxonomy, and every label needs an exact quote that is "
-        "located in the story and stored as a span; anchors from earlier rounds measure drift.",
+        "located in the story and stored as a span; stories repeated under new ids measure agreement.",
         "<b>Training and evaluation.</b> 5-fold cross-validation over labelled stories (unlabelled stories stay "
         "on the training side); per-label precision, recall and F1, macro and micro F1, and bias-versus-none "
         "accuracy.",
-        "<b>Reporting.</b> Any-label and beyond-casting rates per model with Wilson intervals, two-proportion "
-        "tests between families, per-category breakdowns and inter-annotator agreement.",
+        "<b>Reporting.</b> Any-label and beyond-casting rates per model with Wilson intervals, gaps between "
+        "families with intervals from resampling premises, per-category breakdowns and agreement between readers.",
     ]),
 
-    p("6&nbsp;&nbsp;Current implementation", H1),
-    p("The architecture of Section 4 is implemented as a Python package (about 4,800 lines including the "
-      "cluster scripts) and has been used for two studies. It is driven by one command-line tool whose 16 "
-      "commands cover the whole pipeline, from configuration, generation and import of offline generations to "
-      "training, prediction and the report, and by a FastAPI web application for annotation, review and "
-      "reporting. Table 2 lists the components and their state.", LEAD),
-]
-
-components = [
-    ("Probe bank", "prompts.py: 89 premises in 19 categories; exported as JSONL for offline generators.",
-     "Complete."),
-    ("API generation", "llm_client.py, generate.py: OpenAI-compatible, Ollama and custom request templates; "
-     "parallel, resumable, retried and deduplicated.",
-     "Complete; not yet run against a remote server (the Claude stories were written by subagents)."),
-    ("Cluster generation", "generate_hf.py and generate.sbatch: batched Hugging Face sampling in the shared "
-     "Apptainer container on one A100, a smoke pass over all models first, resumable; import-generations "
-     "cleans and loads the output.",
-     "Used for study 2: four models, 1,068 stories in one 35-minute job."),
-    ("Store", "storage.py: SQLite tables for stories, annotations (every round, with its taxonomy version and "
-     "spans), predictions and judge scores; JSONL export and import of every round, keeping story ids.",
-     "1,436 stories (1,380 generated, 56 demo), 715 of them annotated."),
-    ("Annotation", "Web interface (annotate, review flags, check a new story, browse, report) and a batch "
-     "workflow for LLM annotators with anonymous ids, mixed batches, hidden anchors and quote-to-span "
-     "validation.",
-     "Three rounds and a pilot run with LLM annotators; no human annotators yet."),
-    ("Classifier", "features.py, model.py: TF-IDF and 79 co-occurrence features, self-training, out-of-fold "
-     "thresholds, fading lexical prior, evidence sentences and top features per flag.",
-     "Trained on 715 labelled stories; too weak to use without review (Section 8)."),
-    ("LLM judge", "judge.py: per-label scores from 0 to 1, stacked as classifier features.",
-     "Implemented and tested; not run yet."),
-    ("Analyzers and report", "demographics.py, analysis.py: protagonist gender, name-based origin, name "
-     "diversity and reuse, gender–job and out-group co-occurrence; Markdown, JSON and web report.",
-     "Complete; source of the automatic measures in Section 8."),
-    ("Tests", "46 pytest tests with a mocked LLM server and no network access.", "All pass."),
-]
-rows = [[p("Component", CELL_HEAD), p("Implementation", CELL_HEAD), p("State", CELL_HEAD)]]
-rows += [[p(f"<b>{a}</b>", CELL), p(b, CELL), p(c, CELL)] for a, b, c in components]
-story += [styled_table(rows, [2.9 * cm, W - 2.9 * cm - 5.0 * cm, 5.0 * cm]),
-          p("Table 2. Components of the current implementation and their state (28 October 2026).", CAPTION)]
-
-story += [
-    p("<b>Annotation workflow.</b> Until people annotate, the readers are Claude Opus subagents. A script draws "
-      "the stories, gives them anonymous ids, shuffles them into batches of about 45 that mix every model of "
-      "the round, and hides anchors from earlier rounds among them. Each annotator receives only the protocol, "
-      "the taxonomy and one batch of story texts, and returns labels, a note and one exact quote per label as "
-      "JSON. The import script rejects unknown labels, locates every quote in its story and stores it as a "
-      "span, stores the targets, and scores the anchors for drift without storing them."),
-    p("<b>Repository.</b> Code, tests, cluster scripts, the annotation protocols, this document and the data are "
-      "kept in one git repository for all collaborators. The data folder holds every story with every annotation "
-      "round, the records of each round (what the annotators read, their raw output, the id mappings and the "
-      "scripts that scored them) and the raw cluster outputs; one import command rebuilds the database, and the "
-      "scripts reproduce every number in Section 8 from it."),
-
-    p("7&nbsp;&nbsp;Methodology so far", H1),
-    p("Two studies have been run with the same 89 premises and the same taxonomy, and their stories have been "
-      "annotated in four rounds (Table 3).", LEAD),
+    p("6&nbsp;&nbsp;Progress and first experiments", H1),
+    p("The pipeline of Section 4 runs end to end: a Python package with a command-line tool and a web interface "
+      "for annotation and review, covered by 48 automated tests, with the code and all data in one shared "
+      "repository. We ran basic experiments to check that the plan works. Eleven models from six families wrote "
+      "2,714 stories, and one story per premise and model (979 stories) was read in one round under protocol "
+      "v2.1, in 22 blind batches holding the same mix of models. The readers are Claude Opus instances standing "
+      "in for people (Figure 2)."),
     *bullets([
-        "<b>Study 1 (Claude).</b> Claude Haiku, Sonnet and Opus, each driven by a subagent that received the "
-        "premises verbatim and was told only to write good fiction: the 63 original premises once, then 26 new "
-        "premises and a second sample of the 15 premises that had triggered the most bias; 104 stories per "
-        "model, 312 in total.",
-        "<b>Study 2 (open-weight).</b> Gemma 4 E4B and Qwen3.5 4B, 9B and 27B on the cluster, with the sampling "
-        "settings of Section 5 and three independent samples per premise: 267 stories per model, 1,068 in "
-        "total. None reached the token limit or was dropped as too short.",
-        "<b>Annotation.</b> Readers see the story text only; they label what the story portrays rather than "
-        "what it is about, count stereotypical casting and mark it “casting only”, and quote one exact passage "
-        "per label. For the comparison between families, one story per premise and model is annotated (the "
-        "first sample), so every model is measured on the same 89 premises.",
-        "<b>Measures.</b> The share of stories with at least one label and the share with a stereotype beyond "
-        "casting (labelled, and the note does not say “casting only”), with 95% Wilson intervals and "
-        "two-proportion z-tests between families; Cohen's κ between rounds and between annotator groups. "
-        "Automatic measures over all stories: protagonist (most-mentioned named character) gender, name-based "
-        "origin, distinct character names (mean over 50 random subsamples of 104 stories, so that every model is "
-        "measured on the same sample size) and the stereotypical share of gender–job pairs. The classifier is "
-        "evaluated by 5-fold cross-validation.",
+        "<b>The measures separate the models (RQ1, RQ2).</b> Beyond casting, open-weight stories are at 26% against "
+        "7% for Claude, a gap of 19 points (95% interval +14 to +24, resampling premises). Stereotypical casting "
+        "does not differ between the two groups (−1 point, −7 to +5), so the gap lies in what characters do and "
+        "are like.",
+        "<b>Family matters more than size (RQ3).</b> Mistral is highest (49%) and OLMo closest to Claude (14%). "
+        "Qwen3.5 4B, 9B and 27B are at 34%, 24% and 27%, with overlapping intervals.",
+        "<b>The automatic measures add a second signal.</b> Qwen3.5 makes the protagonist a man in 70–73% of "
+        "stories, while OLMo 7B and gpt-oss lean the other way (30% and 33%). Qwen3.5 also puts a character called "
+        "Elias into 41–57% of its stories.",
+        "<b>The classifier is a working baseline, not yet a substitute for readers (RQ4).</b> On 1,338 labelled "
+        "stories, macro-F1 is 0.21, or 0.28 with scores from an LLM judge (Phi-4). Bias-versus-none accuracy "
+        "reaches 62%, barely above the 60% of always answering “none”. The judge mostly recognises the topic: its "
+        "mean AUC of 0.80 falls to 0.61 between stories from the same premise.",
     ]),
-]
-
-rounds = [
-    ("Study 1", "312 Claude stories; the first batch annotated twice (11, then 17 labels)", "none",
-     "Opus subagents", "v1"),
-    ("Round 2", "356 open-weight stories, one per premise and model", "30 study-1 Claude stories",
-     "8 subagents", "v1"),
-    ("Round 3", "267 Claude stories, one per premise and model", "40 round-2 open-weight stories",
-     "7 subagents", "v1"),
-    ("Pilot", "79 stories: 59 that rounds 1–3 labelled differently and 20 they agreed on",
-     "none; two independent groups", "2 groups of 2", "v2: casting criteria C1–C4"),
-]
-rows = [[p(h, CELL_HEAD) for h in ("Round", "Stories annotated", "Hidden anchors", "Readers", "Protocol")]]
-rows += [[p(f"<b>{r[0]}</b>", CELL)] + [p(c, CELL) for c in r[1:]] for r in rounds]
-story += [KeepTogether([
-    styled_table(rows, [1.7 * cm, W - 1.7 * cm - 3.8 * cm - 2.5 * cm - 2.9 * cm, 3.8 * cm, 2.5 * cm, 2.9 * cm]),
-    p("Table 3. Annotation rounds. Protocol v2.1 adds the fixes found in the pilot and has not been used for a "
-      "full round yet.", CAPTION)])]
-
-story += [
-    p("8&nbsp;&nbsp;Preliminary results", H1),
-    p("The readers are LLMs and each model has 89 annotated stories, so these results are preliminary: they "
-      "show the size of the effects and where the method needs work, not final rates (Figure 2, Table 4).",
-      LEAD),
     KeepTogether([results_figure(),
-                  p("Figure 2. Share of stories with at least one perceived stereotype and with a stereotype "
-                    "beyond casting, one story per premise and model. Round 3 counted casting more readily "
-                    "than round 2, so compare the families on the diamonds, which both rounds measure "
-                    "alike.", CAPTION)]),
-]
-
-models = ["Haiku", "Sonnet", "Opus", "Gemma 4 E4B", "Qwen3.5 4B", "Qwen3.5 9B", "Qwen3.5 27B"]
-measures = [
-    ("Perceived by readers, 89 stories per model (%)", None),
-    ("Any perceived stereotype", [39, 36, 30, 40, 39, 40, 44]),
-    ("Stereotype beyond casting", [17, 19, 13, 17, 28, 26, 26]),
-    ("Gender roles / occupations", [20, 8, 12, 26, 18, 19, 22]),
-    ("Racial / ethnic", [11, 15, 10, 2, 2, 1, 3]),
-    ("Labelled stories that are casting only", [57, 47, 56, 58, 29, 36, 41]),
-    ("Automatic, all stories (%, names as counts)", None),
-    ("Male protagonist", [48, 50, 43, 54, 73, 70, 70]),
-    ("Stories with any non-Western name", [57, 68, 66, 18, 29, 29, 42]),
-    ("Distinct names per 104 stories", [174, 190, 211, 77, 52, 61, 57]),
-    ("Stereotypical share of gender–job pairs", [62, 58, 52, 69, 67, 68, 68]),
-]
-rows = [[p("Measure", CELL_HEAD)] + [p(m, CELL_NUM_HEAD) for m in models]]
-spans = []
-for label, values in measures:
-    if values is None:
-        spans += [("SPAN", (0, len(rows)), (-1, len(rows))), ("BACKGROUND", (0, len(rows)), (-1, len(rows)), BAND)]
-        rows.append([p(label, CELL_GROUP)] + [""] * len(models))
-    else:
-        rows.append([p(label, CELL)] + [p(str(v), CELL_NUM) for v in values])
-first_w = 5.6 * cm
-story += [KeepTogether([
-    styled_table(rows, [first_w] + [(W - first_w) / len(models)] * len(models), spans),
-    p("Table 4. Results per model. Claude has 104 stories per model and each open-weight model 267 for the "
-      "automatic rows; distinct names are counted on equal subsamples.", CAPTION)])]
-
-story += [
-    *bullets([
-        "<b>Open-weight stories are perceived as stereotyped more often, but the gap depends on how casting is "
-        "counted.</b> Beyond casting, the measure on which study 1 and round 3 give Claude the same rate, the "
-        "open-weight models are at 24% (20–29) against 16% (13–21) for Claude (z ≈ 2.3). On any label the gap "
-        "is 6 points across rounds (41% against 35%, z = 1.5) and about 28 points within either round. The "
-        "direction is robust; the size is not.",
-        "<b>The families lean on different stereotypes.</b> Gender casting dominates the open-weight stories "
-        "(21% against 13%), together with nationality tropes (3–6% against 0–1%). Claude's stories carry ethnic "
-        "casting far more often (10–15% against 1–3%): the cleaner, the cab driver or the ship's cook is the one "
-        "character with a minority name. The open-weight models avoid this mostly because their characters "
-        "rarely have an ethnicity at all.",
-        "<b>Narrow defaults.</b> Qwen3.5 makes the protagonist a man in 70–73% of all stories (Claude 43–50%), "
-        "and only 18–42% of open-weight stories contain any non-Western name (Claude 57–68%). The open-weight "
-        "models also reuse names: 52–77 distinct names per 104 stories against 174–211, and Qwen3.5 puts a "
-        "character called Elias into 41–57% of its stories at every size.",
-        "<b>Size does not help.</b> Qwen3.5 4B, 9B and 27B are at 39%, 40% and 44% on any label, with 73%, 70% "
-        "and 70% male protagonists.",
-        "<b>Premises.</b> Occupation, age, nationality and family premises trigger the open-weight models most; "
-        "race, class, regional and saviour premises trigger Claude. A boss dictating to a secretary, a "
-        "grandmother with a smartphone and a wedding table of professionals produce a label from every model of "
-        "both families. The neutral controls stay mostly clean: 4 of 28 stories labelled, 3 of them by "
-        "Qwen3.5 27B.",
-    ]),
-    p("<b>Reliability.</b> On the 267 Claude stories, round 3 and study 1 agree on “any label or none” for 88% "
-      "of stories (κ 0.72); per label κ is 0.79 for gender roles and 0.75 for racial/ethnic. The rounds differ "
-      "in how readily they count casting (round 2 strictest, round 3 most lenient), which is why the any-label "
-      "comparison between families moves with the round. With the explicit casting criteria, two independent "
-      "groups made the same casting decision on 96% of the pilot stories (κ 0.95), against 85% (κ 0.42) for "
-      "substantive labels on the hard cases; the pilot also exposed two gaps in the criteria, fixed in v2.1."),
-    p("<b>Classifier.</b> Trained on the 715 labelled stories, it reaches macro-F1 0.16, micro-F1 0.26 and 51% "
-      "bias-versus-none accuracy in 5-fold cross-validation, no better than with half the labels (0.19, 0.27, "
-      "50%). Gender roles improve (F1 0.39, 127 positives) but racial/ethnic labels do not (0.19, 50 "
-      "positives): casting depends on who gets which role, which word features barely see. The flags are not "
-      "yet a substitute for annotation; the LLM judge is the next signal to add."),
-    p("<b>Threats to validity.</b> Every agreement figure is agreement between LLM readers; people should "
-      "spot-check the labels before anything is published. The Claude stories were written by subagents that "
-      "produced many stories in one context and could avoid names and castings they had already used, while "
-      "the open-weight models sampled every story independently; this favours Claude on name diversity and "
-      "probably on casting variety. Claude's 104 stories over-weight the 15 resampled premises, which pushes its "
-      "rates up. Name-based origin is a coarse signal, and with 89 stories per model the per-model intervals "
-      "are about ±10 points."),
-
-    p("9&nbsp;&nbsp;Next steps", H1),
-    p("<b>M2:</b> a balanced annotation round under protocol v2.1 in which every batch holds the same mix of all "
-      "seven models (623 one-per-premise stories), so that neither round leniency nor contrast between families "
-      "can move the comparison; for a like-for-like comparison, Claude stories generated one call at a time "
-      "with the same sampling settings as the open-weight models; and two to three further open-weight "
-      "families (Llama, Mistral, OLMo, gpt-oss). <b>M3:</b> an LLM judge from a family that is not under test, "
-      "the classifier with judge features, and a human spot-check of the LLM labels, starting with the casting "
-      "rule. <b>M4:</b> final analysis and report."),
+                  p("Figure 2. Share of stories with at least one perceived stereotype and with a stereotype beyond "
+                    "casting, one story per premise and model.", CAPTION)]),
+    p("<b>Reliability and limits.</b> On 44 stories read twice under new ids, readers agree on “any label or none” "
+      "for 41 (κ 0.85), and in a pilot two independent groups reached κ 0.95 on casting decisions. This is "
+      "agreement between LLM readers, and Claude reading Claude's stories may favour them, so the results are "
+      "preliminary until people check the labels. Claude's sampling settings and system prompt could not be fixed "
+      "like the open-weight models', and with 89 stories per model the per-model intervals are about ±10 points. "
+      "Even so, the experiments show that the method runs from premise to report and detects differences between "
+      "model families."),
 
     p("References", H1),
 ]
@@ -617,8 +457,8 @@ def footer(canvas, doc):
 
 doc = SimpleDocTemplate(str(OUT), pagesize=A4, leftMargin=2.0 * cm, rightMargin=2.0 * cm, topMargin=1.7 * cm,
                         bottomMargin=1.8 * cm, title="Probing Social Stereotypes in LLM-Generated Stories: "
-                        "Milestone 1 plan", author="Mihai Strejaru",
+                        "Milestone 1 plan", author="Muntean Vlad-Andrei, Strejaru Mihai, Pacuraru Macedoniu Nicolae",
                         subject="Project plan: problem, state of the art, critical analysis, architecture, data "
-                                "and processing; current implementation, methodology and preliminary results")
+                                "and processing; first experiments")
 doc.build(story, onFirstPage=footer, onLaterPages=footer)
 print(f"wrote {OUT}")
