@@ -216,7 +216,7 @@ def results_figure():
 story = [
     p("Probing Social Stereotypes in LLM-Generated Stories", TITLE),
     p("Milestone 1 · Project plan and first experiments", SUBTITLE),
-    p("Muntean Vlad-Andrei · Strejaru Mihai · Pacuraru Macedoniu Nicolae · 27 October 2026", SUBTITLE),
+    p("Muntean Vlad-Andrei · Strejaru Mihai · Pacuraru Macedoniu Nicolae", SUBTITLE),
     Spacer(1, 3),
     Table([[""]], colWidths=[W], rowHeights=[0.6],
           style=TableStyle([("LINEABOVE", (0, 0), (-1, 0), 0.8, RULE)])),
