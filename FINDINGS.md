@@ -1,13 +1,211 @@
 # Findings so far
 
-Status of the bias study as of 23 October 2026. Everything below is reproducible from the
+Status of the bias study as of 1 November 2026. Everything below is reproducible from the
 database in `data/biasprobe.db` (`python -m biasprobe serve`, then `/report`), and the raw
-tables are in `reports/report.md` and `reports/report.json`. The first part covers the second
-study (four open-weight models generated on the FEP cluster, one story per probe annotated, and
-Claude's matching stories re-annotated for comparison); sections 1–9 are the first study (three
-Claude models, annotated).
+tables are in `reports/report.md` and `reports/report.json`. Study 3 comes first and is the
+comparison to quote: 11 models read in one balanced round. Study 2 follows (four open-weight
+models on the FEP cluster, Claude re-annotated for comparison); sections 1–9 are study 1 (three
+Claude models).
+
+## Study 3: more families, one-call Claude, one balanced round (1 November 2026)
+
+**In short.** Read in one balanced round, the open models' stories lean on a stereotype beyond
+casting about 19 points more often than Claude's (26% against 7%; 95% interval over premises +14
+to +24). Who gets cast in which job does not differ between the families (any casting −1, −7 to
++5). Family matters more than size: Mistral is highest (49%), OLMo is closest to Claude (14%), and
+larger models are not cleaner. These labels come from Claude readers, so people should check them
+before they are published (see "How reliable this is").
+
+**What was added.**
+
+- **New families.** Mistral 7B Instruct v0.3, OLMo 3 7B Instruct, OLMo 3.1 32B Instruct and gpt-oss
+  20B, with three samples of each of the 89 probes and the same settings as study 2. gpt-oss got
+  1,500 new tokens and low reasoning effort, because its reasoning counts against the limit. 1,067
+  of the 1,068 stories were kept (one OLMo 7B output was just the word "Russia"). Llama 3.1 is
+  gated and was skipped: the cluster has no Hugging Face token.
+- **Like-for-like Claude.** 267 new stories (`claude-haiku-single`, `-sonnet-single`,
+  `-opus-single`; 89 each), each written by a separate subagent that saw one premise and nothing
+  else, so none could see the names it had used before. See
+  [`dataset/claude_single/`](dataset/claude_single/).
+- **Balanced round.** One story per premise for each of the 11 models (979 stories) under protocol
+  v2.1, in 22 batches holding the same mix of models, read blind by Claude Opus subagents. 44
+  stories were repeated under new ids to measure agreement. See
+  [`dataset/annotation_s5/`](dataset/annotation_s5/).
+- **LLM judge.** Phi-4, a family not under test, scored all 2,770 stories on the cluster; every
+  output parsed. See [`dataset/judge_outputs/`](dataset/judge_outputs/).
+
+### Perceived bias in the balanced round
+
+Brackets are 95% Wilson intervals. "Beyond casting" means a story has a label the annotator did
+not mark as casting under C1–C4.
+
+| model | any label | beyond casting | casting only | gender roles | gender traits | racial/ethnic | nationality | age | occupation | labels/story |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Claude Haiku (one call) | 37% (28–47) | 9% (5–17) | 28% | 25% | 2% | 4% | 1% | 1% | 1% | 0.39 |
+| Claude Sonnet (one call) | 29% (21–39) | 9% (5–17) | 20% | 19% | 0% | 4% | 1% | 1% | 3% | 0.30 |
+| Claude Opus (one call) | 24% (16–33) | 3% (1–9) | 20% | 20% | 0% | 1% | 0% | 1% | 2% | 0.25 |
+| Gemma 4 E4B | 47% (37–57) | 24% (16–33) | 24% | 28% | 4% | 2% | 6% | 1% | 7% | 0.56 |
+| Qwen3.5 4B | 51% (40–61) | 34% (25–44) | 17% | 24% | 4% | 2% | 3% | 4% | 7% | 0.60 |
+| Qwen3.5 9B | 43% (33–53) | 24% (16–33) | 19% | 21% | 2% | 2% | 6% | 4% | 2% | 0.48 |
+| Qwen3.5 27B | 48% (38–59) | 27% (19–37) | 21% | 25% | 10% | 1% | 4% | 6% | 3% | 0.60 |
+| Mistral 7B | 62% (51–71) | 49% (39–60) | 12% | 20% | 18% | 2% | 8% | 3% | 8% | 0.80 |
+| OLMo 3 7B | 26% (18–36) | 10% (5–18) | 16% | 16% | 0% | 4% | 1% | 1% | 2% | 0.30 |
+| OLMo 3.1 32B | 38% (29–49) | 18% (11–27) | 20% | 24% | 1% | 4% | 3% | 2% | 2% | 0.47 |
+| gpt-oss 20B | 38% (29–49) | 21% (14–31) | 17% | 15% | 2% | 9% | 4% | 2% | 3% | 0.44 |
+
+Every model wrote about the same premises, so stories are not independent. The gaps below resample
+premises (10,000 times) and are the intervals to quote.
+
+| against Claude, points (95%) | any label | beyond casting | any casting |
+|---|---|---|---|
+| all open models | +14 (+7 to +21) | +19 (+14 to +24) | −1 (−7 to +5) |
+| Mistral | +32 (+21 to +43) | +42 (+33 to +52) | −1 (−10 to +7) |
+| Qwen3.5 | +17 (+9 to +25) | +21 (+15 to +28) | 0 (−7 to +7) |
+| Gemma | +17 (+6 to +29) | +16 (+9 to +25) | +4 (−5 to +13) |
+| gpt-oss | +8 (−2 to +19) | +14 (+7 to +22) | −5 (−13 to +4) |
+| OLMo | +2 (−6 to +10) | +7 (+1 to +13) | −3 (−10 to +4) |
+
+What this shows:
+
+1. **The gap is in what characters do and are like, not in who is cast.** Gender roles are 21% for
+   Claude and 21% for the open models. In study 2, with the families in different rounds and
+   Claude's stories written in one context, they looked different (13% and 21%).
+2. **Family matters, and "open" is not one thing.** OLMo is close to Claude on any label and only
+   7 points above it beyond casting. Mistral is above everything else, with the most gendered
+   traits (18%) and nationality tropes (8%).
+3. **Size does not help.** Qwen3.5 4B / 9B / 27B score 51% / 43% / 48%, with overlapping intervals.
+   OLMo 7B scores below OLMo 32B (26% against 38%), though two models from different releases
+   cannot show a trend.
+4. **Where the gap sits.** On nationality premises, 4% of Claude's stories and 42% of the open
+   models' go beyond casting; on saviour premises 11% and 54%, disability 0% and 41%, race 13% and
+   45%, age 25% and 56%. Profession premises trip both families (67% and 79%). Claude has only 6–30
+   stories per category here, so read these as directions.
+5. **The controls hold up.** Neutral premises get a label in 8% (Claude) and 12% (open) of stories,
+   and 0% and 6% beyond casting. `natl_taxi` and `neutral_robot` were clean for
+   all 11 models. Seven premises were labelled for at least 10 of the 11: `age_smartphone`,
+   `def_boss_secretary`, `fam_saturday`, `occ_engineer_teacher`, `prof_lift`,
+   `prof_wedding_table`, `race_street`.
+6. **Claude's rates moved from study 2, and the cause is unresolved.** Beyond casting fell from 16%
+   to 7% and racial/ethnic from 10–15% to 1–4%. The stories were rewritten one call at a time and
+   the protocol changed to v2.1 together, so this round cannot separate the two. Rereading the
+   in-context stories under v2.1 would.
+
+### Automatic measures, one-call Claude included
+
+From the name lists and the analyzer, not from readers. Distinct names are the mean over 50
+subsamples of 89 stories. The "Claude, in context" columns are the study 1 stories.
+
+| measure | Haiku, in context | Sonnet, in context | Opus, in context | Haiku, one call | Sonnet, one call | Opus, one call | Gemma | Qwen 4B | Qwen 9B | Qwen 27B | Mistral | OLMo 7B | OLMo 32B | gpt-oss |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| stories / mean words | 104 / 285 | 104 / 248 | 104 / 267 | 89 / 260 | 89 / 257 | 89 / 267 | 267 / 232 | 267 / 309 | 267 / 318 | 267 / 308 | 267 / 296 | 266 / 269 | 267 / 254 | 267 / 305 |
+| protagonist male, all | 48% | 50% | 43% | 32% | 41% | 46% | 54% | 73% | 70% | 70% | 51% | 30% | 44% | 33% |
+| protagonist male, cue-free | 47% | 50% | 35% | 35% | 50% | 38% | 65% | 80% | 70% | 83% | 42% | 20% | 46% | 15% |
+| gender cues that are male | 54% | 51% | 51% | 48% | 47% | 49% | 55% | 63% | 59% | 60% | 50% | 35% | 45% | 41% |
+| protagonist Anglo/Western | 60% | 37% | 44% | 39% | 27% | 33% | 71% | 73% | 67% | 71% | 63% | 42% | 47% | 25% |
+| protagonist origin unknown | 10% | 15% | 19% | 13% | 10% | 8% | 22% | 19% | 22% | 10% | 26% | 19% | 26% | 35% |
+| stories with a non-Western name | 57% | 68% | 66% | 84% | 92% | 79% | 18% | 29% | 29% | 42% | 20% | 58% | 52% | 68% |
+| distinct names per 89 stories | 158 | 170 | 188 | 125 | 100 | 104 | 72 | 48 | 57 | 52 | 102 | 117 | 136 | 98 |
+| most reused name | Priya 8% | Marcus 10% | Callum 5% | Priya 33% | Priya 37% | Tomasz 19% | Clara 36% | Elias 57% | Elias 41% | Elias 50% | Emily 11% | Maria 8% | Maya 12% | Maya 33% |
+| stereotypical share of gender+job pairs | 62% | 58% | 52% | 55% | 55% | 39% | 69% | 67% | 68% | 68% | 64% | 52% | 55% | 51% |
+
+1. **Correction to study 2: part of Claude's name diversity came from how the stories were
+   written.** Without seeing earlier stories, Claude uses 100–125 distinct names per 89 stories,
+   not 158–188, and Haiku and Sonnet put a Priya in a third of their stories. Name collapse is not
+   specific to open models: gpt-oss, Mistral and OLMo (98–136) are level with one-call Claude, and
+   Qwen and Gemma remain the narrow ones (48–72).
+2. **"The open models default to men" holds for Qwen and Gemma only.** Mistral is at parity, and
+   OLMo 7B and gpt-oss lean strongly female (30% and 33% male; 20% and 15% on cue-free premises).
+   One-call Haiku leans the same way (32%), while one-call Sonnet and Opus are at 41–46%. A skew
+   towards women is still a default.
+3. **The default cast differs by family.** Gemma, Qwen and Mistral have Anglo/Western protagonists
+   in 63–73% of stories, against 25–47% for one-call Claude, OLMo and gpt-oss. Origin unknown runs
+   up to 35% (gpt-oss, whose Maya and Mara the lists cannot place), so these rows compare less
+   well than the gender rows, where unknown is 0–7%.
+4. **Visible diversity is not the same as fewer stereotypes.** gpt-oss has a broad cast (Anglo/Western
+   protagonists 25%, a non-Western name in 68% of stories) and still goes beyond casting in 21% of
+   stories, about the same as Gemma, whose cast is far narrower.
+
+### The LLM judge
+
+The judge is much weaker than the raw numbers suggest, because it mostly recognises the topic.
+
+| label | positives | AUC | AUC within premise |
+|---|---|---|---|
+| gender roles | 254 | 0.66 | 0.56 |
+| racial/ethnic | 72 | 0.54 | 0.53 |
+| gender traits | 52 | 0.69 | 0.63 |
+| occupational | 43 | 0.77 | 0.57 |
+| nationality | 39 | 0.58 | 0.53 |
+| ageism | 36 | 0.91 | 0.61 |
+| saviour | 26 | 0.76 | 0.67 |
+| disability | 19 | 0.95 | 0.64 |
+| regional | 18 | 0.98 | 0.62 |
+| class | 16 | 0.96 | 0.55 |
+| appearance | 11 | 0.84 | 0.65 |
+| political | 6 | 0.99 | 0.70 |
+| mean | | 0.80 | 0.61 |
+
+Measured on the 1,291 annotated non-demo stories against the latest label. "Within premise" compares
+only stories written for the same premise, so recognising the topic earns nothing, and this is the
+number that says whether it sees the stereotype. Regional drops from 0.98 to 0.62, because almost
+all regional labels come from regional premises. On any label against none, AUC is 0.60 (0.58 within
+premise on the balanced round). It flags 58–78% of stories at a score of 0.5 or more, against 40% of
+annotated stories labelled by readers. It cannot replace them.
+
+### Classifier
+
+Retrained on all 1,338 labelled stories, 5-fold CV, without and with the judge's scores as features
+(`v20261101112020-n1338` and `v20261101113858-n1338`; the second is the current model).
+
+| metric | study 2 (715 stories, no judge) | 1,338 stories, no judge | 1,338 stories, judge |
+|---|---|---|---|
+| macro-F1 | 0.16 | 0.21 | 0.28 |
+| micro-F1 | 0.26 | 0.31 | 0.38 |
+| any-vs-none accuracy | 51% | 55% | 62% |
+| exact label set | | 36% | 43% |
+
+The judge helps every label with enough positives except nationality (0.41 either way): gender
+roles 0.38 → 0.42, racial/ethnic 0.17 → 0.24, gender traits 0.14 → 0.25, ageism 0.44 → 0.59,
+regional 0.34 → 0.60. It is still not good enough to stand in for readers. Always answering "no
+bias" scores 60% on any-vs-none, so 62% is barely above that, and 55% without the judge is below it.
+The folds are random, so stories from the same premise sit on both sides of a split, and much of the
+judge's gain may be the topic recognition measured above. On premises it has not seen, the classifier
+would probably do worse. Use its flags to choose what to read, not to report rates.
+
+### How reliable this is
+
+- **Within the round.** On the 44 repeats: any label 41/44 (κ 0.85), any casting 42/44 (κ 0.90),
+  beyond casting 42/44 (κ 0.78), identical label set 39/44. All 482 evidence quotes were found in
+  their stories, and the labelled share per batch ranged from 23% to 53%. This is agreement between
+  LLM readers with the same protocol, not between people.
+- **Across rounds.** On the 356 open-model stories that round 2 also read, the balanced round
+  labelled 168 and round 2 labelled 146, agreeing on 296 (κ 0.66). Protocol v2.1 is not a neutral
+  relabelling.
+- **The readers are the same family as some of the writers.** Claude Opus read Claude's stories
+  blind, but a family may prefer its own style, and this could inflate the gap against Claude. As a
+  check, Phi-4 ranks the families (any score of 0.5 or more): gpt-oss 58%, Claude 60%, OLMo 66%,
+  Gemma 76%, Qwen 76%, Mistral 79%. Claude is among the lowest and Mistral highest, as with the
+  readers, but gpt-oss moves below Claude, and a judge this weak supports the direction only.
+  People should spot-check the labels first, starting with Claude's and Mistral's.
+- **One-call Claude is only partly like-for-like.** Each subagent carries the Claude Code system
+  prompt and uncontrolled sampling, whereas the open models ran with fixed settings and the system
+  prompt of `biasprobe generate`.
+- **89 stories per model** gives wide per-model intervals, about ±10 points. Differences between
+  neighbouring models are mostly not resolved; family gaps with premise intervals are.
+
+Next steps:
+
+1. Have people label a sample of this round, stratified by family, and compare with the LLM readers
+   (at least Claude's and Mistral's stories, to test self-preference).
+2. Reread Claude's in-context stories under v2.1 to separate the protocol's effect from the effect
+   of writing one call at a time (finding 6).
+3. Add Llama through [`cluster/models.txt`](cluster/models.txt) once the cluster has an `HF_TOKEN`.
+4. Annotate samples 2 and 3 of the new families where a probe-level rate matters.
 
 ## Study 2: four open-weight models on the FEP cluster (23 October 2026)
+
+The balanced round in study 3 replaces the comparisons between rounds below. Study 3 also corrects
+Claude's name diversity and shows that "default to men" is true of Qwen and Gemma only.
 
 **What was run.** Gemma 4 E4B (instruction-tuned) and Qwen3.5 4B, 9B and 27B, from the
 checkpoints already on the cluster, through [`cluster/generate.sbatch`](cluster/generate.sbatch)
@@ -236,8 +434,7 @@ Caveats specific to this comparison:
 - The Claude stories were written by subagents that produced many stories in one context, so
   they could see, and avoid, the names and castings they had already used. The open models
   sampled every story independently. This favours Claude on name diversity and probably on
-  casting variety. A like-for-like rerun would generate the Claude stories one call at a time
-  with the same sampling settings (or batch the open models in one context).
+  casting variety. Study 3 reruns the Claude stories one call at a time and confirms it for names.
 - Claude's 104 stories over-weight the 15 probes that were most biased in batch 1 (they got a
   second sample), while the open models have exactly three samples of every probe. That pushes
   Claude's rates up, not down.
@@ -246,24 +443,13 @@ Caveats specific to this comparison:
   counts as a name at the start of a sentence ("Can you…"). This is why the Claude numbers in
   sections 4–5 below (from 22 October) differ by a few points from this table.
 
-Next steps for study 2:
-
-1. Settle the casting rule with explicit criteria (when does a single role given to one gender
-   or one minority character count?) and then run **one balanced round**: every batch holds the
-   same mix of all seven models (623 one-per-probe stories, about 13 per model per batch), so
-   that neither round leniency nor contrast between families can move the comparison. Better
-   still, have people do it. Until then, quote the beyond-casting rate. A draft of the criteria
-   is [`docs/annotation/protocol_v2.1.md`](docs/annotation/protocol_v2.1.md). In a pilot on the 59 stories rounds 1–3
-   disagreed on (plus 20 they agreed on), two independent groups made identical casting
-   decisions on 96% of stories (κ 0.95), against 85% (κ 0.42) for substantive labels on the hard
-   cases; the pilot also found two gaps in the draft, fixed in v2.1
-   ([`docs/annotation/pilot_results.md`](docs/annotation/pilot_results.md)).
-2. The other 712 open-model stories (samples 2 and 3) are unannotated; annotate them where a
-   probe-level rate matters, or use the classifier's flags with care.
-3. Add other model families through [`cluster/models.txt`](cluster/models.txt) (Llama, Mistral,
-   OLMo, gpt-oss, …). They download to the job's `/tmp`; gated models need an `HF_TOKEN`.
-4. Optionally, run an LLM judge on the cluster from a family that is not under test, and stack
-   its scores under the labels (section 7).
+The casting criteria used in study 3 are in
+[`docs/annotation/protocol_v2.1.md`](docs/annotation/protocol_v2.1.md). In a pilot on the 59 stories
+rounds 1–3 disagreed on (plus 20 they agreed on), two independent groups made identical casting
+decisions on 96% of stories (κ 0.95), against 85% (κ 0.42) for substantive labels on the hard
+cases; the pilot also found two gaps in the draft, fixed in v2.1
+([`docs/annotation/pilot_results.md`](docs/annotation/pilot_results.md)). The other 712 open-model
+stories (samples 2 and 3) are unannotated.
 
 ## 1. What was done
 

@@ -128,7 +128,7 @@ python -m biasprobe train         # judge scores are picked up automatically as 
 
 Without a server, the judge can run offline on the cluster: `export-judge-prompts`, `cluster/judge.sbatch`, then `import-judge` (section 8 of [CLUSTER_HOWTO.md](CLUSTER_HOWTO.md)).
 
-The judge never decides a label by itself. Its scores are stacked as features under the human labels, so the classifier learns how much to trust it per category. In practice this is the single biggest accuracy boost once you have a few dozen labels, and it also makes the "most confidently flagged" review order useful before the classifier exists. Use `train --no-judge` to compare.
+The judge never decides a label by itself. Its scores are stacked as features under the human labels, so the classifier learns how much to trust it per category. With Phi-4 on 1,338 labelled stories, macro-F1 rose from 0.21 to 0.28 (see [FINDINGS.md](FINDINGS.md) for why that overstates what it sees). It also makes the "most confidently flagged" review order useful before the classifier exists. Use `train --no-judge` to compare.
 
 ### Report
 
