@@ -1,0 +1,13 @@
+<section id="gaps" data-transition="fade" style="background:#EEF1F5;color:#1B2A3A;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:36px">
+<p style="font-size:24px;color:#2F5D8A;letter-spacing:2px;text-transform:uppercase;font-weight:600">3 · Critical analysis</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.15;color:#1B2A3A">Five gaps, five design answers</h2>
+<table style="font-family:'IBM Plex Sans', Arial, sans-serif;font-size:24px;color:#1B2A3A;background:#FDFCF9;border:1px solid #D9DEE5">
+<tr style="background:#DCE5EF"><th style="width:22%">Gap</th><th style="width:39%">What is missing</th><th style="width:39%">Response in this project</th></tr>
+<tr><td>G1 Recognition is not production</td><td>Benchmarks test whether a model prefers a stereotype it is shown, not what it writes when free</td><td>Premises that leave every attribute open; the written story is the unit of analysis</td></tr>
+<tr><td>G2 Proxies miss casting</td><td>Sentiment and regard stay neutral when every nurse is a woman and every cleaner an immigrant</td><td>Human-perceived labels, casting split from substantive stereotypes, lexical analyzers</td></tr>
+<tr><td>G3 One axis, one family</td><td>Mostly gender only, one often older model, each study with its own prompts and sampling</td><td>The same 89 premises for several families and sizes, one sampling setup</td></tr>
+<tr><td>G4 Unstated annotation rules</td><td>Whether casting counts is left to each annotator; LLM-annotator reliability is rarely reported</td><td>Written casting criteria, blind batches mixing all models, repeated stories, Cohen’s κ</td></tr>
+<tr><td>G5 Opaque detectors</td><td>A score without the sentence that triggered it, so review is slow</td><td>Evidence sentences shown in a human-in-the-loop review queue</td></tr>
+</table>
+<aside>What the existing work misses comes down to five gaps. First, benchmarks measure recognition, not what a model writes when it is free to choose. Second, automatic proxies like sentiment miss casting: a story where every nurse is a woman reads as neutral. Third, most studies cover one axis and one model family, with incomparable settings. Fourth, annotation rules, especially whether casting alone counts, are left unstated, so labels drift. Fifth, detectors give scores without evidence. The right column shows how our design answers each one.</aside>
+</section>

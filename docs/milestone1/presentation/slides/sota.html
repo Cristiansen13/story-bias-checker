@@ -1,0 +1,23 @@
+<section id="sota" data-transition="fade" style="background:#F7F6F2;color:#1B2A3A;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:36px">
+<p style="font-size:24px;color:#2F5D8A;letter-spacing:2px;text-transform:uppercase;font-weight:600">2 · State of the art</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.15;color:#1B2A3A">What existing work measures</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px;background:#FDFCF9;padding:36px;border:1px solid #D9DEE5;border-top:6px solid #2F5D8A;border-radius:14px">
+<h3 style="font-family:'IBM Plex Sans', Arial, sans-serif;font-size:32px;font-weight:600;color:#1B2A3A">Bias in NLP</h3>
+<p style="font-size:26px;line-height:1.4;color:#4A5568">“Bias” is often left undefined; name the harm (Blodgett et al., 2020). Metrics and datasets surveyed by Gallegos et al. (2024). Word embeddings already encode stereotypes (Bolukbasi et al., 2016; Caliskan et al., 2017).</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#FDFCF9;padding:36px;border:1px solid #D9DEE5;border-top:6px solid #2F5D8A;border-radius:14px">
+<h3 style="font-family:'IBM Plex Sans', Arial, sans-serif;font-size:32px;font-weight:600;color:#1B2A3A">Fixed-format benchmarks</h3>
+<p style="font-size:26px;line-height:1.4;color:#4A5568">StereoSet and CrowS-Pairs compare sentence likelihoods; WinoBias and Winogender test gendered coreference; BBQ tests answers under ambiguity. LLMs pick the stereotyped occupation 3–6 times more often (Kotek et al., 2023).</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#FDFCF9;padding:36px;border:1px solid #D9DEE5;border-top:6px solid #2F5D8A;border-radius:14px">
+<h3 style="font-family:'IBM Plex Sans', Arial, sans-serif;font-size:32px;font-weight:600;color:#1B2A3A">Open-ended generation</h3>
+<p style="font-size:26px;line-height:1.4;color:#4A5568">Regard (Sheng et al., 2019) and BOLD (Dhamala et al., 2021). GPT-3 stories tie women to family and looks (Lucy and Bamman, 2021); reference letters (Wan et al., 2023); marked personas (Cheng et al., 2023).</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#FDFCF9;padding:36px;border:1px solid #D9DEE5;border-top:6px solid #2F5D8A;border-radius:14px">
+<h3 style="font-family:'IBM Plex Sans', Arial, sans-serif;font-size:32px;font-weight:600;color:#1B2A3A">Measurement tools</h3>
+<p style="font-size:26px;line-height:1.4;color:#4A5568">LLMs as annotators (Gilardi et al., 2023) and as judges (Zheng et al., 2023), with position and self-preference biases. Active learning asks humans about the most informative examples first (Settles, 2009).</p>
+</div>
+</div>
+<aside>Four groups of work. Blodgett and colleagues showed that “bias” is often left undefined; Gallegos and colleagues survey the metrics. Benchmarks such as StereoSet, CrowS-Pairs, WinoBias and BBQ test whether a model prefers a stereotype it is shown; Kotek found LLMs pick the stereotyped occupation three to six times more often. For open-ended text there are regard and BOLD, and Lucy and Bamman showed GPT-3 stories tie women to family and looks. Finally, LLMs now serve as annotators and judges, and active learning saves human labels.</aside>
+</section>

@@ -2,7 +2,7 @@
 
 Probe how different LLMs write stories and which social stereotypes they lean on.
 
-Results are in [FINDINGS.md](FINDINGS.md): the first study (three Claude models, 312 stories, blind annotation, 17 bias labels), the second (Gemma 4 and Qwen3.5 4B/9B/27B on the FEP cluster, 1,068 stories, one per probe annotated blind and compared with Claude's re-annotated stories) and the third (Mistral, OLMo and gpt-oss added, Claude rewritten one call at a time, one balanced annotation round over 11 models, and an offline Phi-4 judge). The annotation protocols and the taxonomy are in [`docs/annotation/`](docs/annotation/), the Milestone 1 plan is in [`docs/milestone1/`](docs/milestone1/), and all the data (every story with every annotation round, the records of each round and the raw cluster outputs) is in [`dataset/`](dataset/).
+Results are in [FINDINGS.md](FINDINGS.md): the first study (three Claude models, 312 stories, blind annotation, 17 bias labels), the second (Gemma 4 and Qwen3.5 4B/9B/27B on the FEP cluster, 1,068 stories, one per probe annotated blind and compared with Claude's re-annotated stories) and the third (Mistral, OLMo and gpt-oss added, Claude rewritten one call at a time, one balanced annotation round over 11 models, and an offline Phi-4 judge). The annotation protocols and the taxonomy are in [`docs/annotation/`](docs/annotation/), the Milestone 1 plan and slides are in [`docs/milestone1/`](docs/milestone1/), and all the data (every story with every annotation round, the records of each round and the raw cluster outputs) is in [`dataset/`](dataset/).
 
 To start from the shared data, rebuild the database once after cloning:
 
@@ -191,7 +191,7 @@ biasprobe/
   web/           FastAPI app, templates, static assets
 cluster/         offline generation with Hugging Face checkpoints on the FEP Slurm cluster
 docs/annotation/ annotation protocols (v1 used in rounds 1–3, v2.1 draft), taxonomy, pilot results
-docs/milestone1/ Milestone 1 document and the script that builds it
+docs/milestone1/ Milestone 1 document and slides (PDF), their sources and build scripts
 tests/           pytest suite (mocked LLM server, no network)
 ```
 

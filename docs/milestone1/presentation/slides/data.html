@@ -1,0 +1,36 @@
+<section id="data" data-transition="fade" style="background:#F7F6F2;color:#1B2A3A;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:36px">
+<p style="font-size:24px;color:#2F5D8A;letter-spacing:2px;text-transform:uppercase;font-weight:600">5 · Data and processing</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.15;color:#1B2A3A">Generated data, scripted processing</h2>
+<div style="display:flex;flex-direction:row;gap:64px">
+<div style="width:600px;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;flex-direction:row;align-items:center;gap:24px">
+<p style="font-family:'Source Serif 4', Georgia, serif;font-size:56px;font-weight:600;color:#2F5D8A;width:180px;flex:none">89</p>
+<p style="font-size:26px;line-height:1.3;color:#4A5568">premises in 19 categories</p>
+</div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:24px">
+<p style="font-family:'Source Serif 4', Georgia, serif;font-size:56px;font-weight:600;color:#2F5D8A;width:180px;flex:none">11</p>
+<p style="font-size:26px;line-height:1.3;color:#4A5568">models: Claude Haiku, Sonnet, Opus; Gemma 4; Qwen3.5 4B, 9B, 27B; Mistral 7B; OLMo 7B, 32B; gpt-oss 20B</p>
+</div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:24px">
+<p style="font-family:'Source Serif 4', Georgia, serif;font-size:56px;font-weight:600;color:#2F5D8A;width:180px;flex:none">3</p>
+<p style="font-size:26px;line-height:1.3;color:#4A5568">stories per premise for each open-weight model; Claude at least 1</p>
+</div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:24px">
+<p style="font-family:'Source Serif 4', Georgia, serif;font-size:56px;font-weight:600;color:#2F5D8A;width:180px;flex:none">2,714</p>
+<p style="font-size:26px;line-height:1.3;color:#4A5568">stories so far; no scraped or personal data</p>
+</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FDFCF9;padding:36px;border:1px solid #D9DEE5;border-radius:14px">
+<ol style="font-size:26px;line-height:1.4;color:#1B2A3A">
+<li><b>Prompt:</b> premise plus a fixed instruction and system prompt</li>
+<li><b>Generate:</b> temperature 0.9, top-p 0.95, at most 700 tokens (gpt-oss 1,500)</li>
+<li><b>Clean:</b> strip reasoning and titles, drop short outputs, deduplicate</li>
+<li><b>Sample:</b> one story per premise and model; every batch mixes all models</li>
+<li><b>Validate:</b> taxonomy labels only; exact quotes stored as spans; repeats for agreement</li>
+<li><b>Train:</b> 5-fold cross-validation; per-label F1 and bias-vs-none accuracy</li>
+<li><b>Report:</b> any-label and beyond-casting rates, Wilson intervals, Cohen’s κ</li>
+</ol>
+</div>
+</div>
+<aside>All data is generated for the study: no scraped or personal data. The same 89 premises go to eleven models from six families, three Claude and eight open-weight: about 2,700 stories so far. Processing is scripted end to end: fixed prompts, identical sampling, cleaning and deduplication, then one story per premise and model for annotation, in batches that mix all models. Labels need exact quotes, the classifier is cross-validated, and the report gives rates with intervals and agreement.</aside>
+</section>
