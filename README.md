@@ -2,13 +2,14 @@
 
 Probe how different LLMs write stories and which social stereotypes they lean on.
 
-Results are in [FINDINGS.md](FINDINGS.md): the first study (three Claude models, 312 stories, blind annotation, 17 bias labels) and the second (Gemma 4 and Qwen3.5 4B/9B/27B on the FEP cluster, 1,068 stories, one per probe annotated blind and compared with Claude's re-annotated stories). The annotation protocols and the taxonomy are in [`docs/annotation/`](docs/annotation/), the Milestone 1 plan is in [`docs/milestone1/`](docs/milestone1/), and all the data (every story with every annotation round, the records of each round and the raw cluster outputs) is in [`dataset/`](dataset/).
+Results are in [FINDINGS.md](FINDINGS.md): the first study (three Claude models, 312 stories, blind annotation, 17 bias labels), the second (Gemma 4 and Qwen3.5 4B/9B/27B on the FEP cluster, 1,068 stories, one per probe annotated blind and compared with Claude's re-annotated stories) and the third (Mistral, OLMo and gpt-oss added, Claude rewritten one call at a time, one balanced annotation round over 11 models, and an offline Phi-4 judge). The annotation protocols and the taxonomy are in [`docs/annotation/`](docs/annotation/), the Milestone 1 plan is in [`docs/milestone1/`](docs/milestone1/), and all the data (every story with every annotation round, the records of each round and the raw cluster outputs) is in [`dataset/`](dataset/).
 
 To start from the shared data, rebuild the database once after cloning:
 
 ```bash
 pip install -r requirements.txt
 python -m biasprobe import dataset/stories.jsonl --keep-ids   # creates data/biasprobe.db
+python -m biasprobe import-judge dataset/judge_outputs/judge-phi-4.jsonl
 python -m biasprobe train                                      # classifier and predictions
 ```
 
@@ -80,8 +81,8 @@ Generation is resumable: rerunning only produces what is still missing, duplicat
 shared Apptainer container on the `dgxa100` partition (see [CLUSTER_HOWTO.md](CLUSTER_HOWTO.md)
 for the cluster rules: no compute on the login node, everything through `sbatch`).
 
-- [`cluster/models.txt`](cluster/models.txt): one line per model: the name the report shows, a local checkpoint directory or Hugging Face id, and the batch size. It starts with the checkpoints already on the cluster: Gemma 4 E4B, Qwen3.5 4B, 9B and 27B.
-- [`cluster/generate_hf.py`](cluster/generate_hf.py): batched sampling with identical settings for every model (temperature 0.9, top-p 0.95, no top-k, 700 new tokens), the system prompt of `biasprobe generate`, and thinking mode turned off. Needs only torch and transformers.
+- [`cluster/models.txt`](cluster/models.txt): one line per model: the name the report shows, a local checkpoint directory or Hugging Face id, the batch size, and optional extra arguments. It holds the checkpoints already on the cluster (Gemma 4 E4B, Qwen3.5 4B, 9B and 27B) and models downloaded to the job's `/tmp` (Mistral 7B, OLMo 3 7B, OLMo 3.1 32B, gpt-oss 20B).
+- [`cluster/generate_hf.py`](cluster/generate_hf.py): batched sampling with identical settings for every model (temperature 0.9, top-p 0.95, no top-k, 700 new tokens; gpt-oss gets 1,500 and low reasoning effort, because its reasoning counts against the limit), the system prompt of `biasprobe generate`, and thinking mode turned off. Needs only torch and transformers. `--task judge` runs the LLM judge with greedy decoding instead.
 - [`cluster/generate.sbatch`](cluster/generate.sbatch): picks the first container whose transformers loads every model in the list, runs a short smoke pass over all models (so a broken one shows up in minutes), then generates everything that is missing. Rerunning resumes; the output files are `out/stories-<name>.jsonl`.
 
 ```bash
@@ -124,6 +125,8 @@ Annotation guidelines that keep the labels consistent:
 python -m biasprobe judge         # scores every story 0–1 per label with the configured judge model
 python -m biasprobe train         # judge scores are picked up automatically as extra features
 ```
+
+Without a server, the judge can run offline on the cluster: `export-judge-prompts`, `cluster/judge.sbatch`, then `import-judge` (section 8 of [CLUSTER_HOWTO.md](CLUSTER_HOWTO.md)).
 
 The judge never decides a label by itself. Its scores are stacked as features under the human labels, so the classifier learns how much to trust it per category. In practice this is the single biggest accuracy boost once you have a few dozen labels, and it also makes the "most confidently flagged" review order useful before the classifier exists. Use `train --no-judge` to compare.
 

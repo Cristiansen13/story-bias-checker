@@ -109,3 +109,17 @@ with `os.environ` (keeps one sbatch reusable across runs).
   that times `--cpus-per-task` silently raises the CPU count, and every `srun` in the job then
   fails with `cpus-per-task set by two different environment variables`. On haswell, keep
   `--mem` ≤ 1.7 GB × CPUs.
+- `dgxa100-ncit-wn01` rejected jobs instantly on 30 Oct 2026 (ExitCode 0:53, no log, even though
+  the node shows as idle). Resubmit with `sbatch --exclude=dgxa100-ncit-wn01 ...`.
+
+## 8. Scoring stories with an LLM judge (biasprobe)
+```bash
+python -m biasprobe export-judge-prompts cluster/judge_prompts.jsonl --judge phi-4
+scp cluster/generate_hf.py cluster/judge.sbatch cluster/judge_prompts.jsonl fep:biasprobe/
+ssh fep 'cd ~/biasprobe && sbatch --exclude=dgxa100-ncit-wn01 judge.sbatch'
+scp fep:biasprobe/out/judge-phi-4.jsonl dataset/judge_outputs/
+python -m biasprobe import-judge dataset/judge_outputs/judge-phi-4.jsonl
+```
+Use a judge from a family that is not under test. Pick another with
+`--export=ALL,JUDGE_NAME=...,JUDGE_PATH=...`, and use the same name in `--judge`. Rerunning resumes.
+Gated models such as Llama need an `HF_TOKEN`, which the cluster does not have yet.
