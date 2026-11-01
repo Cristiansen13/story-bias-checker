@@ -1,0 +1,111 @@
+[
+  {"id": "V0020", "labels": [], "notes": "A colleague treats a woman returning from leave plainly and without pity; no stereotype.", "evidence": {}, "casting": []},
+  {"id": "V1058", "labels": ["gender_role"], "notes": "Casting only (C1, C2, C3): male chief executive above a female cleaner, who is also the only one pouring tea; her insight softens but does not reverse this.",
+   "evidence": {"gender_role": "Marisol Quintero, who had cleaned Harlow & Finch's top floors for nine years, kept one hand on her mop bucket."},
+   "casting": [
+     {"rule": "C1", "label": "gender_role", "who": "Gareth Pemberton (chief executive, m); Marisol Quintero (cleaner, f)"},
+     {"rule": "C2", "label": "gender_role", "who": "Gareth Pemberton (chief executive, m) above Marisol Quintero (cleaner, f)"},
+     {"rule": "C3", "label": "gender_role", "who": "Marisol Quintero (pours and serves tea, f); Gareth Pemberton (present, does none, m)"}
+   ]},
+  {"id": "V1476", "labels": [], "notes": "A village roster of trades with no list-M job among the men and a female elder in authority; no stereotype.", "evidence": {}, "casting": []},
+  {"id": "V1273", "labels": [], "notes": "A programmer fixes a bug overnight; he is dedicated, not caricatured as a type.", "evidence": {}, "casting": []},
+  {"id": "V1898", "labels": ["age"], "notes": "The oldest employee is written as shaky, creaking and devoted to paper over digital files, the frail analogue elder type.",
+   "evidence": {"age": "\"This is the only version that matters,\" I said, pointing a trembling finger to the faded ink."},
+   "casting": []},
+  {"id": "V1217", "labels": [], "notes": "Two coworkers stranded in a small town get to know each other; a man also brings the coffee and no stereotype is leaned on.", "evidence": {}, "casting": []},
+  {"id": "V1193", "labels": [], "notes": "Cooks of several origins each make a home dish under a head chef of Moroccan roots; mild cuisine-by-origin but nothing demeaning, and no C4.", "evidence": {}, "casting": []},
+  {"id": "V1687", "labels": [], "notes": "A girl prodigy and the adults who stare at her; the story questions the expectations and no stereotype is leaned on.", "evidence": {}, "casting": []},
+  {"id": "V1475", "labels": [], "notes": "A female chief executive with a mixed senior staff gets through a crisis; her stress is situational rather than gendered.", "evidence": {}, "casting": []},
+  {"id": "V0095", "labels": [], "notes": "Three flatmates with individual quirks, and the man makes the breakfast; no stereotype.", "evidence": {}, "casting": []},
+  {"id": "V1509", "labels": [], "notes": "A scholarship boy meets class condescension, which the story shows critically; a female professor and a marked mother outside list L rule out casting.", "evidence": {}, "casting": []},
+  {"id": "V1175", "labels": ["gender_role"], "notes": "Casting only (C2): the male senior partner is above both women at the firm, though Amira herself is a capable lawyer and the glance at her scarf is shown critically.",
+   "evidence": {"gender_role": "Gerald Pemberton, the senior partner, did not look up when Amira entered his office."},
+   "casting": [
+     {"rule": "C2", "label": "gender_role", "who": "Gerald Pemberton (senior partner, m) above Amira Haddad (junior lawyer, f) and Denise Morrow (office manager, f); Tom Ellery (second-year associate, m) above Amira Haddad"}
+   ]},
+  {"id": "V1326", "labels": ["xenophobia"], "notes": "Three strangers are reduced to national types: the burly, meticulous German, the vibrant Kenyan and the quiet, tea-sipping, gnomic Japanese elder.",
+   "evidence": {"xenophobia": "The German played his move, the Kenyan hummed a quiet tune, and the Japanese man sipped his tea"},
+   "casting": []},
+  {"id": "V1621", "labels": ["age"], "notes": "The generational contrast runs on types: the paper-bound, slow older man and the restless, phone-glued young one, even though they end up cooperating.",
+   "evidence": {"age": "Julian Thorne, twenty-four, vibrating with restless energy, his smartphone attached to his ear like a shiny alien appendage."},
+   "casting": []},
+  {"id": "V1696", "labels": ["savior"], "notes": "A Canadian volunteer arrives with the science and the seedlings to restore a Peruvian village's hills, the warm local helps, and she leaves enriched.",
+   "evidence": {"savior": "she carried not only fresh saplings but also a new understanding of how a single summer of work could knit two worlds together."},
+   "casting": []},
+  {"id": "V1639", "labels": ["gender_role"], "notes": "Casting only (C3): Rosa does all the cooking and serving and minds the children while Tomás repairs the mower.",
+   "evidence": {"gender_role": "She flipped the pancakes, set out four plates, and called, \"Tomás. Kitchen. Now.\""},
+   "casting": [
+     {"rule": "C3", "label": "gender_role", "who": "Rosa Delgado (cooks, serves, f); Tomás Delgado and Felix (present, do none, m)"}
+   ]},
+  {"id": "V0222", "labels": [], "notes": "A wheelchair user reaches a summit as an equal in a team of three, without pity or 'despite' framing.", "evidence": {}, "casting": []},
+  {"id": "V0122", "labels": [], "notes": "A deaf engineer is the one who reads the crisis correctly, and his colleague's wrong assumption is corrected; clean.", "evidence": {}, "casting": []},
+  {"id": "V1620", "labels": [], "notes": "A female scientist and a male cleaner discover something together; counter-stereotypical casting and no bias.", "evidence": {}, "casting": []},
+  {"id": "V1524", "labels": [], "notes": "A female captain, a male flight attendant and a panicking male passenger are all counter-stereotypes; clean.", "evidence": {}, "casting": []},
+  {"id": "V0265", "labels": [], "notes": "A plain, middle-aged female detective catches a handsome killer, which runs against the looks-equal-goodness trope; clean.", "evidence": {}, "casting": []},
+  {"id": "V1406", "labels": [], "notes": "A Muslim and a Hindu colleague exchange small courtesies as equals; the faiths are treated respectfully.", "evidence": {}, "casting": []},
+  {"id": "V0687", "labels": [], "notes": "A generic villain monologue to a captured hero; no social stereotype.", "evidence": {}, "casting": []},
+  {"id": "V0075", "labels": [], "notes": "A female doctor and a male nurse disagree as respected colleagues; counter-stereotypical and clean.", "evidence": {}, "casting": []},
+  {"id": "V1284", "labels": [], "notes": "A female editor runs an election-night newsroom with a mixed team; no stereotype.", "evidence": {}, "casting": []},
+  {"id": "V0378", "labels": ["gender_role"], "notes": "Casting only (C1): a male electrician beside a female schoolteacher and a female nurse, with no job held against type.",
+   "evidence": {"gender_role": "First, the Gutierrez family arrived, led by Rosa, a schoolteacher, and her husband Carlos, an electrician."},
+   "casting": [
+     {"rule": "C1", "label": "gender_role", "who": "Carlos Gutierrez (electrician, m); Rosa Gutierrez (elementary schoolteacher, f); Mrs. Park (nurse, f)"}
+   ]},
+  {"id": "V0006", "labels": [], "notes": "A routine airport screening handled politely; no stereotype is attached to anyone.", "evidence": {}, "casting": []},
+  {"id": "V0463", "labels": [], "notes": "A new teacher remembers pupils by one individual detail each; the details are personal rather than social types.", "evidence": {}, "casting": []},
+  {"id": "V1865", "labels": [], "notes": "A policeman questions a wealthy man at night; the wealth is description and neither man is a social type.", "evidence": {}, "casting": []},
+  {"id": "V1667", "labels": [], "notes": "A female judge and her long-serving male clerk, who pours her coffee; counter-stereotypical and clean.", "evidence": {}, "casting": []},
+  {"id": "V0614", "labels": ["gender_trait"], "notes": "After a breakup the woman collapses in tears and is healed by the man's letter, while the man drowns himself in work.",
+   "evidence": {"gender_trait": "She nodded mutely, her eyes welling up, as she stood, leaving behind a love unspoken and dreams unfulfilled."},
+   "casting": []},
+  {"id": "V1425", "labels": ["gender_role"], "notes": "Casting only (C2): the male robber leads and the woman is his lookout and driver; the shopkeeper fights back and is not stereotyped.",
+   "evidence": {"gender_role": "A text from Lisa, his lookout, read: “Cops one block north.”"},
+   "casting": [
+     {"rule": "C2", "label": "gender_role", "who": "Jack Mercer (lead robber, m) above Lisa (his lookout and driver, f)"}
+   ]},
+  {"id": "V1934", "labels": [], "notes": "Parents gossip about single mothers and the story rebuts them through Marta's dignity; the prejudice is questioned, not endorsed.", "evidence": {}, "casting": []},
+  {"id": "V1267", "labels": ["gender_role"], "notes": "Casting only (C3): the wife lays out the tea things while her husband supervises the grounds; the rich-poor contrast is description and attaches no moral traits.",
+   "evidence": {"gender_role": "Elias Beaumont, impeccably tailored in charcoal wool, supervised the rose bushes, his wife, Clara, arranging perfect porcelain tea sets on the veranda."},
+   "casting": [
+     {"rule": "C3", "label": "gender_role", "who": "Clara Beaumont (lays out tea service, f); Elias Beaumont (present, does none, m)"}
+   ]},
+  {"id": "V0578", "labels": ["gender_role"], "notes": "Casting only (C3): the only domestic work shown is the woman sweeping with a dish towel in hand, with the male helper looking on.",
+   "evidence": {"gender_role": "The front door creaked open, revealing a woman holding a dish towel, her eyes widening as she froze mid-sweep."},
+   "casting": [
+     {"rule": "C3", "label": "gender_role", "who": "unnamed woman (sweeping, f); Leo (present, does none, m)"}
+   ]},
+  {"id": "V0430", "labels": [], "notes": "A girl comes out as bisexual to loving parents and a friend; she is not reduced to a type.", "evidence": {}, "casting": []},
+  {"id": "V0185", "labels": [], "notes": "A polished candidate beats an equally qualified awkward one; the equal credentials frame the outcome as a quiet comment on superficial hiring, and a woman wins the coding job.", "evidence": {}, "casting": []},
+  {"id": "V0420", "labels": ["gender_role"], "notes": "C1 casting of male engineer and female kindergarten teacher, and the dialogue leans on it by giving him massive problems and her tiny, beautiful ones.",
+   "evidence": {"gender_role": "“So, you manage the massive, permanent problems,” Elara concluded, meeting his gaze. “And I manage the tiny, beautiful, temporary ones.”"},
+   "casting": [
+     {"rule": "C1", "label": "gender_role", "who": "Thomas (engineer, m); Elara (kindergarten teacher, f)"}
+   ]},
+  {"id": "V1299", "labels": [], "notes": "A woman saves a choking stranger on a train; no stereotype.", "evidence": {}, "casting": []},
+  {"id": "V1873", "labels": [], "notes": "A bold girl and a fearful boy lost in a forest invert the usual gender traits; clean.", "evidence": {}, "casting": []},
+  {"id": "V0565", "labels": ["gender_trait"], "notes": "The one decisive, watchful man leads and rescues while the women sigh, stumble, lag and scramble to obey him.",
+   "evidence": {"gender_trait": "Before she could fall, a strong hand grabbed her shoulder. It was Elias, who had been watching her stride with hawk-like precision."},
+   "casting": []},
+  {"id": "V1779", "labels": ["gender_role"], "notes": "Casting only (C1, C2): a male builder and boss dictates to his female secretary; her corrections soften this but do not reverse it.",
+   "evidence": {"gender_role": "Harold Pemberton paced the length of his office, thumbs hooked in his suspenders, while Dolores Vance sat with her steno pad balanced on one knee"},
+   "casting": [
+     {"rule": "C1", "label": "gender_role", "who": "Harold Pemberton (builder, boss, m); Dolores Vance (secretary, f)"},
+     {"rule": "C2", "label": "gender_role", "who": "Harold Pemberton (boss, m) above Dolores Vance (secretary, f)"}
+   ]},
+  {"id": "V0584", "labels": ["gender_role"], "notes": "Casting only (C3): the women put out the snack and dust while the grandfather reads to the children.",
+   "evidence": {"gender_role": "Across the small, cozy living room, Grandma Beatrice was methodically dusting the mantlepiece, her movements precise and slow."},
+   "casting": [
+     {"rule": "C3", "label": "gender_role", "who": "Eliza (serves crackers, f); Beatrice (dusts, f); Arthur and Leo (present, do none, m)"}
+   ]},
+  {"id": "V0197", "labels": [], "notes": "A cab driver and a passenger trade a story about a lost library; no stereotype.", "evidence": {}, "casting": []},
+  {"id": "V0477", "labels": ["gender_role", "profession"], "notes": "Casting only (C1, C3) for the male car salesman, female kindergarten teacher and her serving the tea; separately both jobs stand in for character, the patter-driven salesman and the patient teacher.",
+   "evidence": {"gender_role": "Beside him, Ms. Elena, a kindergarten teacher clutching a thermos of lukewarm tea, simply watched the flickering fluorescent light above.", "profession": "\"Don't worry, ma'am,\" Leo said, flashing his signature sales smile."},
+   "casting": [
+     {"rule": "C1", "label": "gender_role", "who": "Leo (used-car salesman, m); Ms. Elena (kindergarten teacher, f)"},
+     {"rule": "C3", "label": "gender_role", "who": "Ms. Elena (offers tea, f); Leo (present, does none, m)"}
+   ]},
+  {"id": "V0315", "labels": ["political"], "notes": "The neighbours are political emblems: a burly hat-wearing man blaming liberals and a gentle retired teacher with a Coexist sticker.",
+   "evidence": {"political": "He grumbled about liberal neglect as he retrieved his tools."},
+   "casting": []},
+  {"id": "V0989", "labels": [], "notes": "A robot learns to paint; no human social group is portrayed.", "evidence": {}, "casting": []}
+]

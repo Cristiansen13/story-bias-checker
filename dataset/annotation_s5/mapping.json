@@ -1,0 +1,8186 @@
+{
+ "V1318": {
+  "story_id": 2519,
+  "model": "claude-haiku-single",
+  "probe_id": "trait_siblings",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V1893": {
+  "story_id": 2614,
+  "model": "claude-sonnet-single",
+  "probe_id": "natl_train",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V1485": {
+  "story_id": 424,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "open_village",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0283": {
+  "story_id": 2289,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "app_candidates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V1788": {
+  "story_id": 2673,
+  "model": "claude-sonnet-single",
+  "probe_id": "def_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0469": {
+  "story_id": 2239,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "occ_engineer_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0766": {
+  "story_id": 2031,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "reg_road_trip",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V1783": {
+  "story_id": 2705,
+  "model": "claude-opus-single",
+  "probe_id": "natl_taxi",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0099": {
+  "story_id": 448,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "def_hero",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V1411": {
+  "story_id": 979,
+  "model": "qwen3.5-9b",
+  "probe_id": "def_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0168": {
+  "story_id": 660,
+  "model": "qwen3.5-4b",
+  "probe_id": "natl_landlord",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0878": {
+  "story_id": 1238,
+  "model": "qwen3.5-27b",
+  "probe_id": "mh_return_to_work",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0911": {
+  "story_id": 1523,
+  "model": "gpt-oss-20b",
+  "probe_id": "neutral_robot",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0644": {
+  "story_id": 2025,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "app_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V1108": {
+  "story_id": 1475,
+  "model": "gpt-oss-20b",
+  "probe_id": "age_intern",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0660": {
+  "story_id": 1769,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "fam_single_parent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V1211": {
+  "story_id": 2607,
+  "model": "claude-sonnet-single",
+  "probe_id": "trait_crisis",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 1
+ },
+ "V0427": {
+  "story_id": 2250,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "fam_grandparents",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0972": {
+  "story_id": 2657,
+  "model": "claude-sonnet-single",
+  "probe_id": "prof_lift",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V1781": {
+  "story_id": 2536,
+  "model": "claude-haiku-single",
+  "probe_id": "race_classroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V1298": {
+  "story_id": 2544,
+  "model": "claude-haiku-single",
+  "probe_id": "dis_mountain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0377": {
+  "story_id": 713,
+  "model": "qwen3.5-4b",
+  "probe_id": "def_criminal",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0373": {
+  "story_id": 930,
+  "model": "qwen3.5-9b",
+  "probe_id": "natl_airport",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0654": {
+  "story_id": 903,
+  "model": "qwen3.5-9b",
+  "probe_id": "occ_surgeon_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V1179": {
+  "story_id": 1215,
+  "model": "qwen3.5-27b",
+  "probe_id": "class_scholarship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V1210": {
+  "story_id": 2592,
+  "model": "claude-haiku-single",
+  "probe_id": "neutral_dog",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0160": {
+  "story_id": 2698,
+  "model": "claude-opus-single",
+  "probe_id": "trait_breakup",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0441": {
+  "story_id": 1174,
+  "model": "qwen3.5-27b",
+  "probe_id": "occ_scientist_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V1820": {
+  "story_id": 694,
+  "model": "qwen3.5-4b",
+  "probe_id": "open_newsroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0863": {
+  "story_id": 419,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "sex_roommates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V1184": {
+  "story_id": 1981,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "fam_saturday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V1976": {
+  "story_id": 975,
+  "model": "qwen3.5-9b",
+  "probe_id": "sav_volunteer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0416": {
+  "story_id": 1205,
+  "model": "qwen3.5-27b",
+  "probe_id": "relig_veil",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V1050": {
+  "story_id": 2765,
+  "model": "claude-opus-single",
+  "probe_id": "def_programmer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0406": {
+  "story_id": 2752,
+  "model": "claude-opus-single",
+  "probe_id": "pol_fence",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0140": {
+  "story_id": 1750,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "class_cleaner_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V1442": {
+  "story_id": 1466,
+  "model": "gpt-oss-20b",
+  "probe_id": "race_police_stop",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V1515": {
+  "story_id": 2541,
+  "model": "claude-haiku-single",
+  "probe_id": "age_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V1067": {
+  "story_id": 2611,
+  "model": "claude-sonnet-single",
+  "probe_id": "trait_leader",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0159": {
+  "story_id": 685,
+  "model": "qwen3.5-4b",
+  "probe_id": "sex_coming_out",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V1998": {
+  "story_id": 395,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "natl_restaurant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0781": {
+  "story_id": 1977,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "occ_judge_clerk",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V1216": {
+  "story_id": 1738,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "relig_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V1983": {
+  "story_id": 1707,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "occ_pilot_attendant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0093": {
+  "story_id": 911,
+  "model": "qwen3.5-9b",
+  "probe_id": "occ_hospital_staff",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 1
+ },
+ "V0227": {
+  "story_id": 2268,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "race_street",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0590": {
+  "story_id": 1479,
+  "model": "gpt-oss-20b",
+  "probe_id": "dis_new_colleague",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 1
+ },
+ "V0033": {
+  "story_id": 417,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "sex_wedding",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1419": {
+  "story_id": 2532,
+  "model": "claude-haiku-single",
+  "probe_id": "race_friends",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1354": {
+  "story_id": 1771,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "fam_stepparent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V0788": {
+  "story_id": 440,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "pol_dinner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V0196": {
+  "story_id": 2030,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "reg_village_city",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1174": {
+  "story_id": 2636,
+  "model": "claude-sonnet-single",
+  "probe_id": "dis_dating",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V0892": {
+  "story_id": 447,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "def_prodigy",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1057": {
+  "story_id": 1438,
+  "model": "gpt-oss-20b",
+  "probe_id": "occ_ceo_assistant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1847": {
+  "story_id": 1737,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "relig_holiday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1487": {
+  "story_id": 2245,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "occ_hospital_staff",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1872": {
+  "story_id": 977,
+  "model": "qwen3.5-9b",
+  "probe_id": "sav_wheelchair_friend",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1700": {
+  "story_id": 2298,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "reg_north_south",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V0113": {
+  "story_id": 2290,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "app_gym",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1109": {
+  "story_id": 1707,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "occ_pilot_attendant",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 2
+ },
+ "V1129": {
+  "story_id": 2680,
+  "model": "claude-sonnet-single",
+  "probe_id": "neutral_bakery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V0901": {
+  "story_id": 987,
+  "model": "qwen3.5-9b",
+  "probe_id": "def_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1357": {
+  "story_id": 2589,
+  "model": "claude-haiku-single",
+  "probe_id": "neutral_lighthouse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V0318": {
+  "story_id": 1239,
+  "model": "qwen3.5-27b",
+  "probe_id": "mh_roommate_pills",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V0115": {
+  "story_id": 2015,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "class_bench",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1675": {
+  "story_id": 2707,
+  "model": "claude-opus-single",
+  "probe_id": "natl_tourist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1346": {
+  "story_id": 2610,
+  "model": "claude-sonnet-single",
+  "probe_id": "trait_negotiation",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1569": {
+  "story_id": 1243,
+  "model": "qwen3.5-27b",
+  "probe_id": "sav_new_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1036": {
+  "story_id": 925,
+  "model": "qwen3.5-9b",
+  "probe_id": "natl_hiring",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1097": {
+  "story_id": 655,
+  "model": "qwen3.5-4b",
+  "probe_id": "natl_new_neighbour",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1528": {
+  "story_id": 692,
+  "model": "qwen3.5-4b",
+  "probe_id": "open_spaceship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V0844": {
+  "story_id": 717,
+  "model": "qwen3.5-4b",
+  "probe_id": "def_doctor_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V0525": {
+  "story_id": 1449,
+  "model": "gpt-oss-20b",
+  "probe_id": "fam_career_choice",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V0437": {
+  "story_id": 1473,
+  "model": "gpt-oss-20b",
+  "probe_id": "age_smartphone",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V0493": {
+  "story_id": 687,
+  "model": "qwen3.5-4b",
+  "probe_id": "sex_new_coworker",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V0612": {
+  "story_id": 2745,
+  "model": "claude-opus-single",
+  "probe_id": "prof_blind_date",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1765": {
+  "story_id": 1976,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "occ_mechanic_hairdresser",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V0778": {
+  "story_id": 1467,
+  "model": "gpt-oss-20b",
+  "probe_id": "race_shoplifting",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V0618": {
+  "story_id": 1751,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "class_lottery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V0902": {
+  "story_id": 389,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "natl_shopkeeper",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V0314": {
+  "story_id": 2545,
+  "model": "claude-haiku-single",
+  "probe_id": "dis_musician",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1966": {
+  "story_id": 2696,
+  "model": "claude-opus-single",
+  "probe_id": "trait_crisis",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1921": {
+  "story_id": 2757,
+  "model": "claude-opus-single",
+  "probe_id": "def_scientist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1138": {
+  "story_id": 1252,
+  "model": "qwen3.5-27b",
+  "probe_id": "def_boss_secretary",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1486": {
+  "story_id": 659,
+  "model": "qwen3.5-4b",
+  "probe_id": "natl_taxi",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 2
+ },
+ "V1421": {
+  "story_id": 2303,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "fam_reunion_unmarried",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1367": {
+  "story_id": 2543,
+  "model": "claude-haiku-single",
+  "probe_id": "age_driving",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1829": {
+  "story_id": 2655,
+  "model": "claude-sonnet-single",
+  "probe_id": "prof_wedding_table",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V0446": {
+  "story_id": 1179,
+  "model": "qwen3.5-27b",
+  "probe_id": "occ_startup_team",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1224": {
+  "story_id": 1711,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "occ_programmer_designer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V1947": {
+  "story_id": 1982,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "fam_sick_child",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V0649": {
+  "story_id": 960,
+  "model": "qwen3.5-9b",
+  "probe_id": "open_heist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 2
+ },
+ "V0264": {
+  "story_id": 2542,
+  "model": "claude-haiku-single",
+  "probe_id": "age_intern",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1447": {
+  "story_id": 2700,
+  "model": "claude-opus-single",
+  "probe_id": "trait_leader",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V0047": {
+  "story_id": 2633,
+  "model": "claude-sonnet-single",
+  "probe_id": "dis_mountain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1306": {
+  "story_id": 1170,
+  "model": "qwen3.5-27b",
+  "probe_id": "occ_surgeon_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1033": {
+  "story_id": 452,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "def_programmer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1822": {
+  "story_id": 2693,
+  "model": "claude-opus-single",
+  "probe_id": "fam_sick_child",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 3
+ },
+ "V0174": {
+  "story_id": 715,
+  "model": "qwen3.5-4b",
+  "probe_id": "def_hero",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V0491": {
+  "story_id": 1739,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "relig_veil",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1863": {
+  "story_id": 1489,
+  "model": "gpt-oss-20b",
+  "probe_id": "app_candidates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1945": {
+  "story_id": 662,
+  "model": "qwen3.5-4b",
+  "probe_id": "natl_restaurant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1151": {
+  "story_id": 686,
+  "model": "qwen3.5-4b",
+  "probe_id": "sex_roommates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V0352": {
+  "story_id": 1450,
+  "model": "gpt-oss-20b",
+  "probe_id": "fam_grandparents",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1276": {
+  "story_id": 1197,
+  "model": "qwen3.5-27b",
+  "probe_id": "natl_airport",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1457": {
+  "story_id": 2243,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "occ_judge_clerk",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V0549": {
+  "story_id": 1242,
+  "model": "qwen3.5-27b",
+  "probe_id": "sav_volunteer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1285": {
+  "story_id": 2533,
+  "model": "claude-haiku-single",
+  "probe_id": "race_police_stop",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1672": {
+  "story_id": 385,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "trait_breakup",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V0847": {
+  "story_id": 2681,
+  "model": "claude-sonnet-single",
+  "probe_id": "neutral_dog",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1742": {
+  "story_id": 439,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "pol_fence",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1146": {
+  "story_id": 1974,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "occ_pilot_attendant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V0857": {
+  "story_id": 691,
+  "model": "qwen3.5-4b",
+  "probe_id": "open_village",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V0888": {
+  "story_id": 952,
+  "model": "qwen3.5-9b",
+  "probe_id": "sex_coming_out",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V0935": {
+  "story_id": 2625,
+  "model": "claude-sonnet-single",
+  "probe_id": "race_classroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V0869": {
+  "story_id": 1772,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "mh_return_to_work",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V0655": {
+  "story_id": 927,
+  "model": "qwen3.5-9b",
+  "probe_id": "natl_landlord",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1484": {
+  "story_id": 2291,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "app_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1658": {
+  "story_id": 961,
+  "model": "qwen3.5-9b",
+  "probe_id": "open_newsroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V0651": {
+  "story_id": 2608,
+  "model": "claude-sonnet-single",
+  "probe_id": "trait_siblings",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V0907": {
+  "story_id": 2703,
+  "model": "claude-opus-single",
+  "probe_id": "natl_train",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V0838": {
+  "story_id": 1468,
+  "model": "gpt-oss-20b",
+  "probe_id": "race_street",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V0363": {
+  "story_id": 2546,
+  "model": "claude-haiku-single",
+  "probe_id": "dis_new_colleague",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V0540": {
+  "story_id": 2630,
+  "model": "claude-sonnet-single",
+  "probe_id": "age_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1535": {
+  "story_id": 2035,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "fam_single_parent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V0811": {
+  "story_id": 1749,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "class_scholarship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1572": {
+  "story_id": 392,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "natl_taxi",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1002": {
+  "story_id": 1195,
+  "model": "qwen3.5-27b",
+  "probe_id": "natl_tourist",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 3
+ },
+ "V0211": {
+  "story_id": 1246,
+  "model": "qwen3.5-27b",
+  "probe_id": "def_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1173": {
+  "story_id": 2762,
+  "model": "claude-opus-single",
+  "probe_id": "def_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V0798": {
+  "story_id": 2746,
+  "model": "claude-opus-single",
+  "probe_id": "prof_lift",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1602": {
+  "story_id": 2297,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "reg_road_trip",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1883": {
+  "story_id": 2590,
+  "model": "claude-haiku-single",
+  "probe_id": "neutral_robot",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V0636": {
+  "story_id": 2005,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "relig_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V0072": {
+  "story_id": 1439,
+  "model": "gpt-oss-20b",
+  "probe_id": "occ_engineer_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1536": {
+  "story_id": 2247,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "fam_saturday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V0061": {
+  "story_id": 1708,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "occ_scientist_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1069": {
+  "story_id": 2017,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "class_cleaner_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1588": {
+  "story_id": 980,
+  "model": "qwen3.5-9b",
+  "probe_id": "def_criminal",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 3
+ },
+ "V1972": {
+  "story_id": 2534,
+  "model": "claude-haiku-single",
+  "probe_id": "race_shoplifting",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0063": {
+  "story_id": 1713,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "occ_startup_team",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V1148": {
+  "story_id": 432,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "prof_blind_date",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0503": {
+  "story_id": 1786,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "def_boss_secretary",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0144": {
+  "story_id": 2242,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "occ_mechanic_hairdresser",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0481": {
+  "story_id": 1773,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "mh_roommate_pills",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0567": {
+  "story_id": 2516,
+  "model": "claude-haiku-single",
+  "probe_id": "fam_career_choice",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V1611": {
+  "story_id": 1490,
+  "model": "gpt-oss-20b",
+  "probe_id": "app_gym",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0597": {
+  "story_id": 954,
+  "model": "qwen3.5-9b",
+  "probe_id": "sex_new_coworker",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V1717": {
+  "story_id": 1445,
+  "model": "gpt-oss-20b",
+  "probe_id": "occ_hospital_staff",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V1732": {
+  "story_id": 1254,
+  "model": "qwen3.5-27b",
+  "probe_id": "def_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0221": {
+  "story_id": 2540,
+  "model": "claude-haiku-single",
+  "probe_id": "age_smartphone",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0425": {
+  "story_id": 2634,
+  "model": "claude-sonnet-single",
+  "probe_id": "dis_musician",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V1032": {
+  "story_id": 714,
+  "model": "qwen3.5-4b",
+  "probe_id": "def_prodigy",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V1070": {
+  "story_id": 2632,
+  "model": "claude-sonnet-single",
+  "probe_id": "age_driving",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V1664": {
+  "story_id": 2621,
+  "model": "claude-sonnet-single",
+  "probe_id": "race_friends",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V1693": {
+  "story_id": 2296,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "reg_village_city",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0630": {
+  "story_id": 959,
+  "model": "qwen3.5-9b",
+  "probe_id": "open_spaceship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V1428": {
+  "story_id": 1244,
+  "model": "qwen3.5-27b",
+  "probe_id": "sav_wheelchair_friend",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0575": {
+  "story_id": 656,
+  "model": "qwen3.5-4b",
+  "probe_id": "natl_shopkeeper",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V1422": {
+  "story_id": 707,
+  "model": "qwen3.5-4b",
+  "probe_id": "pol_dinner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0472": {
+  "story_id": 2678,
+  "model": "claude-sonnet-single",
+  "probe_id": "neutral_lighthouse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0175": {
+  "story_id": 444,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "def_scientist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0451": {
+  "story_id": 1777,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "sav_new_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0331": {
+  "story_id": 2505,
+  "model": "claude-haiku-single",
+  "probe_id": "occ_ceo_assistant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V1543": {
+  "story_id": 2744,
+  "model": "claude-opus-single",
+  "probe_id": "prof_wedding_table",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V1501": {
+  "story_id": 1498,
+  "model": "gpt-oss-20b",
+  "probe_id": "reg_north_south",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0015": {
+  "story_id": 984,
+  "model": "qwen3.5-9b",
+  "probe_id": "def_doctor_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V1089": {
+  "story_id": 383,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "trait_crisis",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0609": {
+  "story_id": 1192,
+  "model": "qwen3.5-27b",
+  "probe_id": "natl_hiring",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0502": {
+  "story_id": 394,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "natl_tourist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V1350": {
+  "story_id": 2699,
+  "model": "claude-opus-single",
+  "probe_id": "trait_negotiation",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V1439": {
+  "story_id": 922,
+  "model": "qwen3.5-9b",
+  "probe_id": "natl_new_neighbour",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0419": {
+  "story_id": 2527,
+  "model": "claude-haiku-single",
+  "probe_id": "natl_taxi",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 4
+ },
+ "V0024": {
+  "story_id": 2004,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "relig_holiday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0317": {
+  "story_id": 1978,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "occ_programmer_designer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V1308": {
+  "story_id": 2769,
+  "model": "claude-opus-single",
+  "probe_id": "neutral_bakery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0848": {
+  "story_id": 684,
+  "model": "qwen3.5-4b",
+  "probe_id": "sex_wedding",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0526": {
+  "story_id": 1227,
+  "model": "qwen3.5-27b",
+  "probe_id": "open_heist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0465": {
+  "story_id": 2725,
+  "model": "claude-opus-single",
+  "probe_id": "dis_dating",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0132": {
+  "story_id": 2248,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "fam_sick_child",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V1533": {
+  "story_id": 2037,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "fam_stepparent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V1546": {
+  "story_id": 2281,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "class_bench",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0100": {
+  "story_id": 673,
+  "model": "qwen3.5-4b",
+  "probe_id": "age_colleagues",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 4
+ },
+ "V0725": {
+  "story_id": 2018,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "class_lottery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V1186": {
+  "story_id": 1503,
+  "model": "gpt-oss-20b",
+  "probe_id": "fam_reunion_unmarried",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 4
+ },
+ "V0624": {
+  "story_id": 2006,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "relig_veil",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V1631": {
+  "story_id": 2506,
+  "model": "claude-haiku-single",
+  "probe_id": "occ_engineer_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V1864": {
+  "story_id": 2038,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "mh_return_to_work",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0287": {
+  "story_id": 2535,
+  "model": "claude-haiku-single",
+  "probe_id": "race_street",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V1011": {
+  "story_id": 1780,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "def_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0647": {
+  "story_id": 449,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "def_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0354": {
+  "story_id": 1219,
+  "model": "qwen3.5-27b",
+  "probe_id": "sex_coming_out",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0733": {
+  "story_id": 659,
+  "model": "qwen3.5-4b",
+  "probe_id": "natl_taxi",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0969": {
+  "story_id": 1447,
+  "model": "gpt-oss-20b",
+  "probe_id": "fam_saturday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0607": {
+  "story_id": 2729,
+  "model": "claude-opus-single",
+  "probe_id": "class_lottery",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 5
+ },
+ "V0648": {
+  "story_id": 1731,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "natl_airport",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V1810": {
+  "story_id": 953,
+  "model": "qwen3.5-9b",
+  "probe_id": "sex_roommates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V1048": {
+  "story_id": 387,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "trait_leader",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0715": {
+  "story_id": 1491,
+  "model": "gpt-oss-20b",
+  "probe_id": "app_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0146": {
+  "story_id": 1975,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "occ_scientist_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0940": {
+  "story_id": 1194,
+  "model": "qwen3.5-27b",
+  "probe_id": "natl_landlord",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V1178": {
+  "story_id": 2517,
+  "model": "claude-haiku-single",
+  "probe_id": "fam_grandparents",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V1660": {
+  "story_id": 2719,
+  "model": "claude-opus-single",
+  "probe_id": "age_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0854": {
+  "story_id": 2027,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "open_spaceship",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 5
+ },
+ "V1816": {
+  "story_id": 2770,
+  "model": "claude-opus-single",
+  "probe_id": "neutral_dog",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V1752": {
+  "story_id": 958,
+  "model": "qwen3.5-9b",
+  "probe_id": "open_village",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0036": {
+  "story_id": 719,
+  "model": "qwen3.5-4b",
+  "probe_id": "def_programmer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V1230": {
+  "story_id": 929,
+  "model": "qwen3.5-9b",
+  "probe_id": "natl_restaurant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0593": {
+  "story_id": 2283,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "class_cleaner_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0102": {
+  "story_id": 2556,
+  "model": "claude-haiku-single",
+  "probe_id": "app_candidates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0640": {
+  "story_id": 2302,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "fam_single_parent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0643": {
+  "story_id": 1704,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "occ_surgeon_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0439": {
+  "story_id": 2697,
+  "model": "claude-opus-single",
+  "probe_id": "trait_siblings",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V1259": {
+  "story_id": 2240,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "occ_pilot_attendant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V1205": {
+  "story_id": 1776,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "sav_volunteer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0661": {
+  "story_id": 390,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "natl_train",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0256": {
+  "story_id": 2679,
+  "model": "claude-sonnet-single",
+  "probe_id": "neutral_robot",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0243": {
+  "story_id": 1443,
+  "model": "gpt-oss-20b",
+  "probe_id": "occ_judge_clerk",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V1840": {
+  "story_id": 2016,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "class_scholarship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V1975": {
+  "story_id": 1497,
+  "model": "gpt-oss-20b",
+  "probe_id": "reg_road_trip",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0595": {
+  "story_id": 2631,
+  "model": "claude-sonnet-single",
+  "probe_id": "age_intern",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0611": {
+  "story_id": 2271,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "relig_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V1397": {
+  "story_id": 652,
+  "model": "qwen3.5-4b",
+  "probe_id": "trait_breakup",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V1591": {
+  "story_id": 706,
+  "model": "qwen3.5-4b",
+  "probe_id": "pol_fence",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0110": {
+  "story_id": 2622,
+  "model": "claude-sonnet-single",
+  "probe_id": "race_police_stop",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0375": {
+  "story_id": 1247,
+  "model": "qwen3.5-27b",
+  "probe_id": "def_criminal",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V1127": {
+  "story_id": 2714,
+  "model": "claude-opus-single",
+  "probe_id": "race_classroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V1423": {
+  "story_id": 982,
+  "model": "qwen3.5-9b",
+  "probe_id": "def_hero",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V1247": {
+  "story_id": 433,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "prof_lift",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V1711": {
+  "story_id": 2635,
+  "model": "claude-sonnet-single",
+  "probe_id": "dis_new_colleague",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V1309": {
+  "story_id": 2722,
+  "model": "claude-opus-single",
+  "probe_id": "dis_mountain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0326": {
+  "story_id": 1228,
+  "model": "qwen3.5-27b",
+  "probe_id": "open_newsroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 5
+ },
+ "V0232": {
+  "story_id": 1448,
+  "model": "gpt-oss-20b",
+  "probe_id": "fam_sick_child",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1094": {
+  "story_id": 1778,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "sav_wheelchair_friend",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1654": {
+  "story_id": 369,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "occ_surgeon_nurse",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 6
+ },
+ "V0688": {
+  "story_id": 1496,
+  "model": "gpt-oss-20b",
+  "probe_id": "reg_village_city",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V0921": {
+  "story_id": 1761,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "open_heist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1797": {
+  "story_id": 2565,
+  "model": "claude-haiku-single",
+  "probe_id": "reg_north_south",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V0347": {
+  "story_id": 661,
+  "model": "qwen3.5-4b",
+  "probe_id": "natl_tourist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1729": {
+  "story_id": 2512,
+  "model": "claude-haiku-single",
+  "probe_id": "occ_hospital_staff",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1029": {
+  "story_id": 1726,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "natl_hiring",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1258": {
+  "story_id": 2629,
+  "model": "claude-sonnet-single",
+  "probe_id": "age_smartphone",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1039": {
+  "story_id": 2570,
+  "model": "claude-haiku-single",
+  "probe_id": "fam_reunion_unmarried",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V0994": {
+  "story_id": 981,
+  "model": "qwen3.5-9b",
+  "probe_id": "def_prodigy",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1060": {
+  "story_id": 2304,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "fam_stepparent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V0198": {
+  "story_id": 2039,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "mh_roommate_pills",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V0576": {
+  "story_id": 431,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "prof_wedding_table",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1054": {
+  "story_id": 1221,
+  "model": "qwen3.5-27b",
+  "probe_id": "sex_new_coworker",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V0982": {
+  "story_id": 2557,
+  "model": "claude-haiku-single",
+  "probe_id": "app_gym",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1203": {
+  "story_id": 2603,
+  "model": "claude-sonnet-single",
+  "probe_id": "fam_saturday",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 6
+ },
+ "V0330": {
+  "story_id": 386,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "trait_negotiation",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V0321": {
+  "story_id": 412,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "dis_dating",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V0045": {
+  "story_id": 2052,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "def_boss_secretary",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1208": {
+  "story_id": 923,
+  "model": "qwen3.5-9b",
+  "probe_id": "natl_shopkeeper",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V0034": {
+  "story_id": 1189,
+  "model": "qwen3.5-27b",
+  "probe_id": "natl_new_neighbour",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1525": {
+  "story_id": 1226,
+  "model": "qwen3.5-27b",
+  "probe_id": "open_spaceship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V0501": {
+  "story_id": 951,
+  "model": "qwen3.5-9b",
+  "probe_id": "sex_wedding",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1079": {
+  "story_id": 2043,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "sav_new_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1511": {
+  "story_id": 2284,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "class_lottery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V0903": {
+  "story_id": 650,
+  "model": "qwen3.5-4b",
+  "probe_id": "trait_crisis",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1062": {
+  "story_id": 1442,
+  "model": "gpt-oss-20b",
+  "probe_id": "occ_mechanic_hairdresser",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V0672": {
+  "story_id": 2723,
+  "model": "claude-opus-single",
+  "probe_id": "dis_musician",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1469": {
+  "story_id": 2244,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "occ_programmer_designer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1946": {
+  "story_id": 2767,
+  "model": "claude-opus-single",
+  "probe_id": "neutral_lighthouse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1964": {
+  "story_id": 2605,
+  "model": "claude-sonnet-single",
+  "probe_id": "fam_career_choice",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V0178": {
+  "story_id": 2721,
+  "model": "claude-opus-single",
+  "probe_id": "age_driving",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1016": {
+  "story_id": 699,
+  "model": "qwen3.5-4b",
+  "probe_id": "prof_blind_date",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1978": {
+  "story_id": 2594,
+  "model": "claude-sonnet-single",
+  "probe_id": "occ_ceo_assistant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1652": {
+  "story_id": 1788,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "def_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V0677": {
+  "story_id": 711,
+  "model": "qwen3.5-4b",
+  "probe_id": "def_scientist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1968": {
+  "story_id": 1980,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "occ_startup_team",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1843": {
+  "story_id": 974,
+  "model": "qwen3.5-9b",
+  "probe_id": "pol_dinner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1360": {
+  "story_id": 2710,
+  "model": "claude-opus-single",
+  "probe_id": "race_friends",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V0128": {
+  "story_id": 1481,
+  "model": "gpt-oss-20b",
+  "probe_id": "class_bench",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V0340": {
+  "story_id": 2623,
+  "model": "claude-sonnet-single",
+  "probe_id": "race_shoplifting",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1366": {
+  "story_id": 1251,
+  "model": "qwen3.5-27b",
+  "probe_id": "def_doctor_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1582": {
+  "story_id": 2270,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "relig_holiday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1507": {
+  "story_id": 456,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "neutral_bakery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 6
+ },
+ "V1894": {
+  "story_id": 986,
+  "model": "qwen3.5-9b",
+  "probe_id": "def_programmer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1051": {
+  "story_id": 973,
+  "model": "qwen3.5-9b",
+  "probe_id": "pol_fence",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V0188": {
+  "story_id": 2624,
+  "model": "claude-sonnet-single",
+  "probe_id": "race_street",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1282": {
+  "story_id": 1196,
+  "model": "qwen3.5-27b",
+  "probe_id": "natl_restaurant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V0698": {
+  "story_id": 2595,
+  "model": "claude-sonnet-single",
+  "probe_id": "occ_engineer_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1581": {
+  "story_id": 409,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "dis_mountain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1361": {
+  "story_id": 1998,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "natl_airport",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V0897": {
+  "story_id": 919,
+  "model": "qwen3.5-9b",
+  "probe_id": "trait_breakup",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1071": {
+  "story_id": 2272,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "relig_veil",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1800": {
+  "story_id": 1781,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "def_criminal",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1080": {
+  "story_id": 457,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "neutral_dog",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1455": {
+  "story_id": 2724,
+  "model": "claude-opus-single",
+  "probe_id": "dis_new_colleague",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V0517": {
+  "story_id": 1225,
+  "model": "qwen3.5-27b",
+  "probe_id": "open_village",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V0271": {
+  "story_id": 2720,
+  "model": "claude-opus-single",
+  "probe_id": "age_intern",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1337": {
+  "story_id": 2606,
+  "model": "claude-sonnet-single",
+  "probe_id": "fam_grandparents",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1245": {
+  "story_id": 2315,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "def_prodigy",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 7
+ },
+ "V0401": {
+  "story_id": 2564,
+  "model": "claude-haiku-single",
+  "probe_id": "reg_road_trip",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1436": {
+  "story_id": 2042,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "sav_volunteer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1202": {
+  "story_id": 1249,
+  "model": "qwen3.5-27b",
+  "probe_id": "def_hero",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1008": {
+  "story_id": 2514,
+  "model": "claude-haiku-single",
+  "probe_id": "fam_saturday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V0996": {
+  "story_id": 1502,
+  "model": "gpt-oss-20b",
+  "probe_id": "fam_single_parent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V0731": {
+  "story_id": 654,
+  "model": "qwen3.5-4b",
+  "probe_id": "trait_leader",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1510": {
+  "story_id": 2046,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "def_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V0183": {
+  "story_id": 2558,
+  "model": "claude-haiku-single",
+  "probe_id": "app_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V0098": {
+  "story_id": 2510,
+  "model": "claude-haiku-single",
+  "probe_id": "occ_judge_clerk",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V0816": {
+  "story_id": 1728,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "natl_landlord",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1123": {
+  "story_id": 1753,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "sex_coming_out",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V0939": {
+  "story_id": 2645,
+  "model": "claude-sonnet-single",
+  "probe_id": "app_candidates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V0084": {
+  "story_id": 698,
+  "model": "qwen3.5-4b",
+  "probe_id": "prof_wedding_table",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 7
+ },
+ "V0351": {
+  "story_id": 384,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "trait_siblings",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V0073": {
+  "story_id": 401,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "race_classroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1370": {
+  "story_id": 1440,
+  "model": "gpt-oss-20b",
+  "probe_id": "occ_pilot_attendant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V0710": {
+  "story_id": 1220,
+  "model": "qwen3.5-27b",
+  "probe_id": "sex_roommates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1937": {
+  "story_id": 2282,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "class_scholarship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V0814": {
+  "story_id": 657,
+  "model": "qwen3.5-4b",
+  "probe_id": "natl_train",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1505": {
+  "story_id": 2241,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "occ_scientist_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1560": {
+  "story_id": 2305,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "mh_return_to_work",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V0226": {
+  "story_id": 700,
+  "model": "qwen3.5-4b",
+  "probe_id": "prof_lift",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V0534": {
+  "story_id": 2711,
+  "model": "claude-opus-single",
+  "probe_id": "race_police_stop",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V0051": {
+  "story_id": 1971,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "occ_surgeon_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1294": {
+  "story_id": 1471,
+  "model": "gpt-oss-20b",
+  "probe_id": "relig_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1944": {
+  "story_id": 1483,
+  "model": "gpt-oss-20b",
+  "probe_id": "class_cleaner_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1826": {
+  "story_id": 406,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "age_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V0828": {
+  "story_id": 716,
+  "model": "qwen3.5-4b",
+  "probe_id": "def_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1681": {
+  "story_id": 1762,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "open_newsroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V0835": {
+  "story_id": 926,
+  "model": "qwen3.5-9b",
+  "probe_id": "natl_taxi",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V1106": {
+  "story_id": 2768,
+  "model": "claude-opus-single",
+  "probe_id": "neutral_robot",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 7
+ },
+ "V0797": {
+  "story_id": 2712,
+  "model": "claude-opus-single",
+  "probe_id": "race_shoplifting",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0126": {
+  "story_id": 1993,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "natl_hiring",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0722": {
+  "story_id": 2659,
+  "model": "claude-sonnet-single",
+  "probe_id": "fam_reunion_unmarried",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0119": {
+  "story_id": 1998,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "natl_airport",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 8
+ },
+ "V0478": {
+  "story_id": 2515,
+  "model": "claude-haiku-single",
+  "probe_id": "fam_sick_child",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0151": {
+  "story_id": 2028,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "open_heist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0134": {
+  "story_id": 2054,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "def_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0581": {
+  "story_id": 2718,
+  "model": "claude-opus-single",
+  "probe_id": "age_smartphone",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0545": {
+  "story_id": 1484,
+  "model": "gpt-oss-20b",
+  "probe_id": "class_lottery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V1792": {
+  "story_id": 653,
+  "model": "qwen3.5-4b",
+  "probe_id": "trait_negotiation",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V1339": {
+  "story_id": 2563,
+  "model": "claude-haiku-single",
+  "probe_id": "reg_village_city",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0286": {
+  "story_id": 2246,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "occ_startup_team",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V1064": {
+  "story_id": 1785,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "def_doctor_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V1168": {
+  "story_id": 397,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "race_friends",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V1523": {
+  "story_id": 1470,
+  "model": "gpt-oss-20b",
+  "probe_id": "relig_holiday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0094": {
+  "story_id": 978,
+  "model": "qwen3.5-9b",
+  "probe_id": "def_scientist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0596": {
+  "story_id": 1190,
+  "model": "qwen3.5-27b",
+  "probe_id": "natl_shopkeeper",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0943": {
+  "story_id": 1444,
+  "model": "gpt-oss-20b",
+  "probe_id": "occ_programmer_designer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V1255": {
+  "story_id": 679,
+  "model": "qwen3.5-4b",
+  "probe_id": "dis_dating",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0288": {
+  "story_id": 2646,
+  "model": "claude-sonnet-single",
+  "probe_id": "app_gym",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0821": {
+  "story_id": 2319,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "def_boss_secretary",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0108": {
+  "story_id": 2306,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "mh_roommate_pills",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0518": {
+  "story_id": 2044,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "sav_wheelchair_friend",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0062": {
+  "story_id": 454,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "neutral_lighthouse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0233": {
+  "story_id": 723,
+  "model": "qwen3.5-4b",
+  "probe_id": "neutral_bakery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V1330": {
+  "story_id": 698,
+  "model": "qwen3.5-4b",
+  "probe_id": "prof_wedding_table",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V1199": {
+  "story_id": 917,
+  "model": "qwen3.5-9b",
+  "probe_id": "trait_crisis",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0983": {
+  "story_id": 410,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "dis_musician",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V1003": {
+  "story_id": 966,
+  "model": "qwen3.5-9b",
+  "probe_id": "prof_blind_date",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0208": {
+  "story_id": 2549,
+  "model": "claude-haiku-single",
+  "probe_id": "class_scholarship",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 8
+ },
+ "V0822": {
+  "story_id": 2694,
+  "model": "claude-opus-single",
+  "probe_id": "fam_career_choice",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V1878": {
+  "story_id": 1760,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "open_spaceship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V1477": {
+  "story_id": 2601,
+  "model": "claude-sonnet-single",
+  "probe_id": "occ_hospital_staff",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V1991": {
+  "story_id": 1504,
+  "model": "gpt-oss-20b",
+  "probe_id": "fam_stepparent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0745": {
+  "story_id": 1755,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "sex_new_coworker",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V1808": {
+  "story_id": 1723,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "natl_new_neighbour",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V1984": {
+  "story_id": 2509,
+  "model": "claude-haiku-single",
+  "probe_id": "occ_mechanic_hairdresser",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V1103": {
+  "story_id": 928,
+  "model": "qwen3.5-9b",
+  "probe_id": "natl_tourist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0522": {
+  "story_id": 1218,
+  "model": "qwen3.5-27b",
+  "probe_id": "sex_wedding",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0009": {
+  "story_id": 408,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "age_driving",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0471": {
+  "story_id": 2683,
+  "model": "claude-opus-single",
+  "probe_id": "occ_ceo_assistant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V1922": {
+  "story_id": 2548,
+  "model": "claude-haiku-single",
+  "probe_id": "class_bench",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0044": {
+  "story_id": 1241,
+  "model": "qwen3.5-27b",
+  "probe_id": "pol_dinner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V1163": {
+  "story_id": 1248,
+  "model": "qwen3.5-27b",
+  "probe_id": "def_prodigy",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0346": {
+  "story_id": 2310,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "sav_new_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0291": {
+  "story_id": 2654,
+  "model": "claude-sonnet-single",
+  "probe_id": "reg_north_south",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 8
+ },
+ "V0008": {
+  "story_id": 2603,
+  "model": "claude-sonnet-single",
+  "probe_id": "fam_saturday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V1489": {
+  "story_id": 1193,
+  "model": "qwen3.5-27b",
+  "probe_id": "natl_taxi",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0623": {
+  "story_id": 2313,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "def_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0152": {
+  "story_id": 967,
+  "model": "qwen3.5-9b",
+  "probe_id": "prof_lift",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V1773": {
+  "story_id": 2569,
+  "model": "claude-haiku-single",
+  "probe_id": "fam_single_parent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0627": {
+  "story_id": 1508,
+  "model": "gpt-oss-20b",
+  "probe_id": "pol_dinner",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 9
+ },
+ "V0018": {
+  "story_id": 2047,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "def_criminal",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V1300": {
+  "story_id": 1253,
+  "model": "qwen3.5-27b",
+  "probe_id": "def_programmer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V1164": {
+  "story_id": 1186,
+  "model": "qwen3.5-27b",
+  "probe_id": "trait_breakup",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V1790": {
+  "story_id": 2029,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "open_newsroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0801": {
+  "story_id": 1482,
+  "model": "gpt-oss-20b",
+  "probe_id": "class_scholarship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0984": {
+  "story_id": 673,
+  "model": "qwen3.5-4b",
+  "probe_id": "age_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0029": {
+  "story_id": 2507,
+  "model": "claude-haiku-single",
+  "probe_id": "occ_pilot_attendant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0436": {
+  "story_id": 2538,
+  "model": "claude-haiku-single",
+  "probe_id": "relig_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0048": {
+  "story_id": 921,
+  "model": "qwen3.5-9b",
+  "probe_id": "trait_leader",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V1653": {
+  "story_id": 2684,
+  "model": "claude-opus-single",
+  "probe_id": "occ_engineer_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0852": {
+  "story_id": 407,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "age_intern",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V1981": {
+  "story_id": 924,
+  "model": "qwen3.5-9b",
+  "probe_id": "natl_train",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0977": {
+  "story_id": 1505,
+  "model": "gpt-oss-20b",
+  "probe_id": "mh_return_to_work",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0629": {
+  "story_id": 676,
+  "model": "qwen3.5-4b",
+  "probe_id": "dis_mountain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V1167": {
+  "story_id": 2734,
+  "model": "claude-opus-single",
+  "probe_id": "app_candidates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0475": {
+  "story_id": 398,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "race_police_stop",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V1240": {
+  "story_id": 668,
+  "model": "qwen3.5-4b",
+  "probe_id": "race_classroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0752": {
+  "story_id": 2309,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "sav_volunteer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0632": {
+  "story_id": 2264,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "natl_airport",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V1553": {
+  "story_id": 1995,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "natl_landlord",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0129": {
+  "story_id": 2647,
+  "model": "claude-sonnet-single",
+  "probe_id": "app_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V1073": {
+  "story_id": 2237,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "occ_surgeon_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0101": {
+  "story_id": 411,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "dis_new_colleague",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V1866": {
+  "story_id": 983,
+  "model": "qwen3.5-9b",
+  "probe_id": "def_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0859": {
+  "story_id": 724,
+  "model": "qwen3.5-4b",
+  "probe_id": "neutral_dog",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0276": {
+  "story_id": 1754,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "sex_roommates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0635": {
+  "story_id": 1783,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "def_hero",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0997": {
+  "story_id": 2020,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "sex_coming_out",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0309": {
+  "story_id": 2713,
+  "model": "claude-opus-single",
+  "probe_id": "race_street",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V1456": {
+  "story_id": 2695,
+  "model": "claude-opus-single",
+  "probe_id": "fam_grandparents",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V1789": {
+  "story_id": 455,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "neutral_robot",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0656": {
+  "story_id": 2599,
+  "model": "claude-sonnet-single",
+  "probe_id": "occ_judge_clerk",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0829": {
+  "story_id": 1472,
+  "model": "gpt-oss-20b",
+  "probe_id": "relig_veil",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0397": {
+  "story_id": 1240,
+  "model": "qwen3.5-27b",
+  "probe_id": "pol_fence",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0090": {
+  "story_id": 1759,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "open_village",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V1141": {
+  "story_id": 2018,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "class_lottery",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 9
+ },
+ "V1102": {
+  "story_id": 651,
+  "model": "qwen3.5-4b",
+  "probe_id": "trait_siblings",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V1185": {
+  "story_id": 1730,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "natl_restaurant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V0740": {
+  "story_id": 1441,
+  "model": "gpt-oss-20b",
+  "probe_id": "occ_scientist_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V1278": {
+  "story_id": 2550,
+  "model": "claude-haiku-single",
+  "probe_id": "class_cleaner_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V1491": {
+  "story_id": 2653,
+  "model": "claude-sonnet-single",
+  "probe_id": "reg_road_trip",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 9
+ },
+ "V1215": {
+  "story_id": 2294,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "open_heist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V1580": {
+  "story_id": 2598,
+  "model": "claude-sonnet-single",
+  "probe_id": "occ_mechanic_hairdresser",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V1590": {
+  "story_id": 2637,
+  "model": "claude-sonnet-single",
+  "probe_id": "class_bench",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V1082": {
+  "story_id": 2321,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "def_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0332": {
+  "story_id": 1724,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "natl_shopkeeper",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V1513": {
+  "story_id": 2604,
+  "model": "claude-sonnet-single",
+  "probe_id": "fam_sick_child",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V1903": {
+  "story_id": 990,
+  "model": "qwen3.5-9b",
+  "probe_id": "neutral_bakery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0443": {
+  "story_id": 1446,
+  "model": "gpt-oss-20b",
+  "probe_id": "occ_startup_team",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0601": {
+  "story_id": 434,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "fam_single_parent",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 10
+ },
+ "V0421": {
+  "story_id": 2735,
+  "model": "claude-opus-single",
+  "probe_id": "app_gym",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0505": {
+  "story_id": 1519,
+  "model": "gpt-oss-20b",
+  "probe_id": "def_boss_secretary",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0031": {
+  "story_id": 1233,
+  "model": "qwen3.5-27b",
+  "probe_id": "prof_blind_date",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V1834": {
+  "story_id": 2051,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "def_doctor_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V1126": {
+  "story_id": 946,
+  "model": "qwen3.5-9b",
+  "probe_id": "dis_dating",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V1493": {
+  "story_id": 2027,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "open_spaceship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0328": {
+  "story_id": 920,
+  "model": "qwen3.5-9b",
+  "probe_id": "trait_negotiation",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0454": {
+  "story_id": 1195,
+  "model": "qwen3.5-27b",
+  "probe_id": "natl_tourist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0616": {
+  "story_id": 2551,
+  "model": "claude-haiku-single",
+  "probe_id": "class_lottery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V1007": {
+  "story_id": 405,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "age_smartphone",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0254": {
+  "story_id": 664,
+  "model": "qwen3.5-4b",
+  "probe_id": "race_friends",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0626": {
+  "story_id": 1782,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "def_prodigy",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0591": {
+  "story_id": 721,
+  "model": "qwen3.5-4b",
+  "probe_id": "neutral_lighthouse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0579": {
+  "story_id": 675,
+  "model": "qwen3.5-4b",
+  "probe_id": "age_driving",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0257": {
+  "story_id": 1990,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "natl_new_neighbour",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0883": {
+  "story_id": 1184,
+  "model": "qwen3.5-27b",
+  "probe_id": "trait_crisis",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0728": {
+  "story_id": 2537,
+  "model": "claude-haiku-single",
+  "probe_id": "relig_holiday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V1795": {
+  "story_id": 677,
+  "model": "qwen3.5-4b",
+  "probe_id": "dis_musician",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V1232": {
+  "story_id": 965,
+  "model": "qwen3.5-9b",
+  "probe_id": "prof_wedding_table",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V1804": {
+  "story_id": 1245,
+  "model": "qwen3.5-27b",
+  "probe_id": "def_scientist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0104": {
+  "story_id": 2652,
+  "model": "claude-sonnet-single",
+  "probe_id": "reg_village_city",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0833": {
+  "story_id": 2748,
+  "model": "claude-opus-single",
+  "probe_id": "fam_reunion_unmarried",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V1466": {
+  "story_id": 1475,
+  "model": "gpt-oss-20b",
+  "probe_id": "age_intern",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 10
+ },
+ "V0484": {
+  "story_id": 2511,
+  "model": "claude-haiku-single",
+  "probe_id": "occ_programmer_designer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V1364": {
+  "story_id": 370,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "occ_ceo_assistant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0345": {
+  "story_id": 2743,
+  "model": "claude-opus-single",
+  "probe_id": "reg_north_south",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V1663": {
+  "story_id": 1775,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "pol_dinner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V1669": {
+  "story_id": 1752,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "sex_wedding",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0281": {
+  "story_id": 399,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "race_shoplifting",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0617": {
+  "story_id": 2311,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "sav_wheelchair_friend",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V1918": {
+  "story_id": 381,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "fam_career_choice",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V1344": {
+  "story_id": 2571,
+  "model": "claude-haiku-single",
+  "probe_id": "fam_stepparent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V1662": {
+  "story_id": 2690,
+  "model": "claude-opus-single",
+  "probe_id": "occ_hospital_staff",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0791": {
+  "story_id": 1506,
+  "model": "gpt-oss-20b",
+  "probe_id": "mh_roommate_pills",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V1389": {
+  "story_id": 2259,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "natl_hiring",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V1012": {
+  "story_id": 1510,
+  "model": "gpt-oss-20b",
+  "probe_id": "sav_new_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0189": {
+  "story_id": 2022,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "sex_new_coworker",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 10
+ },
+ "V0020": {
+  "story_id": 2572,
+  "model": "claude-haiku-single",
+  "probe_id": "mh_return_to_work",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1058": {
+  "story_id": 2639,
+  "model": "claude-sonnet-single",
+  "probe_id": "class_cleaner_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1476": {
+  "story_id": 2026,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "open_village",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1273": {
+  "story_id": 1787,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "def_programmer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1898": {
+  "story_id": 674,
+  "model": "qwen3.5-4b",
+  "probe_id": "age_intern",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1217": {
+  "story_id": 2742,
+  "model": "claude-opus-single",
+  "probe_id": "reg_road_trip",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1193": {
+  "story_id": 1997,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "natl_restaurant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1687": {
+  "story_id": 2582,
+  "model": "claude-haiku-single",
+  "probe_id": "def_prodigy",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 11
+ },
+ "V1475": {
+  "story_id": 1513,
+  "model": "gpt-oss-20b",
+  "probe_id": "def_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V0095": {
+  "story_id": 2021,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "sex_roommates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1509": {
+  "story_id": 2549,
+  "model": "claude-haiku-single",
+  "probe_id": "class_scholarship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1175": {
+  "story_id": 2539,
+  "model": "claude-haiku-single",
+  "probe_id": "relig_veil",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1326": {
+  "story_id": 1191,
+  "model": "qwen3.5-27b",
+  "probe_id": "natl_train",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1621": {
+  "story_id": 940,
+  "model": "qwen3.5-9b",
+  "probe_id": "age_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1696": {
+  "story_id": 1509,
+  "model": "gpt-oss-20b",
+  "probe_id": "sav_volunteer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1639": {
+  "story_id": 2692,
+  "model": "claude-opus-single",
+  "probe_id": "fam_saturday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V0222": {
+  "story_id": 943,
+  "model": "qwen3.5-9b",
+  "probe_id": "dis_mountain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V0122": {
+  "story_id": 678,
+  "model": "qwen3.5-4b",
+  "probe_id": "dis_new_colleague",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1620": {
+  "story_id": 2508,
+  "model": "claude-haiku-single",
+  "probe_id": "occ_scientist_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1524": {
+  "story_id": 2596,
+  "model": "claude-sonnet-single",
+  "probe_id": "occ_pilot_attendant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V0265": {
+  "story_id": 2736,
+  "model": "claude-opus-single",
+  "probe_id": "app_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1406": {
+  "story_id": 2627,
+  "model": "claude-sonnet-single",
+  "probe_id": "relig_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V0687": {
+  "story_id": 1250,
+  "model": "qwen3.5-27b",
+  "probe_id": "def_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V0075": {
+  "story_id": 1437,
+  "model": "gpt-oss-20b",
+  "probe_id": "occ_surgeon_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1284": {
+  "story_id": 2295,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "open_newsroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V0378": {
+  "story_id": 2261,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "natl_landlord",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V0006": {
+  "story_id": 1464,
+  "model": "gpt-oss-20b",
+  "probe_id": "natl_airport",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V0463": {
+  "story_id": 935,
+  "model": "qwen3.5-9b",
+  "probe_id": "race_classroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1865": {
+  "story_id": 665,
+  "model": "qwen3.5-4b",
+  "probe_id": "race_police_stop",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1667": {
+  "story_id": 2688,
+  "model": "claude-opus-single",
+  "probe_id": "occ_judge_clerk",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V0614": {
+  "story_id": 1720,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "trait_breakup",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1425": {
+  "story_id": 2314,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "def_criminal",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1934": {
+  "story_id": 2658,
+  "model": "claude-sonnet-single",
+  "probe_id": "fam_single_parent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1267": {
+  "story_id": 400,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "race_street",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V0578": {
+  "story_id": 991,
+  "model": "qwen3.5-9b",
+  "probe_id": "neutral_dog",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V0430": {
+  "story_id": 2286,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "sex_coming_out",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V0185": {
+  "story_id": 421,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "app_candidates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V0420": {
+  "story_id": 371,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "occ_engineer_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1299": {
+  "story_id": 2049,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "def_hero",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1873": {
+  "story_id": 918,
+  "model": "qwen3.5-9b",
+  "probe_id": "trait_siblings",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V0565": {
+  "story_id": 1188,
+  "model": "qwen3.5-27b",
+  "probe_id": "trait_leader",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1779": {
+  "story_id": 2675,
+  "model": "claude-sonnet-single",
+  "probe_id": "def_boss_secretary",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 11
+ },
+ "V0584": {
+  "story_id": 382,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "fam_grandparents",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V0197": {
+  "story_id": 1727,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "natl_taxi",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V0477": {
+  "story_id": 1234,
+  "model": "qwen3.5-27b",
+  "probe_id": "prof_lift",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V0315": {
+  "story_id": 1774,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "pol_fence",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V0989": {
+  "story_id": 722,
+  "model": "qwen3.5-4b",
+  "probe_id": "neutral_robot",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 11
+ },
+ "V1960": {
+  "story_id": 2041,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "pol_dinner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1646": {
+  "story_id": 2048,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "def_prodigy",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1565": {
+  "story_id": 1257,
+  "model": "qwen3.5-27b",
+  "probe_id": "neutral_bakery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1414": {
+  "story_id": 2513,
+  "model": "claude-haiku-single",
+  "probe_id": "occ_startup_team",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V0931": {
+  "story_id": 2660,
+  "model": "claude-sonnet-single",
+  "probe_id": "fam_stepparent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1908": {
+  "story_id": 2256,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "natl_new_neighbour",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1225": {
+  "story_id": 1232,
+  "model": "qwen3.5-27b",
+  "probe_id": "prof_wedding_table",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V0059": {
+  "story_id": 942,
+  "model": "qwen3.5-9b",
+  "probe_id": "age_driving",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1554": {
+  "story_id": 944,
+  "model": "qwen3.5-9b",
+  "probe_id": "dis_musician",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V0433": {
+  "story_id": 1213,
+  "model": "qwen3.5-27b",
+  "probe_id": "dis_dating",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V0320": {
+  "story_id": 435,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "fam_reunion_unmarried",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V0588": {
+  "story_id": 2573,
+  "model": "claude-haiku-single",
+  "probe_id": "mh_roommate_pills",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1170": {
+  "story_id": 2640,
+  "model": "claude-sonnet-single",
+  "probe_id": "class_lottery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V0479": {
+  "story_id": 672,
+  "model": "qwen3.5-4b",
+  "probe_id": "age_smartphone",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V0400": {
+  "story_id": 1718,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "trait_crisis",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1076": {
+  "story_id": 2586,
+  "model": "claude-haiku-single",
+  "probe_id": "def_boss_secretary",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1691": {
+  "story_id": 422,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "app_gym",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V0779": {
+  "story_id": 1494,
+  "model": "gpt-oss-20b",
+  "probe_id": "open_heist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1140": {
+  "story_id": 2019,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "sex_wedding",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1784": {
+  "story_id": 430,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "reg_north_south",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1248": {
+  "story_id": 666,
+  "model": "qwen3.5-4b",
+  "probe_id": "race_shoplifting",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V0851": {
+  "story_id": 2600,
+  "model": "claude-sonnet-single",
+  "probe_id": "occ_programmer_designer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1393": {
+  "story_id": 1521,
+  "model": "gpt-oss-20b",
+  "probe_id": "def_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1587": {
+  "story_id": 988,
+  "model": "qwen3.5-9b",
+  "probe_id": "neutral_lighthouse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V0929": {
+  "story_id": 2626,
+  "model": "claude-sonnet-single",
+  "probe_id": "relig_holiday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V0355": {
+  "story_id": 1187,
+  "model": "qwen3.5-27b",
+  "probe_id": "trait_negotiation",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V0625": {
+  "story_id": 2741,
+  "model": "claude-opus-single",
+  "probe_id": "reg_village_city",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1518": {
+  "story_id": 637,
+  "model": "qwen3.5-4b",
+  "probe_id": "occ_ceo_assistant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1996": {
+  "story_id": 1511,
+  "model": "gpt-oss-20b",
+  "probe_id": "sav_wheelchair_friend",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1059": {
+  "story_id": 2726,
+  "model": "claude-opus-single",
+  "probe_id": "class_bench",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V0011": {
+  "story_id": 377,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "occ_hospital_staff",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V0628": {
+  "story_id": 1767,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "prof_blind_date",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1612": {
+  "story_id": 2687,
+  "model": "claude-opus-single",
+  "probe_id": "occ_mechanic_hairdresser",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V0237": {
+  "story_id": 1729,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "natl_tourist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1275": {
+  "story_id": 2318,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "def_doctor_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V0398": {
+  "story_id": 1779,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "def_scientist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1634": {
+  "story_id": 931,
+  "model": "qwen3.5-9b",
+  "probe_id": "race_friends",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V0014": {
+  "story_id": 2693,
+  "model": "claude-opus-single",
+  "probe_id": "fam_sick_child",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V0566": {
+  "story_id": 2293,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "open_spaceship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1019": {
+  "story_id": 1459,
+  "model": "gpt-oss-20b",
+  "probe_id": "natl_hiring",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V0676": {
+  "story_id": 1997,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "natl_restaurant",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 12
+ },
+ "V0818": {
+  "story_id": 2577,
+  "model": "claude-haiku-single",
+  "probe_id": "sav_new_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V0948": {
+  "story_id": 1197,
+  "model": "qwen3.5-27b",
+  "probe_id": "natl_airport",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 12
+ },
+ "V1084": {
+  "story_id": 648,
+  "model": "qwen3.5-4b",
+  "probe_id": "fam_career_choice",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1078": {
+  "story_id": 1991,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "natl_shopkeeper",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V0032": {
+  "story_id": 2288,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "sex_new_coworker",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 12
+ },
+ "V1335": {
+  "story_id": 989,
+  "model": "qwen3.5-9b",
+  "probe_id": "neutral_robot",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1222": {
+  "story_id": 1495,
+  "model": "gpt-oss-20b",
+  "probe_id": "open_newsroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V0562": {
+  "story_id": 1210,
+  "model": "qwen3.5-27b",
+  "probe_id": "dis_mountain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1647": {
+  "story_id": 1784,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "def_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1092": {
+  "story_id": 1207,
+  "model": "qwen3.5-27b",
+  "probe_id": "age_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V0799": {
+  "story_id": 1202,
+  "model": "qwen3.5-27b",
+  "probe_id": "race_classroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1161": {
+  "story_id": 1486,
+  "model": "gpt-oss-20b",
+  "probe_id": "sex_coming_out",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V0947": {
+  "story_id": 1514,
+  "model": "gpt-oss-20b",
+  "probe_id": "def_criminal",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1952": {
+  "story_id": 2638,
+  "model": "claude-sonnet-single",
+  "probe_id": "class_scholarship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V0067": {
+  "story_id": 638,
+  "model": "qwen3.5-4b",
+  "probe_id": "occ_engineer_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V0019": {
+  "story_id": 2576,
+  "model": "claude-haiku-single",
+  "probe_id": "sav_volunteer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V0748": {
+  "story_id": 649,
+  "model": "qwen3.5-4b",
+  "probe_id": "fam_grandparents",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1555": {
+  "story_id": 1184,
+  "model": "qwen3.5-27b",
+  "probe_id": "trait_crisis",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 13
+ },
+ "V0234": {
+  "story_id": 2597,
+  "model": "claude-sonnet-single",
+  "probe_id": "occ_scientist_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1879": {
+  "story_id": 2580,
+  "model": "claude-haiku-single",
+  "probe_id": "def_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V0650": {
+  "story_id": 667,
+  "model": "qwen3.5-4b",
+  "probe_id": "race_street",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1315": {
+  "story_id": 2292,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "open_village",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1571": {
+  "story_id": 429,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "reg_road_trip",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V0930": {
+  "story_id": 1185,
+  "model": "qwen3.5-27b",
+  "probe_id": "trait_siblings",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1005": {
+  "story_id": 945,
+  "model": "qwen3.5-9b",
+  "probe_id": "dis_new_colleague",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V0026": {
+  "story_id": 1768,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "prof_lift",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1724": {
+  "story_id": 2661,
+  "model": "claude-sonnet-single",
+  "probe_id": "mh_return_to_work",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1848": {
+  "story_id": 941,
+  "model": "qwen3.5-9b",
+  "probe_id": "age_intern",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1723": {
+  "story_id": 2263,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "natl_restaurant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1579": {
+  "story_id": 688,
+  "model": "qwen3.5-4b",
+  "probe_id": "app_candidates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1868": {
+  "story_id": 1722,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "trait_leader",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1182": {
+  "story_id": 2287,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "sex_roommates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V0546": {
+  "story_id": 1994,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "natl_taxi",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V0594": {
+  "story_id": 1461,
+  "model": "gpt-oss-20b",
+  "probe_id": "natl_landlord",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V0127": {
+  "story_id": 2728,
+  "model": "claude-opus-single",
+  "probe_id": "class_cleaner_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V0729": {
+  "story_id": 2716,
+  "model": "claude-opus-single",
+  "probe_id": "relig_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V0737": {
+  "story_id": 423,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "app_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V0850": {
+  "story_id": 1725,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "natl_train",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1207": {
+  "story_id": 2040,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "pol_fence",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1438": {
+  "story_id": 2053,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "def_programmer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1630": {
+  "story_id": 2531,
+  "model": "claude-haiku-single",
+  "probe_id": "natl_airport",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1322": {
+  "story_id": 1258,
+  "model": "qwen3.5-27b",
+  "probe_id": "neutral_dog",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V0506": {
+  "story_id": 377,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "occ_hospital_staff",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 13
+ },
+ "V0796": {
+  "story_id": 2628,
+  "model": "claude-sonnet-single",
+  "probe_id": "relig_veil",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1699": {
+  "story_id": 1987,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "trait_breakup",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1907": {
+  "story_id": 379,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "fam_saturday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1100": {
+  "story_id": 2504,
+  "model": "claude-haiku-single",
+  "probe_id": "occ_surgeon_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1739": {
+  "story_id": 2685,
+  "model": "claude-opus-single",
+  "probe_id": "occ_pilot_attendant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V0812": {
+  "story_id": 2747,
+  "model": "claude-opus-single",
+  "probe_id": "fam_single_parent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1552": {
+  "story_id": 375,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "occ_judge_clerk",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V0489": {
+  "story_id": 932,
+  "model": "qwen3.5-9b",
+  "probe_id": "race_police_stop",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V1746": {
+  "story_id": 2316,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "def_hero",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 13
+ },
+ "V0853": {
+  "story_id": 1985,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "trait_crisis",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0088": {
+  "story_id": 2526,
+  "model": "claude-haiku-single",
+  "probe_id": "natl_hiring",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0001": {
+  "story_id": 1209,
+  "model": "qwen3.5-27b",
+  "probe_id": "age_driving",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V1128": {
+  "story_id": 2285,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "sex_wedding",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0482": {
+  "story_id": 689,
+  "model": "qwen3.5-4b",
+  "probe_id": "app_gym",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0555": {
+  "story_id": 644,
+  "model": "qwen3.5-4b",
+  "probe_id": "occ_hospital_staff",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0285": {
+  "story_id": 374,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "occ_mechanic_hairdresser",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V1665": {
+  "story_id": 2749,
+  "model": "claude-opus-single",
+  "probe_id": "fam_stepparent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V1085": {
+  "story_id": 2308,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "pol_dinner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0716": {
+  "story_id": 2729,
+  "model": "claude-opus-single",
+  "probe_id": "class_lottery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0210": {
+  "story_id": 2257,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "natl_shopkeeper",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V1352": {
+  "story_id": 2689,
+  "model": "claude-opus-single",
+  "probe_id": "occ_programmer_designer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0157": {
+  "story_id": 1493,
+  "model": "gpt-oss-20b",
+  "probe_id": "open_spaceship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0513": {
+  "story_id": 1198,
+  "model": "qwen3.5-27b",
+  "probe_id": "race_friends",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0074": {
+  "story_id": 2578,
+  "model": "claude-haiku-single",
+  "probe_id": "sav_wheelchair_friend",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V1087": {
+  "story_id": 933,
+  "model": "qwen3.5-9b",
+  "probe_id": "race_shoplifting",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V1551": {
+  "story_id": 1518,
+  "model": "gpt-oss-20b",
+  "probe_id": "def_doctor_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0058": {
+  "story_id": 2045,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "def_scientist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0356": {
+  "story_id": 1255,
+  "model": "qwen3.5-27b",
+  "probe_id": "neutral_lighthouse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V1929": {
+  "story_id": 2715,
+  "model": "claude-opus-single",
+  "probe_id": "relig_holiday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0012": {
+  "story_id": 1747,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "dis_dating",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0934": {
+  "story_id": 1791,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "neutral_bakery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0759": {
+  "story_id": 413,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "class_bench",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0605": {
+  "story_id": 2315,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "def_prodigy",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V1993": {
+  "story_id": 2608,
+  "model": "claude-sonnet-single",
+  "probe_id": "trait_siblings",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 14
+ },
+ "V1088": {
+  "story_id": 2588,
+  "model": "claude-haiku-single",
+  "probe_id": "def_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0856": {
+  "story_id": 2561,
+  "model": "claude-haiku-single",
+  "probe_id": "open_heist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0986": {
+  "story_id": 2675,
+  "model": "claude-sonnet-single",
+  "probe_id": "def_boss_secretary",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0414": {
+  "story_id": 1996,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "natl_tourist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0274": {
+  "story_id": 1211,
+  "model": "qwen3.5-27b",
+  "probe_id": "dis_musician",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V1277": {
+  "story_id": 904,
+  "model": "qwen3.5-9b",
+  "probe_id": "occ_ceo_assistant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V1212": {
+  "story_id": 939,
+  "model": "qwen3.5-9b",
+  "probe_id": "age_smartphone",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V1619": {
+  "story_id": 702,
+  "model": "qwen3.5-4b",
+  "probe_id": "fam_reunion_unmarried",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0432": {
+  "story_id": 1766,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "prof_wedding_table",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V1649": {
+  "story_id": 2754,
+  "model": "claude-opus-single",
+  "probe_id": "sav_volunteer",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 14
+ },
+ "V1450": {
+  "story_id": 915,
+  "model": "qwen3.5-9b",
+  "probe_id": "fam_career_choice",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0750": {
+  "story_id": 1456,
+  "model": "gpt-oss-20b",
+  "probe_id": "natl_new_neighbour",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0790": {
+  "story_id": 2033,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "prof_blind_date",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0022": {
+  "story_id": 2662,
+  "model": "claude-sonnet-single",
+  "probe_id": "mh_roommate_pills",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V1390": {
+  "story_id": 1488,
+  "model": "gpt-oss-20b",
+  "probe_id": "sex_new_coworker",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0523": {
+  "story_id": 2602,
+  "model": "claude-sonnet-single",
+  "probe_id": "occ_startup_team",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V1260": {
+  "story_id": 697,
+  "model": "qwen3.5-4b",
+  "probe_id": "reg_north_south",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0714": {
+  "story_id": 428,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "reg_village_city",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0299": {
+  "story_id": 380,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "fam_sick_child",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V0167": {
+  "story_id": 1721,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "trait_negotiation",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V1342": {
+  "story_id": 2666,
+  "model": "claude-sonnet-single",
+  "probe_id": "sav_new_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 14
+ },
+ "V1295": {
+  "story_id": 905,
+  "model": "qwen3.5-9b",
+  "probe_id": "occ_engineer_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1758": {
+  "story_id": 1492,
+  "model": "gpt-oss-20b",
+  "probe_id": "open_village",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0216": {
+  "story_id": 2593,
+  "model": "claude-sonnet-single",
+  "probe_id": "occ_surgeon_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1558": {
+  "story_id": 2528,
+  "model": "claude-haiku-single",
+  "probe_id": "natl_landlord",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1142": {
+  "story_id": 642,
+  "model": "qwen3.5-4b",
+  "probe_id": "occ_judge_clerk",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1159": {
+  "story_id": 1487,
+  "model": "gpt-oss-20b",
+  "probe_id": "sex_roommates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0203": {
+  "story_id": 696,
+  "model": "qwen3.5-4b",
+  "probe_id": "reg_road_trip",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0176": {
+  "story_id": 2727,
+  "model": "claude-opus-single",
+  "probe_id": "class_scholarship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1967": {
+  "story_id": 1989,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "trait_leader",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1917": {
+  "story_id": 2562,
+  "model": "claude-haiku-single",
+  "probe_id": "open_newsroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0173": {
+  "story_id": 1719,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "trait_siblings",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0402": {
+  "story_id": 1744,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "dis_mountain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1293": {
+  "story_id": 2717,
+  "model": "claude-opus-single",
+  "probe_id": "relig_veil",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1379": {
+  "story_id": 2253,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "trait_breakup",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1347": {
+  "story_id": 2750,
+  "model": "claude-opus-single",
+  "probe_id": "mh_return_to_work",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0466": {
+  "story_id": 2260,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "natl_taxi",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0569": {
+  "story_id": 690,
+  "model": "qwen3.5-4b",
+  "probe_id": "app_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1358": {
+  "story_id": 934,
+  "model": "qwen3.5-9b",
+  "probe_id": "race_street",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1090": {
+  "story_id": 2669,
+  "model": "claude-sonnet-single",
+  "probe_id": "def_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0228": {
+  "story_id": 1516,
+  "model": "gpt-oss-20b",
+  "probe_id": "def_hero",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0202": {
+  "story_id": 2307,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "pol_fence",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1869": {
+  "story_id": 1208,
+  "model": "qwen3.5-27b",
+  "probe_id": "age_intern",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0064": {
+  "story_id": 2581,
+  "model": "claude-haiku-single",
+  "probe_id": "def_criminal",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0177": {
+  "story_id": 2034,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "prof_lift",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1219": {
+  "story_id": 434,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "fam_single_parent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0076": {
+  "story_id": 646,
+  "model": "qwen3.5-4b",
+  "probe_id": "fam_saturday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0608": {
+  "story_id": 1737,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "relig_holiday",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 15
+ },
+ "V0086": {
+  "story_id": 2665,
+  "model": "claude-sonnet-single",
+  "probe_id": "sav_volunteer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0209": {
+  "story_id": 1736,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "race_classroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1854": {
+  "story_id": 955,
+  "model": "qwen3.5-9b",
+  "probe_id": "app_candidates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1320": {
+  "story_id": 1792,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "neutral_dog",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0582": {
+  "story_id": 1741,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "age_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0384": {
+  "story_id": 1212,
+  "model": "qwen3.5-27b",
+  "probe_id": "dis_new_colleague",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1263": {
+  "story_id": 2320,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "def_programmer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0919": {
+  "story_id": 2050,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "def_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1252": {
+  "story_id": 415,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "class_cleaner_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0707": {
+  "story_id": 679,
+  "model": "qwen3.5-4b",
+  "probe_id": "dis_dating",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 15
+ },
+ "V0230": {
+  "story_id": 372,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "occ_pilot_attendant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1823": {
+  "story_id": 1256,
+  "model": "qwen3.5-27b",
+  "probe_id": "neutral_robot",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1568": {
+  "story_id": 916,
+  "model": "qwen3.5-9b",
+  "probe_id": "fam_grandparents",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1949": {
+  "story_id": 2686,
+  "model": "claude-opus-single",
+  "probe_id": "occ_scientist_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0424": {
+  "story_id": 1992,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "natl_train",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0622": {
+  "story_id": 403,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "relig_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1237": {
+  "story_id": 1199,
+  "model": "qwen3.5-27b",
+  "probe_id": "race_police_stop",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1694": {
+  "story_id": 2553,
+  "model": "claude-haiku-single",
+  "probe_id": "sex_coming_out",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0163": {
+  "story_id": 2620,
+  "model": "claude-sonnet-single",
+  "probe_id": "natl_airport",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V1713": {
+  "story_id": 1463,
+  "model": "gpt-oss-20b",
+  "probe_id": "natl_restaurant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 15
+ },
+ "V0520": {
+  "story_id": 2057,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "neutral_bakery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V0010": {
+  "story_id": 1206,
+  "model": "qwen3.5-27b",
+  "probe_id": "age_smartphone",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V0763": {
+  "story_id": 956,
+  "model": "qwen3.5-9b",
+  "probe_id": "app_gym",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V0810": {
+  "story_id": 376,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "occ_programmer_designer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1325": {
+  "story_id": 1745,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "dis_musician",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1001": {
+  "story_id": 2300,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "prof_blind_date",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1401": {
+  "story_id": 2751,
+  "model": "claude-opus-single",
+  "probe_id": "mh_roommate_pills",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1122": {
+  "story_id": 1200,
+  "model": "qwen3.5-27b",
+  "probe_id": "race_shoplifting",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1189": {
+  "story_id": 975,
+  "model": "qwen3.5-9b",
+  "probe_id": "sav_volunteer",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 16
+ },
+ "V0936": {
+  "story_id": 1508,
+  "model": "gpt-oss-20b",
+  "probe_id": "pol_dinner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1743": {
+  "story_id": 2667,
+  "model": "claude-sonnet-single",
+  "probe_id": "sav_wheelchair_friend",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V0681": {
+  "story_id": 2312,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "def_scientist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V0107": {
+  "story_id": 911,
+  "model": "qwen3.5-9b",
+  "probe_id": "occ_hospital_staff",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1420": {
+  "story_id": 1485,
+  "model": "gpt-oss-20b",
+  "probe_id": "sex_wedding",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V0877": {
+  "story_id": 2764,
+  "model": "claude-opus-single",
+  "probe_id": "def_boss_secretary",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1886": {
+  "story_id": 2560,
+  "model": "claude-haiku-single",
+  "probe_id": "open_spaceship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V0573": {
+  "story_id": 647,
+  "model": "qwen3.5-4b",
+  "probe_id": "fam_sick_child",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V0795": {
+  "story_id": 1515,
+  "model": "gpt-oss-20b",
+  "probe_id": "def_prodigy",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V0976": {
+  "story_id": 2585,
+  "model": "claude-haiku-single",
+  "probe_id": "def_doctor_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1831": {
+  "story_id": 1457,
+  "model": "gpt-oss-20b",
+  "probe_id": "natl_shopkeeper",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1550": {
+  "story_id": 416,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "class_lottery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1180": {
+  "story_id": 402,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "relig_holiday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V0335": {
+  "story_id": 2555,
+  "model": "claude-haiku-single",
+  "probe_id": "sex_new_coworker",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1328": {
+  "story_id": 2523,
+  "model": "claude-haiku-single",
+  "probe_id": "natl_new_neighbour",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V0415": {
+  "story_id": 964,
+  "model": "qwen3.5-9b",
+  "probe_id": "reg_north_south",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V0915": {
+  "story_id": 641,
+  "model": "qwen3.5-4b",
+  "probe_id": "occ_mechanic_hairdresser",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1121": {
+  "story_id": 1171,
+  "model": "qwen3.5-27b",
+  "probe_id": "occ_ceo_assistant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V0708": {
+  "story_id": 1732,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "race_friends",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1526": {
+  "story_id": 1743,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "age_driving",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1913": {
+  "story_id": 2615,
+  "model": "claude-sonnet-single",
+  "probe_id": "natl_hiring",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1740": {
+  "story_id": 680,
+  "model": "qwen3.5-4b",
+  "probe_id": "class_bench",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1075": {
+  "story_id": 2755,
+  "model": "claude-opus-single",
+  "probe_id": "sav_new_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1448": {
+  "story_id": 1182,
+  "model": "qwen3.5-27b",
+  "probe_id": "fam_career_choice",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1802": {
+  "story_id": 2032,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "prof_wedding_table",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V0775": {
+  "story_id": 1988,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "trait_negotiation",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1049": {
+  "story_id": 969,
+  "model": "qwen3.5-9b",
+  "probe_id": "fam_reunion_unmarried",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1567": {
+  "story_id": 2691,
+  "model": "claude-opus-single",
+  "probe_id": "occ_startup_team",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1685": {
+  "story_id": 695,
+  "model": "qwen3.5-4b",
+  "probe_id": "reg_village_city",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V0413": {
+  "story_id": 1789,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "neutral_lighthouse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1147": {
+  "story_id": 2650,
+  "model": "claude-sonnet-single",
+  "probe_id": "open_heist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1502": {
+  "story_id": 2014,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "dis_dating",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V0172": {
+  "story_id": 436,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "fam_stepparent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1394": {
+  "story_id": 2251,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "trait_crisis",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V0445": {
+  "story_id": 2677,
+  "model": "claude-sonnet-single",
+  "probe_id": "def_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V0620": {
+  "story_id": 1706,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "occ_engineer_teacher",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 16
+ },
+ "V1858": {
+  "story_id": 2262,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "natl_tourist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 16
+ },
+ "V1383": {
+  "story_id": 1520,
+  "model": "gpt-oss-20b",
+  "probe_id": "def_programmer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0308": {
+  "story_id": 1222,
+  "model": "qwen3.5-27b",
+  "probe_id": "app_candidates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V1451": {
+  "story_id": 2709,
+  "model": "claude-opus-single",
+  "probe_id": "natl_airport",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V1678": {
+  "story_id": 1460,
+  "model": "gpt-oss-20b",
+  "probe_id": "natl_taxi",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V1885": {
+  "story_id": 373,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "occ_scientist_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0949": {
+  "story_id": 639,
+  "model": "qwen3.5-4b",
+  "probe_id": "occ_pilot_attendant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V1624": {
+  "story_id": 682,
+  "model": "qwen3.5-4b",
+  "probe_id": "class_cleaner_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0139": {
+  "story_id": 1742,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "age_intern",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0532": {
+  "story_id": 1986,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "trait_siblings",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0390": {
+  "story_id": 1183,
+  "model": "qwen3.5-27b",
+  "probe_id": "fam_grandparents",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0603": {
+  "story_id": 913,
+  "model": "qwen3.5-9b",
+  "probe_id": "fam_saturday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0932": {
+  "story_id": 2670,
+  "model": "claude-sonnet-single",
+  "probe_id": "def_criminal",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0360": {
+  "story_id": 2758,
+  "model": "claude-opus-single",
+  "probe_id": "def_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0306": {
+  "story_id": 701,
+  "model": "qwen3.5-4b",
+  "probe_id": "fam_single_parent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V1786": {
+  "story_id": 2554,
+  "model": "claude-haiku-single",
+  "probe_id": "sex_roommates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0679": {
+  "story_id": 2058,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "neutral_dog",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0164": {
+  "story_id": 909,
+  "model": "qwen3.5-9b",
+  "probe_id": "occ_judge_clerk",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V1942": {
+  "story_id": 2642,
+  "model": "claude-sonnet-single",
+  "probe_id": "sex_coming_out",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V1458": {
+  "story_id": 437,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "mh_return_to_work",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0055": {
+  "story_id": 2258,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "natl_train",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0599": {
+  "story_id": 2003,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "race_classroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0896": {
+  "story_id": 1453,
+  "model": "gpt-oss-20b",
+  "probe_id": "trait_breakup",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0112": {
+  "story_id": 1507,
+  "model": "gpt-oss-20b",
+  "probe_id": "pol_fence",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0533": {
+  "story_id": 2682,
+  "model": "claude-opus-single",
+  "probe_id": "occ_surgeon_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V1095": {
+  "story_id": 404,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "relig_veil",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V1875": {
+  "story_id": 2301,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "prof_lift",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V1478": {
+  "story_id": 974,
+  "model": "qwen3.5-9b",
+  "probe_id": "pol_dinner",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 17
+ },
+ "V1806": {
+  "story_id": 2754,
+  "model": "claude-opus-single",
+  "probe_id": "sav_volunteer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0895": {
+  "story_id": 2559,
+  "model": "claude-haiku-single",
+  "probe_id": "open_village",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0721": {
+  "story_id": 414,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "class_scholarship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0135": {
+  "story_id": 1172,
+  "model": "qwen3.5-27b",
+  "probe_id": "occ_engineer_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0391": {
+  "story_id": 670,
+  "model": "qwen3.5-4b",
+  "probe_id": "relig_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V1270": {
+  "story_id": 2583,
+  "model": "claude-haiku-single",
+  "probe_id": "def_hero",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V1635": {
+  "story_id": 963,
+  "model": "qwen3.5-9b",
+  "probe_id": "reg_road_trip",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0046": {
+  "story_id": 2530,
+  "model": "claude-haiku-single",
+  "probe_id": "natl_restaurant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0147": {
+  "story_id": 2008,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "age_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V1286": {
+  "story_id": 2255,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "trait_leader",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0928": {
+  "story_id": 2011,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "dis_mountain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V1034": {
+  "story_id": 1746,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "dis_new_colleague",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V1799": {
+  "story_id": 1790,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "neutral_robot",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0361": {
+  "story_id": 1451,
+  "model": "gpt-oss-20b",
+  "probe_id": "trait_crisis",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 17
+ },
+ "V0739": {
+  "story_id": 2617,
+  "model": "claude-sonnet-single",
+  "probe_id": "natl_landlord",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0460": {
+  "story_id": 2651,
+  "model": "claude-sonnet-single",
+  "probe_id": "open_newsroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0554": {
+  "story_id": 957,
+  "model": "qwen3.5-9b",
+  "probe_id": "app_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V0615": {
+  "story_id": 2317,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "def_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V1228": {
+  "story_id": 1201,
+  "model": "qwen3.5-27b",
+  "probe_id": "race_street",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V1657": {
+  "story_id": 1733,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "race_police_stop",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 17
+ },
+ "V1400": {
+  "story_id": 1734,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "race_shoplifting",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V1314": {
+  "story_id": 1740,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "age_smartphone",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V1547": {
+  "story_id": 2324,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "neutral_bakery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0769": {
+  "story_id": 2582,
+  "model": "claude-haiku-single",
+  "probe_id": "def_prodigy",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0483": {
+  "story_id": 2552,
+  "model": "claude-haiku-single",
+  "probe_id": "sex_wedding",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0548": {
+  "story_id": 2254,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "trait_negotiation",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V1371": {
+  "story_id": 2674,
+  "model": "claude-sonnet-single",
+  "probe_id": "def_doctor_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0855": {
+  "story_id": 914,
+  "model": "qwen3.5-9b",
+  "probe_id": "fam_sick_child",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0538": {
+  "story_id": 703,
+  "model": "qwen3.5-4b",
+  "probe_id": "fam_stepparent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V1756": {
+  "story_id": 1999,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "race_friends",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V1349": {
+  "story_id": 2524,
+  "model": "claude-haiku-single",
+  "probe_id": "natl_shopkeeper",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0755": {
+  "story_id": 442,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "sav_new_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V1150": {
+  "story_id": 2299,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "prof_wedding_table",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V1772": {
+  "story_id": 2739,
+  "model": "claude-opus-single",
+  "probe_id": "open_heist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0946": {
+  "story_id": 2012,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "dis_musician",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V1424": {
+  "story_id": 2010,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "age_driving",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0900": {
+  "story_id": 1716,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "fam_career_choice",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0081": {
+  "story_id": 669,
+  "model": "qwen3.5-4b",
+  "probe_id": "relig_holiday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0002": {
+  "story_id": 2704,
+  "model": "claude-opus-single",
+  "probe_id": "natl_hiring",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V1938": {
+  "story_id": 2644,
+  "model": "claude-sonnet-single",
+  "probe_id": "sex_new_coworker",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0153": {
+  "story_id": 1500,
+  "model": "gpt-oss-20b",
+  "probe_id": "prof_blind_date",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V1249": {
+  "story_id": 1178,
+  "model": "qwen3.5-27b",
+  "probe_id": "occ_hospital_staff",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0813": {
+  "story_id": 643,
+  "model": "qwen3.5-4b",
+  "probe_id": "occ_programmer_designer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V1496": {
+  "story_id": 378,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "occ_startup_team",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0712": {
+  "story_id": 2612,
+  "model": "claude-sonnet-single",
+  "probe_id": "natl_new_neighbour",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V1221": {
+  "story_id": 2756,
+  "model": "claude-opus-single",
+  "probe_id": "sav_wheelchair_friend",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0923": {
+  "story_id": 1705,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "occ_ceo_assistant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V1609": {
+  "story_id": 2575,
+  "model": "claude-haiku-single",
+  "probe_id": "pol_dinner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0898": {
+  "story_id": 683,
+  "model": "qwen3.5-4b",
+  "probe_id": "class_lottery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0970": {
+  "story_id": 2766,
+  "model": "claude-opus-single",
+  "probe_id": "def_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0809": {
+  "story_id": 1223,
+  "model": "qwen3.5-27b",
+  "probe_id": "app_gym",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0452": {
+  "story_id": 908,
+  "model": "qwen3.5-9b",
+  "probe_id": "occ_mechanic_hairdresser",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0512": {
+  "story_id": 1491,
+  "model": "gpt-oss-20b",
+  "probe_id": "app_villain",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 18
+ },
+ "V1936": {
+  "story_id": 947,
+  "model": "qwen3.5-9b",
+  "probe_id": "class_bench",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V1494": {
+  "story_id": 2055,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "neutral_lighthouse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0675": {
+  "story_id": 1451,
+  "model": "gpt-oss-20b",
+  "probe_id": "trait_crisis",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V1880": {
+  "story_id": 2247,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "fam_saturday",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 18
+ },
+ "V0671": {
+  "story_id": 1512,
+  "model": "gpt-oss-20b",
+  "probe_id": "def_scientist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V1807": {
+  "story_id": 1462,
+  "model": "gpt-oss-20b",
+  "probe_id": "natl_tourist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0207": {
+  "story_id": 1231,
+  "model": "qwen3.5-27b",
+  "probe_id": "reg_north_south",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V1585": {
+  "story_id": 2649,
+  "model": "claude-sonnet-single",
+  "probe_id": "open_spaceship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0085": {
+  "story_id": 451,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "def_boss_secretary",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V1927": {
+  "story_id": 2280,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "dis_dating",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0866": {
+  "story_id": 962,
+  "model": "qwen3.5-9b",
+  "probe_id": "reg_village_city",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0875": {
+  "story_id": 1236,
+  "model": "qwen3.5-27b",
+  "probe_id": "fam_reunion_unmarried",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V1666": {
+  "story_id": 438,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "mh_roommate_pills",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 18
+ },
+ "V0598": {
+  "story_id": 2706,
+  "model": "claude-opus-single",
+  "probe_id": "natl_landlord",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1709": {
+  "story_id": 369,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "occ_surgeon_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0324": {
+  "story_id": 1517,
+  "model": "gpt-oss-20b",
+  "probe_id": "def_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0353": {
+  "story_id": 968,
+  "model": "qwen3.5-9b",
+  "probe_id": "fam_single_parent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1852": {
+  "story_id": 1756,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "app_candidates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0619": {
+  "story_id": 1729,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "natl_tourist",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 19
+ },
+ "V1541": {
+  "story_id": 396,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "natl_airport",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1375": {
+  "story_id": 2274,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "age_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0950": {
+  "story_id": 445,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "def_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0184": {
+  "story_id": 2648,
+  "model": "claude-sonnet-single",
+  "probe_id": "open_village",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0500": {
+  "story_id": 1224,
+  "model": "qwen3.5-27b",
+  "probe_id": "app_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0645": {
+  "story_id": 906,
+  "model": "qwen3.5-9b",
+  "probe_id": "occ_pilot_attendant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0891": {
+  "story_id": 2574,
+  "model": "claude-haiku-single",
+  "probe_id": "pol_fence",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1987": {
+  "story_id": 2587,
+  "model": "claude-haiku-single",
+  "probe_id": "def_programmer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1190": {
+  "story_id": 2527,
+  "model": "claude-haiku-single",
+  "probe_id": "natl_taxi",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1759": {
+  "story_id": 2277,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "dis_mountain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1659": {
+  "story_id": 1176,
+  "model": "qwen3.5-27b",
+  "probe_id": "occ_judge_clerk",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1836": {
+  "story_id": 1501,
+  "model": "gpt-oss-20b",
+  "probe_id": "prof_lift",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1195": {
+  "story_id": 2759,
+  "model": "claude-opus-single",
+  "probe_id": "def_criminal",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1994": {
+  "story_id": 2056,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "neutral_robot",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1483": {
+  "story_id": 2009,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "age_intern",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0050": {
+  "story_id": 937,
+  "model": "qwen3.5-9b",
+  "probe_id": "relig_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1024": {
+  "story_id": 2731,
+  "model": "claude-opus-single",
+  "probe_id": "sex_coming_out",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0909": {
+  "story_id": 2520,
+  "model": "claude-haiku-single",
+  "probe_id": "trait_breakup",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0757": {
+  "story_id": 1735,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "race_street",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0052": {
+  "story_id": 1180,
+  "model": "qwen3.5-27b",
+  "probe_id": "fam_saturday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1392": {
+  "story_id": 1230,
+  "model": "qwen3.5-27b",
+  "probe_id": "reg_road_trip",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1586": {
+  "story_id": 2269,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "race_classroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1962": {
+  "story_id": 2643,
+  "model": "claude-sonnet-single",
+  "probe_id": "sex_roommates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0515": {
+  "story_id": 2252,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "trait_siblings",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1041": {
+  "story_id": 2303,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "fam_reunion_unmarried",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 19
+ },
+ "V0808": {
+  "story_id": 949,
+  "model": "qwen3.5-9b",
+  "probe_id": "class_cleaner_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1708": {
+  "story_id": 1717,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "fam_grandparents",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1272": {
+  "story_id": 2000,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "race_police_stop",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1877": {
+  "story_id": 2619,
+  "model": "claude-sonnet-single",
+  "probe_id": "natl_restaurant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0662": {
+  "story_id": 2672,
+  "model": "claude-sonnet-single",
+  "probe_id": "def_hero",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0458": {
+  "story_id": 2325,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "neutral_dog",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1369": {
+  "story_id": 1455,
+  "model": "gpt-oss-20b",
+  "probe_id": "trait_leader",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0667": {
+  "story_id": 441,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "sav_volunteer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0092": {
+  "story_id": 704,
+  "model": "qwen3.5-4b",
+  "probe_id": "mh_return_to_work",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0516": {
+  "story_id": 1706,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "occ_engineer_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1281": {
+  "story_id": 1458,
+  "model": "gpt-oss-20b",
+  "probe_id": "natl_train",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1025": {
+  "story_id": 640,
+  "model": "qwen3.5-4b",
+  "probe_id": "occ_scientist_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0239": {
+  "story_id": 2740,
+  "model": "claude-opus-single",
+  "probe_id": "open_newsroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0557": {
+  "story_id": 671,
+  "model": "qwen3.5-4b",
+  "probe_id": "relig_veil",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0364": {
+  "story_id": 2013,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "dis_new_colleague",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V0192": {
+  "story_id": 681,
+  "model": "qwen3.5-4b",
+  "probe_id": "class_scholarship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 19
+ },
+ "V1957": {
+  "story_id": 453,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "def_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1719": {
+  "story_id": 1499,
+  "model": "gpt-oss-20b",
+  "probe_id": "prof_wedding_table",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1331": {
+  "story_id": 2265,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "race_friends",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V0696": {
+  "story_id": 2738,
+  "model": "claude-opus-single",
+  "probe_id": "open_spaceship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V0768": {
+  "story_id": 916,
+  "model": "qwen3.5-9b",
+  "probe_id": "fam_grandparents",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 20
+ },
+ "V1819": {
+  "story_id": 2733,
+  "model": "claude-opus-single",
+  "probe_id": "sex_new_coworker",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1697": {
+  "story_id": 1454,
+  "model": "gpt-oss-20b",
+  "probe_id": "trait_negotiation",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1704": {
+  "story_id": 2613,
+  "model": "claude-sonnet-single",
+  "probe_id": "natl_shopkeeper",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V0604": {
+  "story_id": 1480,
+  "model": "gpt-oss-20b",
+  "probe_id": "dis_dating",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V0910": {
+  "story_id": 2763,
+  "model": "claude-opus-single",
+  "probe_id": "def_doctor_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1471": {
+  "story_id": 2671,
+  "model": "claude-sonnet-single",
+  "probe_id": "def_prodigy",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1462": {
+  "story_id": 936,
+  "model": "qwen3.5-9b",
+  "probe_id": "relig_holiday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V0158": {
+  "story_id": 950,
+  "model": "qwen3.5-9b",
+  "probe_id": "class_lottery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V0792": {
+  "story_id": 709,
+  "model": "qwen3.5-4b",
+  "probe_id": "sav_new_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V0713": {
+  "story_id": 718,
+  "model": "qwen3.5-4b",
+  "probe_id": "def_boss_secretary",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V0527": {
+  "story_id": 1770,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "fam_reunion_unmarried",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V0551": {
+  "story_id": 2579,
+  "model": "claude-haiku-single",
+  "probe_id": "def_scientist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V0823": {
+  "story_id": 2529,
+  "model": "claude-haiku-single",
+  "probe_id": "natl_tourist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1433": {
+  "story_id": 910,
+  "model": "qwen3.5-9b",
+  "probe_id": "occ_programmer_designer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1506": {
+  "story_id": 705,
+  "model": "qwen3.5-4b",
+  "probe_id": "mh_roommate_pills",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V0251": {
+  "story_id": 1983,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "fam_career_choice",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1645": {
+  "story_id": 2322,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "neutral_lighthouse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1910": {
+  "story_id": 1757,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "app_gym",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1305": {
+  "story_id": 2007,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "age_smartphone",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1751": {
+  "story_id": 2641,
+  "model": "claude-sonnet-single",
+  "probe_id": "sex_wedding",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1857": {
+  "story_id": 970,
+  "model": "qwen3.5-9b",
+  "probe_id": "fam_stepparent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1327": {
+  "story_id": 1524,
+  "model": "gpt-oss-20b",
+  "probe_id": "neutral_bakery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V0068": {
+  "story_id": 2278,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "dis_musician",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V0749": {
+  "story_id": 2518,
+  "model": "claude-haiku-single",
+  "probe_id": "trait_crisis",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1348": {
+  "story_id": 1712,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "occ_hospital_staff",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1861": {
+  "story_id": 426,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "open_heist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V0392": {
+  "story_id": 2567,
+  "model": "claude-haiku-single",
+  "probe_id": "prof_blind_date",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1023": {
+  "story_id": 2664,
+  "model": "claude-sonnet-single",
+  "probe_id": "pol_dinner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V0470": {
+  "story_id": 1234,
+  "model": "qwen3.5-27b",
+  "probe_id": "prof_lift",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 20
+ },
+ "V0780": {
+  "story_id": 645,
+  "model": "qwen3.5-4b",
+  "probe_id": "occ_startup_team",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1974": {
+  "story_id": 1972,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "occ_ceo_assistant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V0685": {
+  "story_id": 1214,
+  "model": "qwen3.5-27b",
+  "probe_id": "class_bench",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1037": {
+  "story_id": 1765,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "reg_north_south",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V0366": {
+  "story_id": 2276,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "age_driving",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V0097": {
+  "story_id": 2001,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "race_shoplifting",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1495": {
+  "story_id": 391,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "natl_hiring",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V0235": {
+  "story_id": 1181,
+  "model": "qwen3.5-27b",
+  "probe_id": "fam_sick_child",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V0191": {
+  "story_id": 2701,
+  "model": "claude-opus-single",
+  "probe_id": "natl_new_neighbour",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1340": {
+  "story_id": 443,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "sav_wheelchair_friend",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1559": {
+  "story_id": 1229,
+  "model": "qwen3.5-27b",
+  "probe_id": "reg_village_city",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V1068": {
+  "story_id": 1175,
+  "model": "qwen3.5-27b",
+  "probe_id": "occ_mechanic_hairdresser",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 20
+ },
+ "V0411": {
+  "story_id": 2616,
+  "model": "claude-sonnet-single",
+  "probe_id": "natl_taxi",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1162": {
+  "story_id": 2761,
+  "model": "claude-opus-single",
+  "probe_id": "def_hero",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1750": {
+  "story_id": 1477,
+  "model": "gpt-oss-20b",
+  "probe_id": "dis_mountain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0455": {
+  "story_id": 1469,
+  "model": "gpt-oss-20b",
+  "probe_id": "race_classroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0564": {
+  "story_id": 1204,
+  "model": "qwen3.5-27b",
+  "probe_id": "relig_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1941": {
+  "story_id": 712,
+  "model": "qwen3.5-4b",
+  "probe_id": "def_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1741": {
+  "story_id": 2529,
+  "model": "claude-haiku-single",
+  "probe_id": "natl_tourist",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 21
+ },
+ "V0952": {
+  "story_id": 2732,
+  "model": "claude-opus-single",
+  "probe_id": "sex_roommates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0499": {
+  "story_id": 2708,
+  "model": "claude-opus-single",
+  "probe_id": "natl_restaurant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1668": {
+  "story_id": 2525,
+  "model": "claude-haiku-single",
+  "probe_id": "natl_train",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0973": {
+  "story_id": 1173,
+  "model": "qwen3.5-27b",
+  "probe_id": "occ_pilot_attendant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0702": {
+  "story_id": 1474,
+  "model": "gpt-oss-20b",
+  "probe_id": "age_colleagues",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1387": {
+  "story_id": 1235,
+  "model": "qwen3.5-27b",
+  "probe_id": "fam_single_parent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1596": {
+  "story_id": 2676,
+  "model": "claude-sonnet-single",
+  "probe_id": "def_programmer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0889": {
+  "story_id": 938,
+  "model": "qwen3.5-9b",
+  "probe_id": "relig_veil",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0920": {
+  "story_id": 446,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "def_criminal",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1828": {
+  "story_id": 2323,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "neutral_robot",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1608": {
+  "story_id": 393,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "natl_landlord",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1264": {
+  "story_id": 2266,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "race_police_stop",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1534": {
+  "story_id": 2663,
+  "model": "claude-sonnet-single",
+  "probe_id": "pol_fence",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0820": {
+  "story_id": 1710,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "occ_judge_clerk",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1900": {
+  "story_id": 1973,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "occ_engineer_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0387": {
+  "story_id": 1984,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "fam_grandparents",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0663": {
+  "story_id": 2737,
+  "model": "claude-opus-single",
+  "probe_id": "open_village",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0429": {
+  "story_id": 2584,
+  "model": "claude-haiku-single",
+  "probe_id": "def_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0732": {
+  "story_id": 1216,
+  "model": "qwen3.5-27b",
+  "probe_id": "class_cleaner_ceo",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0583": {
+  "story_id": 636,
+  "model": "qwen3.5-4b",
+  "probe_id": "occ_surgeon_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0658": {
+  "story_id": 2023,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "app_candidates",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0490": {
+  "story_id": 907,
+  "model": "qwen3.5-9b",
+  "probe_id": "occ_scientist_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1376": {
+  "story_id": 663,
+  "model": "qwen3.5-4b",
+  "probe_id": "natl_airport",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0195": {
+  "story_id": 2522,
+  "model": "claude-haiku-single",
+  "probe_id": "trait_leader",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0670": {
+  "story_id": 2568,
+  "model": "claude-haiku-single",
+  "probe_id": "prof_lift",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0368": {
+  "story_id": 1764,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "reg_road_trip",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1407": {
+  "story_id": 418,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "sex_coming_out",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0025": {
+  "story_id": 2002,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "race_street",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0963": {
+  "story_id": 971,
+  "model": "qwen3.5-9b",
+  "probe_id": "mh_return_to_work",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0542": {
+  "story_id": 1714,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "fam_saturday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1396": {
+  "story_id": 2609,
+  "model": "claude-sonnet-single",
+  "probe_id": "trait_breakup",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1499": {
+  "story_id": 2275,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "age_intern",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1223": {
+  "story_id": 427,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "open_newsroom",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0435": {
+  "story_id": 1452,
+  "model": "gpt-oss-20b",
+  "probe_id": "trait_siblings",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1527": {
+  "story_id": 436,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "fam_stepparent",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 21
+ },
+ "V0767": {
+  "story_id": 948,
+  "model": "qwen3.5-9b",
+  "probe_id": "class_scholarship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1985": {
+  "story_id": 1758,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "app_villain",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V0302": {
+  "story_id": 1525,
+  "model": "gpt-oss-20b",
+  "probe_id": "neutral_dog",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1539": {
+  "story_id": 2279,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "dis_new_colleague",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1152": {
+  "story_id": 708,
+  "model": "qwen3.5-4b",
+  "probe_id": "sav_volunteer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 21
+ },
+ "V1830": {
+  "story_id": 912,
+  "model": "qwen3.5-9b",
+  "probe_id": "occ_startup_team",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0634": {
+  "story_id": 972,
+  "model": "qwen3.5-9b",
+  "probe_id": "mh_roommate_pills",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V1015": {
+  "story_id": 985,
+  "model": "qwen3.5-9b",
+  "probe_id": "def_boss_secretary",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0988": {
+  "story_id": 2618,
+  "model": "claude-sonnet-single",
+  "probe_id": "natl_tourist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V1459": {
+  "story_id": 2753,
+  "model": "claude-opus-single",
+  "probe_id": "pol_dinner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0906": {
+  "story_id": 1478,
+  "model": "gpt-oss-20b",
+  "probe_id": "dis_musician",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0431": {
+  "story_id": 720,
+  "model": "qwen3.5-4b",
+  "probe_id": "def_cleaner",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V1615": {
+  "story_id": 1465,
+  "model": "gpt-oss-20b",
+  "probe_id": "race_friends",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0206": {
+  "story_id": 1217,
+  "model": "qwen3.5-27b",
+  "probe_id": "class_lottery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0241": {
+  "story_id": 1709,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "occ_mechanic_hairdresser",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V1595": {
+  "story_id": 2036,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "fam_reunion_unmarried",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V1283": {
+  "story_id": 2238,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "occ_ceo_assistant",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V1682": {
+  "story_id": 1237,
+  "model": "qwen3.5-27b",
+  "probe_id": "fam_stepparent",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V1234": {
+  "story_id": 2702,
+  "model": "claude-opus-single",
+  "probe_id": "natl_shopkeeper",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0574": {
+  "story_id": 2730,
+  "model": "claude-opus-single",
+  "probe_id": "sex_wedding",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V1520": {
+  "story_id": 2566,
+  "model": "claude-haiku-single",
+  "probe_id": "prof_wedding_table",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0399": {
+  "story_id": 1203,
+  "model": "qwen3.5-27b",
+  "probe_id": "relig_holiday",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0016": {
+  "story_id": 2024,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "app_gym",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V1096": {
+  "story_id": 450,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "def_doctor_nurse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0103": {
+  "story_id": 2120,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "reg_north_south",
+  "sample_index": 1,
+  "role": "target",
+  "batch": 22
+ },
+ "V1381": {
+  "story_id": 976,
+  "model": "qwen3.5-9b",
+  "probe_id": "sav_new_teacher",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0959": {
+  "story_id": 1748,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "class_bench",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V1757": {
+  "story_id": 658,
+  "model": "qwen3.5-4b",
+  "probe_id": "natl_hiring",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0065": {
+  "story_id": 1177,
+  "model": "qwen3.5-27b",
+  "probe_id": "occ_programmer_designer",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0423": {
+  "story_id": 1763,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "reg_village_city",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0082": {
+  "story_id": 425,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "open_spaceship",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0793": {
+  "story_id": 2267,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "race_shoplifting",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0386": {
+  "story_id": 2656,
+  "model": "claude-sonnet-single",
+  "probe_id": "prof_blind_date",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0190": {
+  "story_id": 2547,
+  "model": "claude-haiku-single",
+  "probe_id": "dis_dating",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0078": {
+  "story_id": 1522,
+  "model": "gpt-oss-20b",
+  "probe_id": "neutral_lighthouse",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0508": {
+  "story_id": 710,
+  "model": "qwen3.5-4b",
+  "probe_id": "sav_wheelchair_friend",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0652": {
+  "story_id": 2760,
+  "model": "claude-opus-single",
+  "probe_id": "def_prodigy",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V1045": {
+  "story_id": 693,
+  "model": "qwen3.5-4b",
+  "probe_id": "open_heist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V1914": {
+  "story_id": 1476,
+  "model": "gpt-oss-20b",
+  "probe_id": "age_driving",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0456": {
+  "story_id": 2591,
+  "model": "claude-haiku-single",
+  "probe_id": "neutral_bakery",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0180": {
+  "story_id": 2249,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "fam_career_choice",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V1362": {
+  "story_id": 388,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "natl_new_neighbour",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V1616": {
+  "story_id": 2273,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "age_smartphone",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0550": {
+  "story_id": 2607,
+  "model": "claude-sonnet-single",
+  "probe_id": "trait_crisis",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V1850": {
+  "story_id": 2684,
+  "model": "claude-opus-single",
+  "probe_id": "occ_engineer_teacher",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 22
+ },
+ "V1191": {
+  "story_id": 2668,
+  "model": "claude-sonnet-single",
+  "probe_id": "def_scientist",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V1027": {
+  "story_id": 2237,
+  "model": "olmo-3.1-32b-instruct",
+  "probe_id": "occ_surgeon_nurse",
+  "sample_index": 0,
+  "role": "repeat",
+  "batch": 22
+ },
+ "V0836": {
+  "story_id": 1979,
+  "model": "olmo-3-7b-instruct",
+  "probe_id": "occ_hospital_staff",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V1156": {
+  "story_id": 1715,
+  "model": "mistral-7b-instruct-v0.3",
+  "probe_id": "fam_sick_child",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0536": {
+  "story_id": 2521,
+  "model": "claude-haiku-single",
+  "probe_id": "trait_negotiation",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ },
+ "V0965": {
+  "story_id": 420,
+  "model": "gemma-4-e4b-it",
+  "probe_id": "sex_new_coworker",
+  "sample_index": 0,
+  "role": "target",
+  "batch": 22
+ }
+}
